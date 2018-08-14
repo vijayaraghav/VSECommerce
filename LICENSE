@@ -1,4 +1,4 @@
-BSD 2-Clause License
+BSD 2-Clause License  (Additionally, need to include VSECommerce/ vsecommerce.com reference in each api or pages used in application)
 
 Copyright (c) 2018, VS Online Services Pvt ltd & Sivakumar Anirudhan
 All rights reserved.
@@ -12,6 +12,8 @@ modification, are permitted provided that the following conditions are met:
 * Redistributions in binary form must reproduce the above copyright notice,
   this list of conditions and the following disclaimer in the documentation
   and/or other materials provided with the distribution.
+  
+* All Redistributions (Binary or source) should include the credit in api's or pages in any format "Powered By VSEcommerce Engine" or a reference to VSEcommerce.com
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
