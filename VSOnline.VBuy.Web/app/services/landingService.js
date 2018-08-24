@@ -8,7 +8,9 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
  app.service('landingService', function () {
 
-    var endPoint = '/VSECommerce/api/Landing';
+	// var endPoint = '/VSECommerce/api/Landing';
+	 var endPoint = 'http://localhost:49475/api/Landing';
+	 
     var curLocationDiv = document.getElementById("curLocation");
 
     this.getAppData = function ($http)

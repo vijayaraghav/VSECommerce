@@ -8,7 +8,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
  app.factory('authService', ['$rootScope', '$http', '$q', 'localStorageService', function ($rootScope, $http, $q, localStorageService) {
 
-    var endPoint = '/VSECommerce/api/Login';
+	 var endPoint = 'http://localhost:49475/';
 
     var authServiceFactory = {};
 

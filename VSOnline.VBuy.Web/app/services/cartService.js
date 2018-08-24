@@ -8,8 +8,11 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
  app.service('cartService', function () {
 
-    var endPoint = '/VSECommerce/api/Cart';
-    var endPointCheckout = '/VSECommerce/api/CheckOut';
+    //var endPoint = '/VSECommerce/api/Cart';
+    //var endPointCheckout = '/VSECommerce/api/CheckOut';
+
+	 var endPoint = 'http://localhost:49475/api/Cart';
+	 var endPointCheckout = 'http://localhost:49475/api/CheckOut';
 
     this.getOrderConfirmationDetails = function ($http, orderid, userName) {
 
