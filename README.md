@@ -1,7 +1,9 @@
 # VSECommerce
 Open Source eCommerce marketplace using ASP.NET Web API and Angular JS. http://www.vsecommerce.com
 
-*Documentation is not done for this product 
+*Documentation will be done based on request and the usage of this hyperlocal eCommerce solution.
+
+With our VSECommerce source, you can create, sigle store, multi store, hyper local ecommerce and even a movie site. A flexible architectured product.
 
 Author : Sivakumar Anirudhan, VS Online Services Pvt ltd, India.
 
