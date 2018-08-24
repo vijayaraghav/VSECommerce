@@ -2,7 +2,7 @@
 
 Open Source eCommerce marketplace using ASP.NET Web API, C# and Angular JS. http://www.vsecommerce.com
 
-*Documentation will be done based on request and the demand for our hyperlocal eCommerce solution.Priority based on various enquiries /queries.
+* Documentation will be done based on request and demand. Priority based on various enquiries /queries.
 
 With our VSECommerce engine, you can create, single store, multi store, hyper local ecommerce or even online movie site (Demo:http://moviesdemo.vbuy.in/Home.html). A flexible architectured product with High Performance, Easy to Setup, Customizable eCommerce marketplace solution.
 
