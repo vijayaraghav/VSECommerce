@@ -1,0 +1,6 @@
+D:\LocalRepository\VBuy\VOnline.VBuy\BuildArtifacts\VBuy.Persistence\Release\VOnline.VBuy.Persistence.dll.config
+D:\LocalRepository\VBuy\VOnline.VBuy\BuildArtifacts\VBuy.Persistence\Release\VOnline.VBuy.Persistence.dll
+D:\LocalRepository\VBuy\VOnline.VBuy\BuildArtifacts\VBuy.Persistence\Release\VOnline.VBuy.Persistence.pdb
+D:\LocalRepository\VBuy\VOnline.VBuy\VOnline.VBuy.Persistence\obj\Release\VOnline.VBuy.Persistence.dll
+D:\LocalRepository\VBuy\VOnline.VBuy\VOnline.VBuy.Persistence\obj\Release\VOnline.VBuy.Persistence.pdb
+D:\LocalRepository\VBuy\VOnline.VBuy\VOnline.VBuy.Persistence\obj\Release\VOnline.VBuy.Persistence.csprojResolveAssemblyReference.cache

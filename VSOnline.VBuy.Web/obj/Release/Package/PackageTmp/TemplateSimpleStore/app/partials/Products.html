@@ -1,0 +1,180 @@
+﻿<og-image>{{imageUrlBase}}VBuy_Image.png</og-image>
+
+
+    <div ng-if="products.data.length<=0">
+        <view-title>Online Shopping of {{searchedCategoryName}} at best prices from your nearby store in India </view-title>
+        <og-description>VBuy {{ searchedCategoryName}}- </og-description>
+    </div>
+    <div ng-if="products.data.length>0">
+        <view-title>
+            Online Shopping of
+            <span data-ng-repeat="category in products.data | unique: 'SubCategoryId' | limitTo:3">
+                {{category.SubCategoryName}} {{category.ParentCategoryName}},
+            </span>
+            at best prices from your nearby store in India
+        </view-title>
+
+        <og-description>VBuy {{category.SubCategoryName}} {{category.ParentCategoryName}} , - </og-description>
+    </div>
+<div >
+    <div data-ng-hide="$root.cartMessage == ''" class="alert alert-success float-message" id="cart-success-alert">
+        <a href="#" class="close" ng-click="$root.cartMessage = ''">&times;</a>
+        <strong>Successfully </strong> added to your cart.
+    </div>
+    <div class="productfilterbar">
+        
+            <div class="col-md-12">
+
+                <h4 class="text-center">
+                    <span class="upperCase greenText" ng-bind="searchedCategoryName"></span><span> : </span>
+                    <span class="minorinfofont font11"> Showing  <strong ng-bind="products.data.length"></strong> of <strong ng-bind="products.totalCount"></strong> products</span>
+                </h4>
+            </div>
+
+            <div>
+                    <button class="btn btn-navbar navbar-toggle" type="button" data-target="#productfilterdiv" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="fontSize10">Filters</span>
+
+                    </button>
+            </div>
+         
+    </div>
+    <div data-ng-hide="message == ''" class="alert alert-info float-message">
+        <a href="#" class="close" ng-click="message = ''">&times;</a>
+        <strong>Info!</strong>  {{message}}
+    </div>
+
+    <br class="clear"/>
+    <div class="view">
+        <div>
+            {{$scope.app.error}}
+
+            <br class="clear" />
+
+            <div class="alert-info" ng-if="products.data.length<=0">There are no products matching your search criteria for the selected area. Please modify your filter condition or check in other areas.</div>
+            <div id="productListDiv">
+                <div class="col-xs-2 noPadding">
+                    <div class="col-xs-12 noPadding">
+                        <span class="multiselectfilterdiv padding-0 sort_by">
+                            <span class="padding-0" ng-dropdown-multiselect="" translation-texts="filterSortCustomTexts"
+                                  extra-settings="dropdownSortSettings" options="dropdownSortData"
+                                  events="dropdownBrandEvents"
+                                  selected-model="selectedFilter.SortBy"></span>
+                        </span>
+                    </div>
+                    <span class="headerlistdropdown">Browse</span>
+                    <div data-ng-repeat="menu in mainMenu.data |  filter:{ParentCategoryId: products.data[0].CategoryId}" ng-if="products.data && products.data.length>0">
+                        <div data-ng-repeat="submenu in menu.SubMenu | limitTo:15 |unique: 'CategoryGroupTag'">                       
+                            <a data-toggle="collapse" data-target="#{{submenu.CategoryGroupTag | formaturl}}" aria-expanded="false" aria-controls="{{submenu.CategoryGroupTag | formaturl}}">
+                                <strong class="saffronText" ng-if="(submenu.CategoryGroupTag.length>0)">  {{submenu.CategoryGroupTag}} <span class="caret"></span></strong>
+                                <strong class="saffronText" ng-if="!(submenu.CategoryGroupTag.length>0)"> Group (None)<span class="caret"></span></strong>
+                            </a>
+                            <div id="{{submenu.CategoryGroupTag | formaturl}}" class="collapse">
+                                <div data-ng-repeat="submenu in menu.SubMenu" data-ng-if="menu.SubMenu">
+                                    <span class="font11">
+                                        <a href="category/{{submenu.SubCategoryName | formaturl}}/{{submenu.SubCategoryId}}">
+                                            <span ng-bind="submenu.SubCategoryName"></span>
+                                        </a>
+                                        <br />
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br class="clear" />
+                    <span class="headerlistdropdown">Filter By</span>
+                    <div><a href="" ng-click="clearFilter()"><span class="glyphicon glyphicon-eye-close"></span>Reset Filters</a></div>
+                    <div class="col-xs-12 noPadding">
+                        <span class="input-smaller" style="margin-right:10px;">Price Rs.<span ng-bind="priceRange"></span></span>
+                        <input type="text" id="priceSlider" price-range-slider data-model="priceRange"
+                               data-slider-handle="" data-slider-orientation="Horizontal"
+                               data-slider-selection="after" data-slider-tooltip="hide">
+                    </div>
+                    <div id="productfilterdiv" class="navbar-collapse collapse noPadding">
+                        <div class="col-xs-12 noPadding productfilter">
+                            <div class="multiselectfilterdiv padding-0">
+                                <div class="col-xs-12 padding-0" ng-dropdown-multiselect="" translation-texts="filterBrandCustomTexts"
+                                     extra-settings="dropdownBrandSettings" options="searchFilter.data.Brand"
+                                     events="dropdownBrandEvents"
+                                     selected-model="selectedFilter.SelectedBrandList" checkboxes="true"></div>
+                            </div>
+
+                            <div class="multiselectfilterdiv padding-0 noPadding" data-ng-repeat="group in productFilterGroup">
+                                <div class="col-xs-12 padding-0" ng-dropdown-multiselect=""
+                                     translation-texts="{ buttonDefaultText: group[0].FilterParameter, uncheckAll: 'Clear'};"
+                                     extra-settings="dropdownProductFilterSettings"
+                                     options="group"
+                                     events="dropdownProductFilterEvents"
+                                     selected-model="group.SelectedProductFilter" checkboxes="true"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div data-ng-repeat="category in products.data | unique: 'SubCategoryId'">                        
+                        <div>
+                            <div>
+                                <div>
+                                    <div class="col-md-3 cardMedium" data-ng-repeat="product in products.data | filter:{SubCategoryId: category.SubCategoryId}">
+                                        <a href="product/{{product.Name | formaturl}}/{{product.ProductId}}" title="{{product.Name}}" class="productlink btn-link">                                          
+                                            <div>
+                                                <img class="col-xs-10" id="img_{{product.ProductId}}" src="{{imageUrlBaseSmall}}{{product.PictureName}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" alt="{{product.PictureName}}" />
+                                                <br class="clear"/>
+                                                <div>
+                                                    {{ product.Name | limitTo:45}}
+                                                </div>
+                                                <br class="clear" />
+                                            </div>
+                                            <div class="cardFooter">
+                                                <div>
+                                                    <b>  <span class="greenText">{{product.SpecialPrice | currency:"&#8377;"}}</span></b>
+                                                    <span class='strikePrice'>
+                                                        <span>{{product.Price | currency:"&#8377;"}}</span>
+                                                    </span>
+                                                </div>
+                                               
+                                            </div>
+                                        </a>
+                                        <div data-ng-if=!product.FlagWishlist class="col-xs-6 shortlistProduct" ng-click="addProductWishlist(product);">
+                                            <i class="icon-wishlist-empty-heart"><span>Wishlist</span></i>
+
+                                        </div>
+                                        <div class="col-xs-6 shortlistProduct" data-ng-if=product.FlagWishlist>
+                                            <i class="icon-wishlist-filled-heart"><span>Wishlisted</span></i>
+                                        </div>
+                                        <div class="col-xs-6 shortlistProduct" data-ng-if="$root.comparisonlistProductId.indexOf(product.ProductId) == -1" ng-click="addToProductComparison(product);">
+                                            <span class="glyphicon glyphicon-th-list compareicon"></span>
+                                            <i class="compareiconspan">Compare</i>
+                                        </div>
+                                        <div class="col-xs-6 shortlistProduct" data-ng-if="$root.comparisonlistProductId.indexOf(product.ProductId) > -1" ng-click="removeFromProductComparison(product);">
+                                            <span class="glyphicon glyphicon-remove-circle removeicon"></span>
+                                            <i class="compareiconspan">Compare</i>
+                                        </div>
+                                        <button class="btn btn-block btn-success margin-2" ng-show="(product.EnableBuy && product.FlagShowBuy)"
+                                                ng-click="addProductToCart(product, product.Branch, product.BranchName
+                                                    ,product.Price, product.SpecialPrice, product.AdditionalShippingCharge, product.DeliveryTime)">
+                                            <span class="glyphicon glyphicon-shopping-cart">  </span>Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                                <br class="clear" />
+                            </div>
+                        </div>
+                </div>
+                    <div class="text-center">
+                        <button class="btn-loadMore" href="#"
+                                ng-show="showLoadMore"
+                                ng-click="loadMore()">                           
+                            ........Show <span ng-bind="products.totalCount - products.data.length"></span> More.......
+                        </button>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>

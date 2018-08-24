@@ -1,0 +1,75 @@
+﻿<!--////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<view-title>Online Shopping Mall of your Trusted Local Retailers - Top Offers | VBuy </view-title>
+<og-description>VBuy Offers from your nearby local businesses</og-description>
+<og-image>{{imageUrlBase}}VBuy_Image.png</og-image>
+
+<div class="container view containerbgcolor">
+    <!--<h1 class="storeHeader">TOP OFFERS</h1>-->
+    <hr />
+
+    <div class="col-xs-12 alignCenter">
+        <div>
+            <img class="img-responsive" src="{{imageUrlBase}}{{homeFolder}}/TopOffers.jpg" alt="TOP OFFERS" />
+        </div>
+    </div>
+
+    <hr />
+
+    <br class="clear" />
+    {{$scope.app.error}}
+    <span ng-bind="messageOffers"></span>
+    <div data-ng-repeat="category in products.data | unique: 'SubCategoryName' ">
+        <div class="sectionHome">
+            <header class="homeHeaders">
+                <strong>  {{category.SubCategoryName}}</strong>
+            </header>
+            <div class="featuredproducts">
+                <div class="col-md-3 col-xs-6 cardMedium" data-ng-repeat="product in products.data | orderBy:'-StoresCount' | filter:{SubCategoryName: category.SubCategoryName}">
+                    <a href="product/{{product.Name | formaturl}}/{{product.ProductId}}" title="{{product.Name}}" class="productlink btn-link">
+                        <div>
+                            <div data-ng-if=!product.FlagWishlist class="shortlistProduct" ng-click="addProductWishlist(product);">
+                                <i class="glyphicon glyphicon-heart-empty font20 btnalignRight"></i>
+                            </div>
+                            <div class="shortlistProduct" data-ng-if=product.FlagWishlist>
+                                <i class="glyphicon glyphicon-heart font20 btnalignRight"></i>
+                            </div>
+                            <img id="img_{{product.ProductId}}" class="col-md-10 col-xs-10" src="{{imageUrlBaseSmall}}{{product.PictureName}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" alt="{{product.PictureName}}" />
+
+                            <div>
+                                <div class="round-button-offer" title="Offer %"> {{((1-(product.SpecialPrice / product.Price ))*100) | number :0}}%</div>
+                            </div>
+                            <br class="clear" />
+                            <div>
+                                {{ product.Name | limitTo:45}}
+                            </div>
+                        </div>
+                        <br class="clear" />
+                        <div>
+                            <b>  <span class="greenText">{{product.SpecialPrice | currency:"&#8377;"}}</span></b>
+                            <span class='strikePrice'>
+                                <span>{{product.Price | currency:"&#8377;"}}</span>
+                            </span>
+                        </div>
+
+                    </a>
+                    <button class="btn btn-block btn-success margin-2"
+                            ng-click="addProductToCart(product, product.Branch, product.BranchName
+                                                    ,product.Price, product.SpecialPrice, 0, 2)">
+                        <span class="glyphicon glyphicon-shopping-cart">  </span>Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <br clear="all" />
+    </div>
+</div>

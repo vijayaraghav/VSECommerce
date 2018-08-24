@@ -1,0 +1,925 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\LocalRepository\VBuyStaging</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="app/app.js">
+      <publishTime>08/18/2015 02:37:02</publishTime>
+    </File>
+    <File Include="app/controllers/appcontroller.min.js">
+      <publishTime>01/05/2015 15:37:31</publishTime>
+    </File>
+    <File Include="app/controllers/cartController.js">
+      <publishTime>08/18/2015 18:15:43</publishTime>
+    </File>
+    <File Include="app/controllers/checkoutController.js">
+      <publishTime>08/22/2015 13:17:08</publishTime>
+    </File>
+    <File Include="app/controllers/controllers.js">
+      <publishTime>08/18/2015 18:12:45</publishTime>
+    </File>
+    <File Include="app/controllers/loginController.js">
+      <publishTime>08/18/2015 18:14:13</publishTime>
+    </File>
+    <File Include="app/controllers/orderTrackingController.js">
+      <publishTime>08/18/2015 16:10:08</publishTime>
+    </File>
+    <File Include="app/controllers/productController.js">
+      <publishTime>08/19/2015 19:11:29</publishTime>
+    </File>
+    <File Include="app/controllers/productlistController.js">
+      <publishTime>08/17/2015 18:40:14</publishTime>
+    </File>
+    <File Include="app/controllers/resetPasswordController.js">
+      <publishTime>02/08/2015 13:14:48</publishTime>
+    </File>
+    <File Include="app/controllers/searchProductsController.js">
+      <publishTime>08/17/2015 18:40:25</publishTime>
+    </File>
+    <File Include="app/controllers/storesController.js">
+      <publishTime>08/18/2015 00:47:54</publishTime>
+    </File>
+    <File Include="app/controllers/userWishlistController.js">
+      <publishTime>05/08/2015 20:16:10</publishTime>
+    </File>
+    <File Include="app/directives/animatedView.js">
+      <publishTime>09/04/2014 23:39:17</publishTime>
+    </File>
+    <File Include="app/directives/ngElevateZoom.js">
+      <publishTime>08/02/2015 00:44:31</publishTime>
+    </File>
+    <File Include="app/directives/ngVBuyRating.js">
+      <publishTime>08/02/2015 22:25:43</publishTime>
+    </File>
+    <File Include="app/partials/Cart.html">
+      <publishTime>08/18/2015 00:58:59</publishTime>
+    </File>
+    <File Include="app/partials/CartRegistration.html">
+      <publishTime>01/21/2015 19:17:34</publishTime>
+    </File>
+    <File Include="app/partials/category.html">
+      <publishTime>12/12/2014 10:24:19</publishTime>
+    </File>
+    <File Include="app/partials/ChangePassword.html">
+      <publishTime>08/09/2015 11:54:16</publishTime>
+    </File>
+    <File Include="app/partials/checkout.html">
+      <publishTime>08/22/2015 02:32:07</publishTime>
+    </File>
+    <File Include="app/partials/Compare.html">
+      <publishTime>08/18/2015 00:42:39</publishTime>
+    </File>
+    <File Include="app/partials/featuredProducts.html">
+      <publishTime>08/09/2015 11:55:12</publishTime>
+    </File>
+    <File Include="app/partials/ForgotPassword.html">
+      <publishTime>08/09/2015 11:55:27</publishTime>
+    </File>
+    <File Include="app/partials/login.html">
+      <publishTime>08/09/2015 11:58:32</publishTime>
+    </File>
+    <File Include="app/partials/MyAccount.html">
+      <publishTime>08/09/2015 11:59:00</publishTime>
+    </File>
+    <File Include="app/partials/offers.html">
+      <publishTime>08/09/2015 12:02:29</publishTime>
+    </File>
+    <File Include="app/partials/OrderConfirmation.html">
+      <publishTime>08/15/2015 16:42:36</publishTime>
+    </File>
+    <File Include="app/partials/orderTracking.html">
+      <publishTime>08/23/2015 13:01:19</publishTime>
+    </File>
+    <File Include="app/partials/orderTransactionFailed.html">
+      <publishTime>08/09/2015 11:59:54</publishTime>
+    </File>
+    <File Include="app/partials/product.html">
+      <publishTime>08/22/2015 02:30:40</publishTime>
+    </File>
+    <File Include="app/partials/products.html">
+      <publishTime>08/16/2015 10:52:34</publishTime>
+    </File>
+    <File Include="app/partials/recentOrders.html">
+      <publishTime>07/23/2015 21:09:10</publishTime>
+    </File>
+    <File Include="app/partials/Register.html">
+      <publishTime>08/09/2015 12:01:07</publishTime>
+    </File>
+    <File Include="app/partials/ResetPassword.html">
+      <publishTime>08/09/2015 12:01:07</publishTime>
+    </File>
+    <File Include="app/partials/search.html">
+      <publishTime>08/13/2015 18:25:04</publishTime>
+    </File>
+    <File Include="app/partials/ShoppingCart.html">
+      <publishTime>03/03/2015 16:39:27</publishTime>
+    </File>
+    <File Include="app/partials/stores.html">
+      <publishTime>08/09/2015 12:01:26</publishTime>
+    </File>
+    <File Include="app/partials/userWishlist.html">
+      <publishTime>08/09/2015 12:01:38</publishTime>
+    </File>
+    <File Include="app/services/appServices.min.js">
+      <publishTime>08/17/2015 14:54:17</publishTime>
+    </File>
+    <File Include="app/services/authInterceptorService.js">
+      <publishTime>08/23/2015 10:28:09</publishTime>
+    </File>
+    <File Include="app/services/authService.js">
+      <publishTime>08/23/2015 10:30:50</publishTime>
+    </File>
+    <File Include="app/services/cartService.js">
+      <publishTime>08/15/2015 02:10:52</publishTime>
+    </File>
+    <File Include="app/services/categoryService.js">
+      <publishTime>08/27/2014 18:31:45</publishTime>
+    </File>
+    <File Include="app/services/landingService.js">
+      <publishTime>05/11/2015 17:09:46</publishTime>
+    </File>
+    <File Include="app/services/mapService.js">
+      <publishTime>02/07/2015 21:12:46</publishTime>
+    </File>
+    <File Include="app/services/orderTrackingService.js">
+      <publishTime>07/23/2015 16:33:23</publishTime>
+    </File>
+    <File Include="app/services/passwordService.js">
+      <publishTime>02/08/2015 12:29:00</publishTime>
+    </File>
+    <File Include="app/services/productService.js">
+      <publishTime>08/06/2015 21:19:41</publishTime>
+    </File>
+    <File Include="app/services/storesService.js">
+      <publishTime>08/07/2015 15:36:18</publishTime>
+    </File>
+    <File Include="app/services/userActionService.js">
+      <publishTime>04/10/2015 17:49:06</publishTime>
+    </File>
+    <File Include="app_retailer/controllers/controllers.js">
+      <publishTime>03/03/2015 17:35:48</publishTime>
+    </File>
+    <File Include="app_retailer/controllers/forgotPasswordController.js">
+      <publishTime>01/02/2015 19:48:35</publishTime>
+    </File>
+    <File Include="app_retailer/controllers/loginController.js">
+      <publishTime>04/25/2015 18:32:37</publishTime>
+    </File>
+    <File Include="app_retailer/controllers/ordersController.js">
+      <publishTime>08/04/2015 15:00:50</publishTime>
+    </File>
+    <File Include="app_retailer/controllers/resetPasswordController.js">
+      <publishTime>01/02/2015 23:28:17</publishTime>
+    </File>
+    <File Include="app_retailer/controllers/retailercontroller.min.js">
+      <publishTime>02/15/2015 16:53:30</publishTime>
+    </File>
+    <File Include="app_retailer/controllers/storesController.js">
+      <publishTime>08/17/2015 13:31:43</publishTime>
+    </File>
+    <File Include="app_retailer/directives/directives.js">
+      <publishTime>01/02/2015 23:24:56</publishTime>
+    </File>
+    <File Include="app_retailer/partials/ChangePassword.html">
+      <publishTime>02/28/2015 00:24:08</publishTime>
+    </File>
+    <File Include="app_retailer/partials/dashboard.html">
+      <publishTime>07/21/2015 12:04:40</publishTime>
+    </File>
+    <File Include="app_retailer/partials/defaultSettings.html">
+      <publishTime>02/27/2015 23:40:12</publishTime>
+    </File>
+    <File Include="app_retailer/partials/ForgotPassword.html">
+      <publishTime>02/27/2015 23:40:56</publishTime>
+    </File>
+    <File Include="app_retailer/partials/login.html">
+      <publishTime>03/04/2015 21:48:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/manageBranches.html">
+      <publishTime>09/26/2014 01:05:46</publishTime>
+    </File>
+    <File Include="app_retailer/partials/managePricing.html">
+      <publishTime>08/04/2015 14:49:56</publishTime>
+    </File>
+    <File Include="app_retailer/partials/manageProducts.html">
+      <publishTime>08/19/2015 21:50:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/MyDetails.html">
+      <publishTime>02/28/2015 00:36:41</publishTime>
+    </File>
+    <File Include="app_retailer/partials/myInbox.html">
+      <publishTime>12/30/2014 19:48:55</publishTime>
+    </File>
+    <File Include="app_retailer/partials/myOrders.html">
+      <publishTime>07/21/2015 16:24:42</publishTime>
+    </File>
+    <File Include="app_retailer/partials/mySettings.html">
+      <publishTime>09/26/2014 01:06:23</publishTime>
+    </File>
+    <File Include="app_retailer/partials/newProduct.html">
+      <publishTime>08/17/2015 13:29:50</publishTime>
+    </File>
+    <File Include="app_retailer/partials/OrderSummary.html">
+      <publishTime>07/16/2015 10:40:04</publishTime>
+    </File>
+    <File Include="app_retailer/partials/pendingOrders.html">
+      <publishTime>08/04/2015 14:49:18</publishTime>
+    </File>
+    <File Include="app_retailer/partials/ResetPassword.html">
+      <publishTime>03/04/2015 21:49:37</publishTime>
+    </File>
+    <File Include="app_retailer/partials/retailerHome.html">
+      <publishTime>08/03/2015 17:12:14</publishTime>
+    </File>
+    <File Include="app_retailer/partials/retailerRegister.html">
+      <publishTime>03/05/2015 00:04:22</publishTime>
+    </File>
+    <File Include="app_retailer/partials/userSettings.html">
+      <publishTime>09/26/2014 01:15:02</publishTime>
+    </File>
+    <File Include="app_retailer/retailerapp.js">
+      <publishTime>07/23/2015 13:23:34</publishTime>
+    </File>
+    <File Include="app_retailer/services/authInterceptorService.js">
+      <publishTime>08/15/2015 14:27:50</publishTime>
+    </File>
+    <File Include="app_retailer/services/authService.js">
+      <publishTime>03/06/2015 00:31:49</publishTime>
+    </File>
+    <File Include="app_retailer/services/ordersService.js">
+      <publishTime>07/26/2015 14:00:32</publishTime>
+    </File>
+    <File Include="app_retailer/services/passwordService.js">
+      <publishTime>02/08/2015 12:20:02</publishTime>
+    </File>
+    <File Include="app_retailer/services/retailerService.js">
+      <publishTime>09/10/2014 13:35:22</publishTime>
+    </File>
+    <File Include="app_retailer/services/retailerServices.min.js">
+      <publishTime>02/15/2015 16:53:42</publishTime>
+    </File>
+    <File Include="app_retailer/services/storesService.js">
+      <publishTime>07/29/2015 20:37:38</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>08/03/2014 20:53:26</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>08/23/2015 13:11:04</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>08/23/2015 13:11:04</publishTime>
+    </File>
+    <File Include="bin/Autofac.dll">
+      <publishTime>09/08/2014 15:26:15</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.Mvc.dll">
+      <publishTime>09/08/2014 22:28:06</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.WebApi.dll">
+      <publishTime>09/08/2014 21:42:45</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>08/09/2014 12:18:46</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.AspNet.dll">
+      <publishTime>08/03/2014 23:22:16</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.Core.dll">
+      <publishTime>08/03/2014 23:16:19</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.Consumer.dll">
+      <publishTime>08/03/2014 23:22:16</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.dll">
+      <publishTime>08/03/2014 23:22:16</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.dll">
+      <publishTime>08/03/2014 23:22:16</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.RelyingParty.dll">
+      <publishTime>08/03/2014 23:22:16</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>08/04/2014 00:54:42</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>08/04/2014 00:54:42</publishTime>
+    </File>
+    <File Include="bin/Facebook.dll">
+      <publishTime>02/05/2015 23:53:19</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.Auth.dll">
+      <publishTime>02/10/2015 18:18:02</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.Auth.PlatformServices.dll">
+      <publishTime>02/10/2015 18:18:02</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.Core.dll">
+      <publishTime>02/10/2015 17:40:20</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.dll">
+      <publishTime>02/10/2015 17:40:21</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.Oauth2.v2.dll">
+      <publishTime>02/10/2015 18:18:02</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.PlatformServices.dll">
+      <publishTime>02/10/2015 17:40:21</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.Plus.v1.dll">
+      <publishTime>02/10/2015 21:18:06</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>02/10/2015 17:40:21</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>09/08/2014 16:16:03</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>09/08/2014 16:16:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Cors.dll">
+      <publishTime>09/08/2014 16:51:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>09/08/2014 16:49:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>09/09/2014 14:46:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>09/08/2014 16:50:45</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>09/08/2014 16:51:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Threading.Tasks.dll">
+      <publishTime>02/10/2015 17:40:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Threading.Tasks.Extensions.Desktop.dll">
+      <publishTime>02/10/2015 17:40:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Threading.Tasks.Extensions.dll">
+      <publishTime>02/10/2015 17:40:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>08/02/2014 22:18:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.WebPages.OAuth.dll">
+      <publishTime>07/09/2013 11:05:10</publishTime>
+    </File>
+    <File Include="bin/Mono.Math.dll">
+      <publishTime>08/03/2014 23:22:16</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>02/10/2015 17:40:20</publishTime>
+    </File>
+    <File Include="bin/Org.Mentalis.Security.Cryptography.dll">
+      <publishTime>08/03/2014 23:22:16</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>09/08/2014 15:43:59</publishTime>
+    </File>
+    <File Include="bin/PagedList.dll">
+      <publishTime>07/25/2015 15:02:10</publishTime>
+    </File>
+    <File Include="bin/Prerender.io.dll">
+      <publishTime>03/11/2015 22:50:05</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Extensions.dll">
+      <publishTime>09/08/2014 15:31:00</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>09/08/2014 13:50:16</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Primitives.dll">
+      <publishTime>09/08/2014 15:31:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>09/09/2014 00:06:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>09/08/2014 15:03:47</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Cors.dll">
+      <publishTime>09/09/2014 00:08:47</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>09/08/2014 13:50:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Owin.dll">
+      <publishTime>09/08/2014 15:43:59</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>09/09/2014 02:16:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>09/08/2014 15:25:41</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>08/03/2014 23:09:43</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>09/08/2014 15:03:47</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>09/08/2014 15:03:47</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>09/08/2014 15:03:47</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>09/08/2014 15:03:47</publishTime>
+    </File>
+    <File Include="bin/VOnline.VBuy.Domain.dll">
+      <publishTime>08/23/2015 13:10:58</publishTime>
+    </File>
+    <File Include="bin/VOnline.VBuy.Persistence.dll">
+      <publishTime>08/23/2015 12:50:47</publishTime>
+    </File>
+    <File Include="bin/VOnline.VBuy.Utilities.dll">
+      <publishTime>08/23/2015 10:32:17</publishTime>
+    </File>
+    <File Include="bin/VOnline.VBuy.Web.dll">
+      <publishTime>08/23/2015 13:10:59</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>08/03/2014 20:53:27</publishTime>
+    </File>
+    <File Include="bin/Zlib.Portable.dll">
+      <publishTime>02/10/2015 17:40:21</publishTime>
+    </File>
+    <File Include="Content/app/css/app.min.css">
+      <publishTime>02/15/2015 17:14:48</publishTime>
+    </File>
+    <File Include="Content/app/css/bootstrap-responsive.css">
+      <publishTime>08/09/2014 20:25:48</publishTime>
+    </File>
+    <File Include="Content/app/css/bootstrap-responsive.min.css">
+      <publishTime>11/18/2014 20:38:18</publishTime>
+    </File>
+    <File Include="Content/app/css/bootstrap-social.css">
+      <publishTime>02/26/2015 11:17:37</publishTime>
+    </File>
+    <File Include="Content/app/css/bootstrap-theme.css">
+      <publishTime>09/04/2014 01:01:42</publishTime>
+    </File>
+    <File Include="Content/app/css/bootstrap-theme.css.map">
+      <publishTime>09/04/2014 01:01:42</publishTime>
+    </File>
+    <File Include="Content/app/css/bootstrap-theme.min.css">
+      <publishTime>09/04/2014 01:01:42</publishTime>
+    </File>
+    <File Include="Content/app/css/bootstrap.css">
+      <publishTime>01/19/2015 09:03:22</publishTime>
+    </File>
+    <File Include="Content/app/css/bootstrap.css.map">
+      <publishTime>09/04/2014 01:01:42</publishTime>
+    </File>
+    <File Include="Content/app/css/bootstrap.min.css">
+      <publishTime>10/01/2014 15:39:14</publishTime>
+    </File>
+    <File Include="Content/app/css/cardstyle.css">
+      <publishTime>08/07/2015 19:54:55</publishTime>
+    </File>
+    <File Include="Content/app/css/flexslider.css">
+      <publishTime>10/17/2014 08:31:03</publishTime>
+    </File>
+    <File Include="Content/app/css/font-awesome.css">
+      <publishTime>01/26/2015 00:19:18</publishTime>
+    </File>
+    <File Include="Content/app/css/gridstyle.css">
+      <publishTime>09/27/2014 19:35:42</publishTime>
+    </File>
+    <File Include="Content/app/css/images/bx_loader.gif">
+      <publishTime>08/31/2013 23:29:46</publishTime>
+    </File>
+    <File Include="Content/app/css/images/controls.png">
+      <publishTime>08/31/2013 23:29:46</publishTime>
+    </File>
+    <File Include="Content/app/css/jquery.bxslider.css">
+      <publishTime>10/16/2014 01:51:40</publishTime>
+    </File>
+    <File Include="Content/app/css/login.css">
+      <publishTime>02/27/2015 23:18:41</publishTime>
+    </File>
+    <File Include="Content/app/css/menustyle.css">
+      <publishTime>08/02/2015 23:02:06</publishTime>
+    </File>
+    <File Include="Content/app/css/Orders.css">
+      <publishTime>08/04/2015 14:29:20</publishTime>
+    </File>
+    <File Include="Content/app/css/others.css">
+      <publishTime>08/01/2015 07:33:07</publishTime>
+    </File>
+    <File Include="Content/app/css/rating.css">
+      <publishTime>12/04/2014 18:52:01</publishTime>
+    </File>
+    <File Include="Content/app/css/styles.css">
+      <publishTime>08/16/2015 16:05:42</publishTime>
+    </File>
+    <File Include="Content/app/fonts/fontawesome-webfont.eot">
+      <publishTime>02/26/2015 01:08:55</publishTime>
+    </File>
+    <File Include="Content/app/fonts/fontawesome-webfont.svg">
+      <publishTime>02/26/2015 01:08:55</publishTime>
+    </File>
+    <File Include="Content/app/fonts/fontawesome-webfont.ttf">
+      <publishTime>02/26/2015 01:08:55</publishTime>
+    </File>
+    <File Include="Content/app/fonts/fontawesome-webfont.woff">
+      <publishTime>02/26/2015 01:08:55</publishTime>
+    </File>
+    <File Include="Content/app/fonts/fontawesome-webfont.woff2">
+      <publishTime>02/26/2015 01:08:55</publishTime>
+    </File>
+    <File Include="Content/app/fonts/FontAwesome.otf">
+      <publishTime>02/26/2015 01:08:55</publishTime>
+    </File>
+    <File Include="Content/app/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>09/04/2014 01:01:42</publishTime>
+    </File>
+    <File Include="Content/app/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>09/04/2014 01:01:42</publishTime>
+    </File>
+    <File Include="Content/app/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>09/04/2014 01:01:42</publishTime>
+    </File>
+    <File Include="Content/app/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>09/04/2014 01:01:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>11/15/2014 00:12:25</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>11/15/2014 00:12:25</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>11/15/2014 00:12:25</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>07/29/2015 00:56:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>11/15/2014 00:12:25</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>07/29/2015 00:56:04</publishTime>
+    </File>
+    <File Include="Content/images/Directions.png">
+      <publishTime>12/03/2014 17:44:06</publishTime>
+    </File>
+    <File Include="Content/images/glyphicons-halflings-white.png">
+      <publishTime>08/21/2012 15:24:26</publishTime>
+    </File>
+    <File Include="Content/images/glyphicons-halflings.png">
+      <publishTime>08/21/2012 15:24:26</publishTime>
+    </File>
+    <File Include="Content/images/glyphicons-white.png">
+      <publishTime>08/21/2012 15:24:26</publishTime>
+    </File>
+    <File Include="Content/images/glyphicons.png">
+      <publishTime>08/21/2012 15:24:26</publishTime>
+    </File>
+    <File Include="Content/images/googlestore.png">
+      <publishTime>06/04/2015 09:50:48</publishTime>
+    </File>
+    <File Include="Content/images/icon_wishlist_cancel.png">
+      <publishTime>02/03/2015 16:55:35</publishTime>
+    </File>
+    <File Include="Content/images/icon_wishlist_Small.png">
+      <publishTime>02/01/2015 12:02:13</publishTime>
+    </File>
+    <File Include="Content/images/icon_wishlist_Small_Filled.png">
+      <publishTime>02/01/2015 13:35:48</publishTime>
+    </File>
+    <File Include="Content/images/locateme.jpg">
+      <publishTime>09/03/2014 22:09:37</publishTime>
+    </File>
+    <File Include="Content/images/RetailerApp/retailerLogIn.jpg">
+      <publishTime>09/25/2014 18:29:18</publishTime>
+    </File>
+    <File Include="Content/images/RetailerApp/retailer_login.jpg">
+      <publishTime>09/25/2014 18:35:52</publishTime>
+    </File>
+    <File Include="Content/images/RetailerApp/specialOffer.jpg">
+      <publishTime>09/25/2014 18:29:00</publishTime>
+    </File>
+    <File Include="Content/images/VBuyIco_32.png">
+      <publishTime>10/30/2014 15:29:43</publishTime>
+    </File>
+    <File Include="Content/images/VBuyLogo.png">
+      <publishTime>10/20/2014 18:49:16</publishTime>
+    </File>
+    <File Include="Content/images/vbuy_loading.gif">
+      <publishTime>12/19/2014 21:06:06</publishTime>
+    </File>
+    <File Include="Content/images/VBuy_map32.png">
+      <publishTime>10/30/2014 18:32:45</publishTime>
+    </File>
+    <File Include="Content/loading-bar.css">
+      <publishTime>12/07/2014 12:45:20</publishTime>
+    </File>
+    <File Include="Content/loading-bar.min.css">
+      <publishTime>12/07/2014 12:45:20</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>07/29/2015 00:56:02</publishTime>
+    </File>
+    <File Include="EmailTemplates/ForgotPassword.txt">
+      <publishTime>08/16/2015 15:52:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/ProductReplyMail.txt">
+      <publishTime>08/16/2015 15:52:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/ProductReplySMS.txt">
+      <publishTime>04/01/2015 20:40:37</publishTime>
+    </File>
+    <File Include="EmailTemplates/ProductRequestMail.txt">
+      <publishTime>08/16/2015 15:52:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/ProductRequestSMS.txt">
+      <publishTime>03/30/2015 20:28:22</publishTime>
+    </File>
+    <File Include="EmailTemplates/RetailerRegistration.txt">
+      <publishTime>08/16/2015 15:52:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/VBuyLogo_150.png">
+      <publishTime>01/04/2015 13:36:30</publishTime>
+    </File>
+    <File Include="EmailTemplates/WelcomeMail.txt">
+      <publishTime>08/16/2015 15:52:34</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>07/29/2015 00:56:04</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>07/29/2015 00:56:04</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>07/29/2015 00:56:04</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>07/29/2015 00:56:04</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>08/02/2014 22:25:09</publishTime>
+    </File>
+    <File Include="Home.html">
+      <publishTime>08/17/2015 21:47:24</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>07/29/2015 00:56:07</publishTime>
+    </File>
+    <File Include="Payment.aspx">
+      <publishTime>07/29/2015 00:18:31</publishTime>
+    </File>
+    <File Include="Payment.html">
+      <publishTime>07/29/2015 00:18:31</publishTime>
+    </File>
+    <File Include="PayUResponseHandling.aspx">
+      <publishTime>08/23/2015 09:27:41</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>08/23/2015 13:11:00</publishTime>
+    </File>
+    <File Include="Retailer.html">
+      <publishTime>08/18/2015 11:48:58</publishTime>
+    </File>
+    <File Include="Scripts/angular-animate.js">
+      <publishTime>11/14/2014 17:51:51</publishTime>
+    </File>
+    <File Include="Scripts/angular-animate.min.js">
+      <publishTime>11/14/2014 17:51:51</publishTime>
+    </File>
+    <File Include="Scripts/angular-animate.min.js.map">
+      <publishTime>11/14/2014 17:51:51</publishTime>
+    </File>
+    <File Include="Scripts/angular-cookies.js">
+      <publishTime>01/03/2015 02:17:45</publishTime>
+    </File>
+    <File Include="Scripts/angular-cookies.min.js">
+      <publishTime>01/03/2015 02:17:52</publishTime>
+    </File>
+    <File Include="Scripts/angular-facebook.js">
+      <publishTime>02/05/2015 17:33:17</publishTime>
+    </File>
+    <File Include="Scripts/angular-file-upload.js">
+      <publishTime>01/08/2015 02:26:26</publishTime>
+    </File>
+    <File Include="Scripts/angular-file-upload.min.js">
+      <publishTime>11/15/2014 23:48:40</publishTime>
+    </File>
+    <File Include="Scripts/angular-file-upload.min.map">
+      <publishTime>11/15/2014 23:48:41</publishTime>
+    </File>
+    <File Include="Scripts/angular-local-storage.min.js">
+      <publishTime>09/09/2014 13:08:44</publishTime>
+    </File>
+    <File Include="Scripts/angular-mocks.js">
+      <publishTime>11/14/2014 17:51:31</publishTime>
+    </File>
+    <File Include="Scripts/angular-route.js">
+      <publishTime>11/14/2014 17:51:35</publishTime>
+    </File>
+    <File Include="Scripts/angular-route.min.js">
+      <publishTime>11/14/2014 17:51:35</publishTime>
+    </File>
+    <File Include="Scripts/angular-route.min.js.map">
+      <publishTime>11/14/2014 17:51:35</publishTime>
+    </File>
+    <File Include="Scripts/angular-sanitize.js">
+      <publishTime>11/14/2014 17:51:56</publishTime>
+    </File>
+    <File Include="Scripts/angular-sanitize.min.js">
+      <publishTime>11/14/2014 17:51:56</publishTime>
+    </File>
+    <File Include="Scripts/angular-sanitize.min.js.map">
+      <publishTime>11/14/2014 17:51:56</publishTime>
+    </File>
+    <File Include="Scripts/angular-strap.js">
+      <publishTime>11/14/2014 22:32:27</publishTime>
+    </File>
+    <File Include="Scripts/angular-strap.min.js">
+      <publishTime>11/18/2014 07:02:55</publishTime>
+    </File>
+    <File Include="Scripts/angular-strap.min.js.map">
+      <publishTime>11/14/2014 17:53:03</publishTime>
+    </File>
+    <File Include="Scripts/angular-strap.tpl.js">
+      <publishTime>11/18/2014 07:04:43</publishTime>
+    </File>
+    <File Include="Scripts/angular-strap.tpl.min.js">
+      <publishTime>11/18/2014 07:03:53</publishTime>
+    </File>
+    <File Include="Scripts/angular.js">
+      <publishTime>08/13/2015 16:27:26</publishTime>
+    </File>
+    <File Include="Scripts/angular.min.js">
+      <publishTime>01/05/2015 15:41:51</publishTime>
+    </File>
+    <File Include="Scripts/angular.min.js.map">
+      <publishTime>11/14/2014 17:51:32</publishTime>
+    </File>
+    <File Include="Scripts/angularjs-dropdown-multiselect.js">
+      <publishTime>08/13/2015 19:03:59</publishTime>
+    </File>
+    <File Include="Scripts/angularjs-viewhead.js">
+      <publishTime>03/19/2015 15:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-slider.js">
+      <publishTime>01/17/2015 15:07:12</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>07/29/2015 00:56:04</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>01/19/2015 09:03:22</publishTime>
+    </File>
+    <File Include="Scripts/google-plus-signin.js">
+      <publishTime>02/11/2015 16:17:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>07/29/2015 00:56:05</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>07/29/2015 00:56:05</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>07/29/2015 00:56:05</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.0.js">
+      <publishTime>11/15/2014 00:12:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.0.min.js">
+      <publishTime>11/15/2014 00:12:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.0.min.map">
+      <publishTime>11/15/2014 00:12:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery.bxslider.js">
+      <publishTime>10/17/2014 01:04:45</publishTime>
+    </File>
+    <File Include="Scripts/jquery.bxslider.min.js">
+      <publishTime>04/05/2014 00:14:38</publishTime>
+    </File>
+    <File Include="Scripts/jquery.elevateZoom-3.0.8.min.js">
+      <publishTime>12/01/2014 22:49:29</publishTime>
+    </File>
+    <File Include="Scripts/jquery.elevatezoom.js">
+      <publishTime>01/21/2015 18:38:41</publishTime>
+    </File>
+    <File Include="Scripts/jquery.min.js">
+      <publishTime>11/13/2014 16:53:02</publishTime>
+    </File>
+    <File Include="Scripts/loading-bar.js">
+      <publishTime>12/07/2014 12:45:20</publishTime>
+    </File>
+    <File Include="Scripts/loading-bar.min.js">
+      <publishTime>12/07/2014 12:45:20</publishTime>
+    </File>
+    <File Include="Scripts/lodash.min.js">
+      <publishTime>05/17/2015 23:52:27</publishTime>
+    </File>
+    <File Include="Scripts/MergedRetailerscripts.js">
+      <publishTime>07/26/2015 18:17:32</publishTime>
+    </File>
+    <File Include="Scripts/Mergedscripts.js">
+      <publishTime>03/19/2015 01:17:44</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>07/29/2015 00:56:07</publishTime>
+    </File>
+    <File Include="Scripts/ng-breadcrumbs.vbuy.js">
+      <publishTime>04/24/2015 02:12:37</publishTime>
+    </File>
+    <File Include="Scripts/ng-table.js">
+      <publishTime>08/04/2015 18:39:30</publishTime>
+    </File>
+    <File Include="Scripts/npm.js">
+      <publishTime>11/15/2014 00:12:25</publishTime>
+    </File>
+    <File Include="Scripts/StyledMarker.js">
+      <publishTime>06/27/2015 12:31:34</publishTime>
+    </File>
+    <File Include="Scripts/VBuyElementFlyer.js">
+      <publishTime>02/01/2015 17:49:16</publishTime>
+    </File>
+    <File Include="shared/PolicyPrivacy.html">
+      <publishTime>04/10/2015 16:27:09</publishTime>
+    </File>
+    <File Include="shared/PolicySeller.html">
+      <publishTime>04/10/2015 16:44:52</publishTime>
+    </File>
+    <File Include="shared/PolicyTerms.html">
+      <publishTime>04/10/2015 16:41:13</publishTime>
+    </File>
+    <File Include="slick/ajax-loader.gif">
+      <publishTime>11/11/2014 15:05:28</publishTime>
+    </File>
+    <File Include="slick/config.rb">
+      <publishTime>11/11/2014 15:05:28</publishTime>
+    </File>
+    <File Include="slick/fonts/slick.eot">
+      <publishTime>11/11/2014 15:05:28</publishTime>
+    </File>
+    <File Include="slick/fonts/slick.svg">
+      <publishTime>11/11/2014 15:05:28</publishTime>
+    </File>
+    <File Include="slick/fonts/slick.ttf">
+      <publishTime>11/11/2014 15:05:28</publishTime>
+    </File>
+    <File Include="slick/fonts/slick.woff">
+      <publishTime>11/11/2014 15:05:28</publishTime>
+    </File>
+    <File Include="slick/slick.css">
+      <publishTime>11/11/2014 15:05:28</publishTime>
+    </File>
+    <File Include="slick/slick.css.map">
+      <publishTime>11/11/2014 15:05:28</publishTime>
+    </File>
+    <File Include="slick/slick.js">
+      <publishTime>11/11/2014 15:05:28</publishTime>
+    </File>
+    <File Include="slick/slick.min.js">
+      <publishTime>11/11/2014 15:05:28</publishTime>
+    </File>
+    <File Include="slick/slick.scss">
+      <publishTime>11/11/2014 15:05:28</publishTime>
+    </File>
+    <File Include="VBuyLogo_150.png">
+      <publishTime>01/04/2015 13:36:51</publishTime>
+    </File>
+    <File Include="Views/Admin/Index.cshtml">
+      <publishTime>08/09/2014 14:49:32</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>08/09/2014 01:22:34</publishTime>
+    </File>
+    <File Include="Views/PaymentGatewayReturn/Index.cshtml">
+      <publishTime>07/29/2015 00:56:23</publishTime>
+    </File>
+    <File Include="Views/PaymentGatewayReturn/Result.cshtml">
+      <publishTime>07/29/2015 01:41:03</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>07/29/2015 00:56:02</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>11/16/2014 22:11:52</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>07/29/2015 00:56:01</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/05/2015 14:05:13</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

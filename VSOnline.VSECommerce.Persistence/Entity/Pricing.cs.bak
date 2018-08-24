@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace VOnline.VBuy.Persistence.Entity
+{   
+    public class Pricing
+    {
+        public int PricingId { get; set; }
+        public int Product { get; set; }
+        public int Store { get; set; }
+        public int Branch { get; set; }
+        public bool CallForPrice { get; set; }
+        public Nullable<decimal> Price { get; set; }
+        public decimal OldPrice { get; set; }
+        public decimal ProductCost { get; set; }
+        public Nullable<decimal> SpecialPrice { get; set; }
+        public string SpecialPriceDescription { get; set; }
+
+        public Nullable<System.DateTime> SpecialPriceStartDateTimeUtc { get; set; }
+        public Nullable<System.DateTime> SpecialPriceEndDateTimeUtc { get; set; }
+        public Nullable<bool> CustomerEntersPrice { get; set; }
+        public Nullable<decimal> MinimumCustomerEnteredPrice { get; set; }
+        public Nullable<decimal> MaximumCustomerEnteredPrice { get; set; }
+        public Nullable<bool> HasTierPrices { get; set; }
+        public Nullable<bool> HasDiscountsApplied { get; set; }
+        public Nullable<bool> BasePriceEnabled { get; set; }
+        public string BasePriceMeasureUnit { get; set; }
+        public Nullable<decimal> BasePriceAmount { get; set; }
+        public Nullable<int> BasePriceBaseAmount { get; set; }
+        public Nullable<System.DateTime> AvailableStartDateTimeUtc { get; set; }
+        public Nullable<System.DateTime> AvailableEndDateTimeUtc { get; set; }
+        public Nullable<decimal> AdditionalShippingCharge { get; set; }
+        public Nullable<int> DeliveryTime { get; set; }
+      //  public Nullable<bool> IsShipEnabled { get; set; }
+        public Nullable<bool> IsFreeShipping { get; set; }
+        public Nullable<decimal> AdditionalTax { get; set; }
+
+        public  string CreatedUser { get; set; }
+        public  string UpdatedUser { get; set; }
+
+        [ForeignKey("Product")]
+        public virtual Product ProductDetails { get; set; }
+        [ForeignKey("Branch")]
+        public virtual SellerBranch BranchDetails { get; set; }
+    }
+}

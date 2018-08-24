@@ -1,0 +1,68 @@
+﻿<div>
+    <view-title>Online Shopping of your favorite products
+          at best prices from your nearby store in India
+    </view-title>
+</div>
+
+    <div class="container view containerbgcolor">
+        <div>
+            {{$scope.app.error}}
+            <div class="navbar navbar-default">
+                <div class="col-md-4">
+                    <h4>
+                        <span class="upperCase greenText">My Wishlist : </span>
+                        <span class="label label-default"> Showing  <strong ng-bind="products.data.length"></strong> of <strong ng-bind="products.totalCount"></strong> products</span>
+                    </h4>
+                </div>
+                 
+            </div>
+
+            <div class="col-xs-12">
+
+                <div class="alert-info" ng-if="products.data.length<=0">There are no products matching the selection</div>
+
+                <div data-ng-repeat="category in products.data | unique: 'SubCategoryId'">
+                    <header class="searchHeaders">
+                        <strong>{{category.ParentCategoryName}} - {{category.SubCategoryName}} </strong>
+                    </header>
+                    <div class="cardContainer">
+                        <div class="col-xs-2 card" data-ng-repeat="product in products.data | orderBy:'-StoresCount' | filter:{SubCategoryId: category.SubCategoryId}">
+                            <a href="product/{{product.Name | formaturl}}/{{product.ProductId}}" title="{{product.Name}}" class="productlink cardBody btn-link">
+                                <div class="cardHeader">
+                                    {{ product.Name | limitTo:45}}
+                                </div>
+                                <div class="cardBody">
+                                    <img class="imgproductsmall" id="img_{{product.ProductId}}" src="{{imageUrlBaseSmall}}{{product.PictureName}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" alt="{{product.PictureName}}" />
+                                </div>
+                                <div class="cardFooter">
+                                    <div>
+                                        from <b>  <span class="greenText">{{product.SpecialPrice | currency:"&#8377;"}}</span></b>
+                                        <span class='strikePrice'>
+                                            <span>{{product.Price | currency:"&#8377;"}}</span>
+                                        </span>
+                                    </div>
+                                    <div> <b>{{product.StoresCount}} </b> stores</div>
+                                </div>
+                            </a>
+                            <div data-ng-if=product.FlagWishlist class="shortlistProduct" ng-click="removeProductWishlist(product);">
+                                <i class="icon-wishlist-remove"><span>Remove from Wishlist</span></i>
+                            </div>
+                            <div data-ng-if=!product.FlagWishlist class="shortlistProduct" ng-click="addProductWishlist(product);">
+                                <i class="icon-wishlist-empty-heart"><span>Add back to Wishlist</span></i>
+
+                            </div>
+                        </div>
+                    </div>
+                    <br clear="all" />
+                </div>
+                <button class="btn-loadMore" href="#"
+                        ng-show="showLoadMore"
+                        ng-click="loadMore()">
+
+                    ........Show <span ng-bind="products.totalCount - products.data.length"></span> More.......
+                </button>
+            </div>
+ 
+            
+    </div>
+</div>

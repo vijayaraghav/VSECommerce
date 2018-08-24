@@ -1,0 +1,243 @@
+﻿<!--////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<og-image>{{imageUrlBase}}/VBuy_Image.png</og-image>
+
+<div>
+    <div class="homeBanner">
+        <span class="hidden">{{$root.hideSearchbar = true}}</span>
+
+        <div class="col-md-12 noPadding">
+            <form data-value="search" data-ng-submit="searchCatalogue()">
+                <div class="col-xs-6 padding-0">
+                    <div class="search-bar">
+                        <!--<span class="glyphicon glyphicon-search saffronText font18"></span>-->
+                        <span>
+                            <input id="productSearchInput" class="productSearch" type="text" data-ng-model="selectedProduct"
+                                   bs-options="product as product.Name for product in getSearchProductList($viewValue)"
+                                   filter="autosuggest"
+                                   data-limit=15
+                                   placeholder="Search by Speciality, Physician Name"
+                                   title="Search by typing the product name"
+                                   data-html=true
+                                   autocomplete="off"
+                                   required
+                                   data-bs-typeahead>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-2 padding-0">
+                    <div class="areaSearch-bar">
+                        <span ng-click="showAreaListClicked()" ng-hide="showAreaList">
+                            <i class="fa fa-map-marker saffronText font20"></i>
+                            <input id="areaSearchInput" ng-hide="showAreaList" class="areaSearchDisabled"
+                                   data-ng-model="selectedArea.AreaName" />
+                            <a href="#" ng-click="showAreaListClicked()" class="right area_select"><span class="fa fa-chevron-down font18"></span></a>
+                        </span>
+                        <span ng-show="showAreaList">
+                            <i class="fa fa-map-marker saffronText font20"></i>
+                            <input id="areaSearchInputSelect" class="areaSearch" ng-show="showAreaList" type="text" data-ng-model="selectedAreaInput"
+                                   bs-options="location.AreaName for location in getLocationList($viewValue) | unique: 'AreaName'"
+                                   data-limit=15
+                                   ng-value="{{selectedAreaInput.AreaName}}"
+                                   placeholder="Type to select area.." autocomplete="off" data-bs-typeahead />
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-2 padding-0">
+                    <div class="col-xs-4 padding-0">
+                        <button type="submit" class="globalSearch-submit" value="Search"><span class="glyphicon glyphicon-search font18"></span></button>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+
+    </div>
+    <div>
+        <div class="menubar navbar-collapse nomobdisplay" id="menubar">
+            <div class="container">
+                <div class="mainmenu" id="mainmenu">
+                    <div class="menu" data-ng-repeat="menu in mainMenu.data" ng-mouseover="showMainMenu();">
+                        <a class="menu-anchor" ng-mouseover="showMainMenu();"
+                           ng-click="clickMainMenu(this, menu.ParentCategoryName, menu.ParentCategoryId);">
+                            <span ng-bind="menu.ParentCategoryName" ng-mouseleave="menuMouseLeave();"></span>
+                        </a>
+                        <div class="subMenu" data-ng-if="menu.SubMenu">
+                            <div class="popup">
+                                <div class="popup-leftdiv">
+                                    <span data-ng-repeat="submenu in menu.SubMenu | limitTo:12 | unique: 'CategoryGroupTag'">
+                                        <strong class="saffronText">  {{submenu.CategoryGroupTag}}</strong>
+                                        <span data-ng-repeat="submenu in menu.SubMenu | limitTo:12 |  filter:{CategoryGroupTag: submenu.CategoryGroupTag}">
+                                            <a href="category/{{submenu.SubCategoryName | formaturl}}/{{submenu.SubCategoryId}}">
+                                                <span ng-bind="submenu.SubCategoryName"></span>
+                                            </a>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="popup-leftdiv" data-ng-if="menu.SubMenu.length>12 && menu.SubMenu.length<=24">
+                                    <span data-ng-repeat="submenu in menu.SubMenu | limitTo:24 | limitTo:12-menu.SubMenu.length | unique: 'CategoryGroupTag'">
+                                        <strong class="saffronText">  {{submenu.CategoryGroupTag}}</strong>
+                                        <span data-ng-repeat="submenu in menu.SubMenu | limitTo:24 |  limitTo:12-menu.SubMenu.length | filter:{CategoryGroupTag: submenu.CategoryGroupTag}">
+                                            <a href="category/{{submenu.SubCategoryName | formaturl}}/{{submenu.SubCategoryId}}">
+                                                <span ng-bind="submenu.SubCategoryName"></span>
+                                            </a>
+                                        </span>
+                                    </span>
+                                    <!-- grouping should be done later.-->
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <a href="https://play.google.com/store/apps/details?id=in.vbuy.client" class="noPadding nomobdisplay" target="_blank">
+                            <img src="../Content/images/googlestore.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas navbar-inner" role="navigation">
+            <div>
+                <a href="/Home">
+                    <img src="../Content/images/VBuyLogo.png" alt=" VBuy.in logo">
+                </a>
+                <a href="" class="fa fa-2x fa-close navbar-toggle btnalignRight" data-toggle="offcanvas" data-target="#myNavmenu">
+
+                </a>
+            </div>
+            <div class="mainmenu" id="mainmenu">
+                <div class="menu menubar" data-ng-repeat="menu in mainMenu.data">
+
+                    <a class="menu-anchor"
+                       ng-click="clickMainMenu(this, menu.ParentCategoryName, menu.ParentCategoryId);" ng-mouseleave="menuMouseLeave();">
+                        <span ng-bind="menu.ParentCategoryName" ng-mouseleave="menuMouseLeave();"></span>
+                    </a>
+                    <div class="subMenu" data-ng-if="menu.SubMenu">
+                        <div class="popup">
+                            <div class="popup-leftdiv">
+                                <span data-ng-repeat="submenu in menu.SubMenu | limitTo:12 | unique: 'CategoryGroupTag'">
+                                    <strong class="saffronText">  {{submenu.CategoryGroupTag}}</strong>
+                                    <span data-ng-repeat="submenu in menu.SubMenu | limitTo:12 |  filter:{CategoryGroupTag: submenu.CategoryGroupTag}">
+                                        <a ng-click="closeMainMenu();" data-toggle="offcanvas" data-target="#myNavmenu" href="category/{{submenu.SubCategoryName | formaturl}}/{{submenu.SubCategoryId}}">
+                                            <span ng-bind="submenu.SubCategoryName"></span>
+                                        </a>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="popup-leftdiv" data-ng-if="menu.SubMenu.length>12 && menu.SubMenu.length<=24">
+                                <span data-ng-repeat="submenu in menu.SubMenu | limitTo:24 | limitTo:12-menu.SubMenu.length | unique: 'CategoryGroupTag'">
+                                    <strong class="saffronText">  {{submenu.CategoryGroupTag}}</strong>
+                                    <span data-ng-repeat="submenu in menu.SubMenu | limitTo:24 |  limitTo:12-menu.SubMenu.length | filter:{CategoryGroupTag: submenu.CategoryGroupTag}">
+                                        <a ng-click="closeMainMenu();" data-toggle="offcanvas" data-target="#myNavmenu" href="category/{{submenu.SubCategoryName | formaturl}}/{{submenu.SubCategoryId}}">
+                                            <span ng-bind="submenu.SubCategoryName"></span>
+                                        </a>
+                                    </span>
+                                </span>
+                                <!-- grouping should be done later.-->
+                            </div>
+
+                            <div class="popup-leftdiv" data-ng-if="menu.SubMenu.length>24">
+                                <span data-ng-repeat="submenu in menu.SubMenu | limitTo:24 | limitTo:12-24 | unique: 'CategoryGroupTag'">
+                                    <strong class="saffronText">  {{submenu.CategoryGroupTag}}</strong>
+                                    <span data-ng-repeat="submenu in menu.SubMenu  | limitTo:24 | limitTo:12-24 | filter:{CategoryGroupTag: submenu.CategoryGroupTag}">
+                                        <a ng-click="closeMainMenu();" data-toggle="offcanvas" data-target="#myNavmenu" href="category/{{submenu.SubCategoryName | formaturl}}/{{submenu.SubCategoryId}}">
+                                            <span ng-bind="submenu.SubCategoryName"></span>
+                                        </a>
+                                    </span>
+                                </span>
+                                <!-- grouping should be done later.-->
+                            </div>
+                            <div class="popup-leftdiv" data-ng-if="menu.SubMenu.length>24">
+                                <span data-ng-repeat="submenu in menu.SubMenu | limitTo:menu.SubMenu.length | limitTo:24-menu.SubMenu.length | unique: 'CategoryGroupTag'">
+                                    <strong class="saffronText">  {{submenu.CategoryGroupTag}}</strong>
+                                    <span data-ng-repeat="submenu in menu.SubMenu  | limitTo:menu.SubMenu.length | limitTo:24-menu.SubMenu.length | filter:{CategoryGroupTag: submenu.CategoryGroupTag}">
+                                        <a ng-click="closeMainMenu();" data-toggle="offcanvas" data-target="#myNavmenu" href="category/{{submenu.SubCategoryName | formaturl}}/{{submenu.SubCategoryId}}">
+                                            <span ng-bind="submenu.SubCategoryName"></span>
+                                        </a>
+                                    </span>
+                                </span>
+                                <!-- grouping should be done later.-->
+                            </div>
+                            <div>
+                                <img class="popup-rightdiv" src="{{imageUrlBase}}Category/{{menu.ParentCategoryName}}.jpg" alt="{{menu.ParentCategoryName}}">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <a href="https://play.google.com/store/apps/details?id=in.vbuy.client" class="noPadding nomobdisplay" target="_blank">
+                        <img src="../Content/images/googlestore.png">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br class="clear" />
+    <br />
+    <div ng-show="recentlyViewedlist.length>0" class="containerbgcolor">
+        <header class="homeHeaders">
+            <strong> RECENTLY VIEWED </strong>
+        </header>
+        <div class="container">
+            <div class="col-md-12 col-xs-12">
+                <div data="recentlyViewedlist"
+                     slick-slider-recentview="{ minSlides: 2,
+                        maxSlides: 5,
+                          moveSlides: 1,
+                         slideWidth: 200,
+                         hideControlOnEnd: true,
+                         infiniteLoop: false,
+                         pager:true,
+                         controls:true,
+                          pager: false,
+                          speed: 1000
+                        }">
+                    <div data-ng-repeat="product in recentlyViewedlist">
+                        <a href="product/{{product.Name | formaturl}}/{{product.ProductId}}" title="{{product.Name}}" class="productlink cardBody btn-link">
+                            <div class="cardHeader">
+                                <span ng-bind="product.Name | limitTo:45"></span>
+                            </div>
+                            <div class="cardBody">
+                                <img class="imgproductsmall" src="{{imageUrlBaseSmall}}{{product.PictureName}}" alt="{{product.PictureName}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
+                            </div>
+                            <div class="cardFooter">
+                                <div>
+                                    <b>  <span class="greenText" ng-bind="product.SpecialPrice | currency:' &#8377;'"></span></b>
+                                    <span class='strikePrice'>
+                                        <span>{{product.Price | currency:"&#8377;"}}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br class="viewpadding" />
+<br />
+<br class="clear" />
+<br />
+<br class="clear" />
+<br class="clear" />
+<br />
+<br class="clear" />
+<br />
+<br />

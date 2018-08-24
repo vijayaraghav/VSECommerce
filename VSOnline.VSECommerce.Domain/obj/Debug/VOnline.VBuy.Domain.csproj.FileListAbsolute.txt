@@ -1,0 +1,7 @@
+D:\LocalRepository\VBuy\VOnline.VBuy\BuildArtifacts\VBuy.Domain\Debug\AutoMapper.Net4.dll
+D:\LocalRepository\VBuy\VOnline.VBuy\BuildArtifacts\VBuy.Domain\Debug\VOnline.VBuy.Domain.dll.config
+D:\LocalRepository\VBuy\VOnline.VBuy\BuildArtifacts\VBuy.Domain\Debug\VOnline.VBuy.Domain.dll
+D:\LocalRepository\VBuy\VOnline.VBuy\BuildArtifacts\VBuy.Domain\Debug\VOnline.VBuy.Domain.pdb
+D:\LocalRepository\VBuy\VOnline.VBuy\VOnline.VBuy.Domain\obj\Debug\VOnline.VBuy.Domain.csprojResolveAssemblyReference.cache
+D:\LocalRepository\VBuy\VOnline.VBuy\VOnline.VBuy.Domain\obj\Debug\VOnline.VBuy.Domain.dll
+D:\LocalRepository\VBuy\VOnline.VBuy\VOnline.VBuy.Domain\obj\Debug\VOnline.VBuy.Domain.pdb

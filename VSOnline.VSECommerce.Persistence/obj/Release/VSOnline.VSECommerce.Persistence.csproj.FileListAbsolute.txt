@@ -1,0 +1,14 @@
+D:\LocalRepository\VBuy\VOnline.VBuy\BuildArtifacts\VBuy.Persistence\Release\VSOnline.VSECommerce.Persistence.dll.config
+D:\LocalRepository\VBuy\VOnline.VBuy\BuildArtifacts\VBuy.Persistence\Release\VSOnline.VSECommerce.Persistence.dll
+D:\LocalRepository\VBuy\VOnline.VBuy\BuildArtifacts\VBuy.Persistence\Release\VSOnline.VSECommerce.Persistence.pdb
+D:\LocalRepository\VBuy\VOnline.VBuy\VOnline.VBuy.Persistence\obj\Release\VSOnline.VSECommerce.Persistence.csprojResolveAssemblyReference.cache
+D:\LocalRepository\VBuy\VOnline.VBuy\VOnline.VBuy.Persistence\obj\Release\VSOnline.VSECommerce.Persistence.dll
+D:\LocalRepository\VBuy\VOnline.VBuy\VOnline.VBuy.Persistence\obj\Release\VSOnline.VSECommerce.Persistence.pdb
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\BuildArtifacts\VBuy.Persistence\Release\VSOnline.VSECommerce.Persistence.dll.config
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\BuildArtifacts\VBuy.Persistence\Release\VSOnline.VSECommerce.Persistence.dll
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\BuildArtifacts\VBuy.Persistence\Release\VSOnline.VSECommerce.Persistence.pdb
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Persistence\obj\Release\VSOnline.VSECommerce.Persistence.csprojAssemblyReference.cache
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Persistence\obj\Release\VSOnline.VSECommerce.Persistence.csproj.CoreCompileInputs.cache
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Persistence\obj\Release\VSOnline.VSECommerce.Persistence.csproj.CopyComplete
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Persistence\obj\Release\VSOnline.VSECommerce.Persistence.dll
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Persistence\obj\Release\VSOnline.VSECommerce.Persistence.pdb

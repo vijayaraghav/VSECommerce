@@ -1,0 +1,91 @@
+﻿<view-title>Search Mobiles, Laptops, Telvision, Air Conditioner, Cameras, Watches from your nearby local stores.</view-title>
+<og-description>
+    Search Mobiles, Laptops, Telvision, Air Conditioner, Cameras, Watches from your nearby local stores through
+    your online shopping mall of trusted local retailers.
+</og-description>
+<og-image>{{imageUrlBase}}VBuy_Image.png</og-image>
+
+<div class="view container containerbgcolor">
+    <div>
+            <span ng-bind="app.error"></span>
+        <div class="productfilterbar col-xs-12">
+            <div class="container">
+                <h4>
+                    <span>SEARCH :</span>
+                    <span class="upperCase greenText" ng-bind="searchedProduct"></span>
+                    <span class="label label-default fontSize10"> Showing  <strong ng-bind="products.data.length"></strong> of <strong ng-bind="products.totalCount"></strong> products</span>
+                 
+                </h4>
+                 
+
+                <div class="col-xs-12 productfilter">
+                    <div class="col-xs-1 padding-0 fontSize10">
+                        REFINE:
+                    </div>
+                    <div class="multiselectfilterdiv padding-0">
+                        <div class="col-xs-12 padding-0" ng-dropdown-multiselect="" translation-texts="{ buttonDefaultText: 'Sort' }"
+                             extra-settings="dropdownSortSettings" options="dropdownSortData"
+                             events="dropdownBrandEvents"
+                             selected-model="selectedFilter.SortBy">
+
+                        </div>
+                    </div>
+                    <div class="multiselectfilterdiv padding-0">
+                        <div class="col-xs-12 padding-0" ng-dropdown-multiselect="" translation-texts="{ buttonDefaultText: 'Ownership' }"
+                             extra-settings="dropdownBrandSettings" options="searchFilter.data.Brand"
+                             events="dropdownBrandEvents"
+                             selected-model="selectedFilter.SelectedBrandList" checkboxes="true"></div>
+                    </div>
+              
+                </div>
+            </div>
+        </div>
+            <strong ng-hide="true">Area : {{searchedArea}}  </strong>
+        <br class="clear" />  
+       
+        <div class="container ">
+            <div class="col-xs-12">
+                <div class="alert-info" ng-if="products.data.length<=0">There are no products matching your search criteria for the selected area. Please modify your filter condition or check in other areas.</div>
+                <div data-ng-repeat="category in products.data | unique: 'SubCategoryId' ">
+                    <header class="searchHeaders">
+                        <strong>  {{category.SubCategoryName}}</strong>
+                    </header>
+                    <div>
+                        <div class="col-md-3" data-ng-repeat="product in products.data | orderBy:'-StoresCount' | filter:{SubCategoryId: category.SubCategoryId}">
+                            <div class="col-xs-11 containerbgcolor card">
+                                <a href="product/{{product.Name | formaturl}}/{{product.ProductId}}" title="{{product.Name}}">
+                                    <div class="cardimageDiv">
+                                        <img id="img_{{product.ProductId}}" class="col-xs-10" src="{{product.PictureName}}" alt="{{product.PictureName}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
+
+                                    </div>
+                                    <br class="clear" />
+                                    <div class="cardHeader">
+                                        {{ product.Name | limitTo:45}}
+                                    </div>
+                                    <div class="cardHeader">
+                                        <div><b>  <span class="greenText">{{product.Price | currency:"&#8377;"}}</span></b></div>
+                                    </div>
+                                </a>
+                                <br class="clear" />
+                                <button class="btn btn-block btn-success margin-2"
+                                        ng-click="addProductToCart(product, product.Branch, product.BranchName
+                                                    ,product.Price, product.Price, product.AdditionalShippingCharge, product.DeliveryTime)">
+                                    <span class="glyphicon glyphicon-shopping-cart">  </span>Pay and Watch
+                                </button>
+                                <br class="clear" />
+                            </div>
+                        </div>
+                    </div>
+                    <br clear="all" />
+                </div>
+                <button class="btn-loadMore" href="#"
+                        ng-show="showLoadMore"
+                        ng-click="loadMore()">
+                    ........Show <span ng-bind="products.totalCount - products.data.length"></span> More.......
+                </button>
+            </div>
+
+        </div>
+</div>
+
+</div>

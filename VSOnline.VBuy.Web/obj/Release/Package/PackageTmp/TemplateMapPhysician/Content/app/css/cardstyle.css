@@ -1,0 +1,144 @@
+﻿
+.card {
+    background-color:#ffffff;
+    outline: 1px solid #000;
+    height:420px;
+    min-width: 175px;
+    margin-bottom: 20px;
+     /*margin-right:5px;
+    padding-left:0px;*/
+    padding-right:0px;
+}
+
+.card-nowidth{
+    background-color:#ffffff;
+    height:420px;
+    margin-bottom: 20px;
+    /* margin-left:5px;*/
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.cardMedium {
+    background-color:#ffffff;
+    outline: 1px solid #000;
+    height:470px;
+    min-width: 190px;
+    margin-bottom: 20px;
+  /*  margin-left:5px;*/
+    padding-left:3px;
+}
+
+.cardHeader {
+    background-color: #ffffff;
+    font-size:14px;
+    line-height:20px;     
+   color:#000;
+    margin:5px;
+    text-align:left;
+    text-transform:uppercase;
+
+}
+
+.cardFooter {
+     
+    height:40px;
+    padding:0px;
+    text-align:left;
+    margin-bottom:10px;
+    font-size:14px;
+    line-height:20px;
+}
+
+.cardFooterMedium
+{
+    background-color: #ffffff;
+    font-size:10pt;
+    height:100px;
+    padding:5px;
+    text-align:left;
+    font-size:14px;
+    line-height:20px;
+    margin-bottom:10px;
+    padding-left:0px;
+}
+
+.cardBody {
+    height:240px;
+    text-align:center;
+}
+
+.lastRow {
+    background-color: #04dcfa;
+}
+
+.indent {
+    margin-left:20px;
+}
+
+.ordersTable {
+    width:800px;
+    margin-left:20px;
+}
+
+.orders th, .customerOrders th {
+    width:25%;
+    cursor: pointer;
+}
+
+.ordersTable tr:first-child th {
+    background-color: #006dcc;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+#submitCustomer {
+    margin-left:50px;
+    margin-top: -8px;
+}
+
+footer {
+    margin-top:10px;
+    font-weight: bold;
+}
+
+
+/* Bootstrap overrides */
+.navbar-inner {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.navbar .nav {
+    margin-left:50px;
+    margin-top:15px;
+}
+
+.close {
+    opacity: 1.0;
+}
+
+div.card a:hover { color: #808080; font-size:14pt; text-decoration:none;}
+
+    div.card:hover{
+        /*border: 1px solid #808080;*/
+    }
+
+
+div.card a:hover div.cardHeader{ color: #808080; font-size:14pt; font-weight:bold;}
+div.card a:hover span.greenText{ color: #808080; font-size:14pt; font-weight:bold;}
+
+div.cardMedium a:hover { color: #808080; font-size:14pt; text-decoration:none;}
+
+    div.cardMedium:hover{
+         /*border: 1px solid #808080;*/
+    }
+div.cardMedium a:hover div.cardHeader{ color: #808080; font-size:14pt; font-weight:bold;}
+div.cardMedium a:hover span.greenText{ color: #808080; font-size:14pt; font-weight:bold;}
+
+.cardBodydivfixed
+{
+    min-height:150px;
+    max-height:150px;
+}

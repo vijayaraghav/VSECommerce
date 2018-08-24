@@ -1,0 +1,16 @@
+D:\LocalRepository\VBuy\VOnline.VBuy\BuildArtifacts\VBuy.Domain\Release\AutoMapper.Net4.dll
+D:\LocalRepository\VBuy\VOnline.VBuy\BuildArtifacts\VBuy.Domain\Release\VSOnline.VSECommerce.Domain.dll.config
+D:\LocalRepository\VBuy\VOnline.VBuy\BuildArtifacts\VBuy.Domain\Release\VSOnline.VSECommerce.Domain.dll
+D:\LocalRepository\VBuy\VOnline.VBuy\BuildArtifacts\VBuy.Domain\Release\VSOnline.VSECommerce.Domain.pdb
+D:\LocalRepository\VBuy\VOnline.VBuy\VOnline.VBuy.Domain\obj\Release\VSOnline.VSECommerce.Domain.csprojResolveAssemblyReference.cache
+D:\LocalRepository\VBuy\VOnline.VBuy\VOnline.VBuy.Domain\obj\Release\VSOnline.VSECommerce.Domain.dll
+D:\LocalRepository\VBuy\VOnline.VBuy\VOnline.VBuy.Domain\obj\Release\VSOnline.VSECommerce.Domain.pdb
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\BuildArtifacts\VBuy.Domain\Release\AutoMapper.Net4.dll
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\BuildArtifacts\VBuy.Domain\Release\VSOnline.VSECommerce.Domain.dll.config
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\BuildArtifacts\VBuy.Domain\Release\VSOnline.VSECommerce.Domain.dll
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\BuildArtifacts\VBuy.Domain\Release\VSOnline.VSECommerce.Domain.pdb
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Domain\obj\Release\VSOnline.VSECommerce.Domain.csprojAssemblyReference.cache
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Domain\obj\Release\VSOnline.VSECommerce.Domain.csproj.CoreCompileInputs.cache
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Domain\obj\Release\VSOnline.VSECommerce.Domain.csproj.CopyComplete
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Domain\obj\Release\VSOnline.VSECommerce.Domain.dll
+D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Domain\obj\Release\VSOnline.VSECommerce.Domain.pdb
