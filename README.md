@@ -11,6 +11,8 @@ Youtube Video : eCommerce feature of VBuy.in : https://www.youtube.com/watch?v=_
 
 # Setting UP
 
+SQL Script is available in SQL folder
+
 Add reference to the dlls in the Reference_dll in case those are missing when you build
 Most of the nuget packages should already be installed when you build the application. 
 However if any of them is missed, please see the list of packages with version below.
