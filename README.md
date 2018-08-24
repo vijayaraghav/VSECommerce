@@ -12,4 +12,4 @@ However if any of them is missed, please see the list of packages with version b
 * Microsoft.ASPNET.WebAPI.OWIN - 5.2.2
 * Microsoft.ASPNET.WebPages - v3.2.6
 * Microsoft.ASPNET.WebPAges.OAUTH - v3.2.6
-
+* PagedList : Addded in Reference dll.
