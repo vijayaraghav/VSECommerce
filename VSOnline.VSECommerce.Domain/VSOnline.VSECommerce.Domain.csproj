@@ -63,11 +63,11 @@
     </Reference>
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\user\Desktop\PagedList\PagedList.dll</HintPath>
+      <HintPath>..\Reference_dll\PagedList.dll</HintPath>
     </Reference>
     <Reference Include="PagedList.EntityFramework, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\user\Desktop\PagedList\PagedList.EntityFramework.dll</HintPath>
+      <HintPath>..\Reference_dll\PagedList.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -80,6 +80,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="VSOnline.VSECommerce.Utilities">
+      <HintPath>..\Reference_dll\VSOnline.VSECommerce.Utilities.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Caching\DefaultCacheManager.cs" />

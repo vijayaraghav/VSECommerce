@@ -244,7 +244,11 @@
     <Reference Include="System.Net.Http.WebRequest">
     </Reference>
     <Reference Include="VSOnline.VSECommerce.Core">
-      <HintPath>..\base_dll\VSOnline.VSECommerce.Core.dll</HintPath>
+      <HintPath>..\Reference_dll\VSOnline.VSECommerce.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="VSOnline.VSECommerce.Utilities, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference_dll\VSOnline.VSECommerce.Utilities.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>

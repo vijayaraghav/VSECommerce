@@ -20,3 +20,7 @@ D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Domain\obj\Debug\VSO
 D:\Github_VSEngine\VSECommerce\VSOnline.VSECommerce.Domain\obj\Debug\VSOnline.VSECommerce.Domain.csprojResolveAssemblyReference.cache
 D:\Github_VSEngine\VSECommerce\VSOnline.VSECommerce.Domain\obj\Debug\VSOnline.VSECommerce.Domain.dll
 D:\Github_VSEngine\VSECommerce\VSOnline.VSECommerce.Domain\obj\Debug\VSOnline.VSECommerce.Domain.pdb
+D:\Github_VSEngine\VSECommerce\BuildArtifacts\VBuy.Domain\Debug\AutoMapper.Net4.dll
+D:\Github_VSEngine\VSECommerce\BuildArtifacts\VBuy.Domain\Debug\VSOnline.VSECommerce.Domain.dll.config
+D:\Github_VSEngine\VSECommerce\BuildArtifacts\VBuy.Domain\Debug\VSOnline.VSECommerce.Domain.dll
+D:\Github_VSEngine\VSECommerce\BuildArtifacts\VBuy.Domain\Debug\VSOnline.VSECommerce.Domain.pdb
