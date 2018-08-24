@@ -7,6 +7,8 @@ With our VSECommerce source, you can create, single store, multi store, hyper lo
 
 Author : Sivakumar Anirudhan, VS Online Services Pvt ltd, India.
 
+Youtube Video : eCommerce feature of VBuy.in : https://www.youtube.com/watch?v=_okHZ9odGbQ
+
 # Setting UP
 
 Add reference to the dlls in the Reference_dll in case those are missing when you build
