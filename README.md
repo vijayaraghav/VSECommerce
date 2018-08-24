@@ -1,13 +1,26 @@
 # VSECommerce
+
 Open Source eCommerce marketplace using ASP.NET Web API, C# and Angular JS. http://www.vsecommerce.com
 
-*Documentation will be done based on request and the usage of this hyperlocal eCommerce solution.
+*Documentation will be done based on request and the demand for our hyperlocal eCommerce solution.Priority based on various enquiries /queries.
 
-With our VSECommerce source, you can create, single store, multi store, hyper local ecommerce and even a movie site. A flexible architectured product.
+With our VSECommerce engine, you can create, single store, multi store, hyper local ecommerce or even online movie site (Demo:http://moviesdemo.vbuy.in/Home.html). A flexible architectured product with High Performance, Easy to Setup, Customizable eCommerce marketplace solution.
 
 Author : Sivakumar Anirudhan, VS Online Services Pvt ltd, India.
 
 Youtube Video : eCommerce feature of VBuy.in : https://www.youtube.com/watch?v=_okHZ9odGbQ
+
+Play Store : https://play.google.com/store/apps/details?id=in.vbuy.client
+
+More about our VSEcommerce Engine 
+ 
+ * Development of the project VBuy started in 2014, by team of experts with more than a decade of s/w engineering experience.
+  
+ * A VBuy.in platform. First end to end API based enterprise ecommerce application supporting map based, hyper local multi vendor solution
+ 
+* This application was initially architected for our hyper local eCommerce Services in India. However, later in 2016 we changed our business model to Custom Software development and focusing on one of the exciting non-eCommerce project and some more custom software development projects.  Though, we want to get this project open source atleast an year back but due to other commitments it got much delayed. But, still we feel this solution can help many developers create eCommerce site with ease and great as the performance and flexibility is more than most of the current available eCommerce projects. For Business, our solution can be as Quick as a DIY for getting your eCommerce site within a week with customization
+
+With the well architected project then (Almost 4 years before), we want to make the project Opensource for a while now but was busy in other development and team building activity for our company. 
 
 # Setting UP
 
