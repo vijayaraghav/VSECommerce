@@ -21,3 +21,10 @@ However if any of them is missed, please see the list of packages with version b
 * Microsoft.ASPNET.WebPages - v3.2.6
 * Microsoft.ASPNET.WebPAges.OAUTH - v3.2.6
 * PagedList : Addded in Reference dll.
+
+Our eCommerce engine(VSOnline.VSEcommerce) is end to end .NET API. So when you configure the VSECommerce api, corresponding api call from angularjs or frontend application (Here VSOnline.VBuy.Web) or your Android or any mobile application should change the reference.  In the application we changed VSOnline.VBuy.Web\app\services\landingservice.js endpoint alone which is matching the current Project URL 
+
+ var endPoint = 'http://localhost:49475/api/Landing';. You need to change in other js files or create a global endpointbaseurl and use the same in all js files.
+ 
+ 
+ 
