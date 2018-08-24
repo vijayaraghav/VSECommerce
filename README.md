@@ -1,5 +1,5 @@
 # VSECommerce
-Open Source eCommerce marketplace using ASP.NET Web API and Angular JS. http://www.vsecommerce.com
+Open Source eCommerce marketplace using ASP.NET Web API, C# and Angular JS. http://www.vsecommerce.com
 
 *Documentation will be done based on request and the usage of this hyperlocal eCommerce solution.
 
