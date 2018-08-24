@@ -1,6 +1,8 @@
 # VSECommerce
 Open Source eCommerce marketplace using ASP.NET Web API and Angular JS. http://www.vsecommerce.com
 
+*Documentation is not done for this product 
+
 Author : Sivakumar Anirudhan, VS Online Services Pvt ltd, India.
 
 # Setting UP
