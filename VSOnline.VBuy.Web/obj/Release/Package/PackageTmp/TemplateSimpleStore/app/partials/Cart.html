@@ -1,4 +1,14 @@
-﻿<div class="containerbgcolor">
+﻿<!--////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<div class="containerbgcolor">
     <div class="col-xs10">
         <header class="compareDropDownHeader">
             Your Cart <span class="glyphicon glyphicon-shopping-cart"></span>
@@ -64,7 +74,7 @@
                     <td>
                         <span class="minorinfofont">
                             <span ng-if="product.DeliveryTime>0"><br /> Delivered within {{product.DeliveryTime}} business day. </span>
-                            <span  ng-if="product.AdditionalShippingCharge>0"> Shipping Charges : {{product.TotalAdditionalShippingCharge | currency:"&#8377;"}}  </span>
+                            <span ng-if="product.AdditionalShippingCharge>0"> Shipping Charges : {{product.TotalAdditionalShippingCharge | currency:"&#8377;"}}  </span>
                             <span class="greenText" ng-if="product.AdditionalShippingCharge==0"> Free Shipping</span>
                         </span>
                     </td>

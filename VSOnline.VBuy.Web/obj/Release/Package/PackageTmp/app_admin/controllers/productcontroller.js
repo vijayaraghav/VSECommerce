@@ -1,4 +1,12 @@
-﻿app_admin.controller('AdminCategoryController', ['$rootScope', '$scope', '$http', '$routeParams', '$timeout', '$location'
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app_admin.controller('AdminCategoryController', ['$rootScope', '$scope', '$http', '$routeParams', '$timeout', '$location'
     ,'adminProductService', 'authInterceptorService',
 function ($rootScope, $scope, $http, $routeParams, $timeout, $location, adminProductService, authInterceptorService) {
     {
@@ -23,8 +31,11 @@ function ($rootScope, $scope, $http, $routeParams, $timeout, $location, adminPro
         function loadCategoryData() {
             adminProductService.getCategory($scope, $http)
                .then(function (response) {
-                   $scope.newCategory = response.data;
-                   $scope.selectedCategory = response.data.ParentCategoryId;
+                   if (response.data != null)
+                   {
+                       $scope.newCategory = response.data;
+                       $scope.selectedCategory = response.data.ParentCategoryId;
+                   }
                });
         }
 

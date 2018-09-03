@@ -14,3 +14,10 @@ D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Domain\obj\Release\V
 D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Domain\obj\Release\VSOnline.VSECommerce.Domain.csproj.CopyComplete
 D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Domain\obj\Release\VSOnline.VSECommerce.Domain.dll
 D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Domain\obj\Release\VSOnline.VSECommerce.Domain.pdb
+C:\Users\user\Desktop\VSECommerce - Copy\BuildArtifacts\VBuy.Domain\Release\AutoMapper.Net4.dll
+C:\Users\user\Desktop\VSECommerce - Copy\BuildArtifacts\VBuy.Domain\Release\VSOnline.VSECommerce.Domain.dll.config
+C:\Users\user\Desktop\VSECommerce - Copy\BuildArtifacts\VBuy.Domain\Release\VSOnline.VSECommerce.Domain.dll
+C:\Users\user\Desktop\VSECommerce - Copy\BuildArtifacts\VBuy.Domain\Release\VSOnline.VSECommerce.Domain.pdb
+C:\Users\user\Desktop\VSECommerce - Copy\VSOnline.VSECommerce.Domain\obj\Release\VSOnline.VSECommerce.Domain.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\VSECommerce - Copy\VSOnline.VSECommerce.Domain\obj\Release\VSOnline.VSECommerce.Domain.dll
+C:\Users\user\Desktop\VSECommerce - Copy\VSOnline.VSECommerce.Domain\obj\Release\VSOnline.VSECommerce.Domain.pdb

@@ -632,6 +632,7 @@
     <Content Include="Content\app\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\Demo1.pubxml" />
     <None Include="Properties\PublishProfiles\Fashionedin.pubxml" />
+    <None Include="Properties\PublishProfiles\moviesite.pubxml" />
     <None Include="Properties\PublishProfiles\PreProductionProfile.pubxml" />
     <None Include="Properties\PublishProfiles\StagingProfile.pubxml" />
     <Content Include="Scripts\angular.min.js" />

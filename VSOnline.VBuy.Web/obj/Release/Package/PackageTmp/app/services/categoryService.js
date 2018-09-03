@@ -1,6 +1,14 @@
-﻿app.service('categoryService', function () {
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app.service('categoryService', function () {
 
-    var endPoint = '/VBuy/api/Admin';
+    var endPoint = '/VSECommerce/api/Admin';
 
     this.getAllCategory = function ($scope, $http) {
         var config = {

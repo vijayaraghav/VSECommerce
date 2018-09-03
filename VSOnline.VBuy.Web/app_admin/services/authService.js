@@ -1,4 +1,4 @@
-﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////////////////
 // <copyright>
 // Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
 //</copyright>
@@ -6,10 +6,10 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app_admin.factory('authService', ['$rootScope', '$http', '$q', 'localStorageService', function ($rootScope, $http, $q, localStorageService) {
+app_admin.factory('authService', ['$rootScope', '$http', '$q', 'localStorageService', function ($rootScope, $http, $q, localStorageService) {
 
     //var endPoint = '/VSECommerce/api/Login';
-	 var endPoint = 'http://localhost:49475/'
+    var endPoint = 'http://localhost:49475/';
 
     var authServiceFactory = {};
 
@@ -36,13 +36,13 @@
     };
 
     var Login = function (loginData) {
-       
+
         var data = "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password + "&scope=" + loginData.code + "&ClientId=" + "VBuyAdminPanel";
 
         var deferred = $q.defer();
 
-		$http.post('/VSEcommerce/token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
-                localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName, refreshToken: "", useRefreshTokens: false });
+        $http.post('http://localhost:49475/token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
+            localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName, refreshToken: "", useRefreshTokens: false });
             _authentication.isAuth = true;
             _authentication.userName = loginData.userName;
 
@@ -66,7 +66,7 @@
         _authentication.useRefreshTokens = false;
 
         $rootScope.flagLoggedIn = false;
-        
+
     };
 
     var _fillAuthData = function () {
@@ -156,7 +156,7 @@
 
     };
 
-   // authServiceFactory.saveRegistration = _saveRegistration;
+    // authServiceFactory.saveRegistration = _saveRegistration;
     authServiceFactory.login = Login;
     authServiceFactory.logOut = LogOut;
     authServiceFactory.fillAuthData = _fillAuthData;

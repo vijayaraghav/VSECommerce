@@ -1,6 +1,14 @@
-﻿app_retailer.service('storesService', function () {
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app_retailer.service('storesService', function () {
 
-    var endPoint = '/VBuy/api/Retailer';
+     var endPoint = 'http://192.168.1.12:8075/api/Retailer';
 
 
     this.getFilter = function ($http)

@@ -1,4 +1,12 @@
-﻿app_retailer.controller('ResetPasswordController', ['$scope', '$location', '$http', '$rootScope', '$routeParams', 'passwordService',
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app_retailer.controller('ResetPasswordController', ['$scope', '$location', '$http', '$rootScope', '$routeParams', 'passwordService',
     function ($scope, $location, $http, $rootScope, $routeParams, passwordService) {
 
 

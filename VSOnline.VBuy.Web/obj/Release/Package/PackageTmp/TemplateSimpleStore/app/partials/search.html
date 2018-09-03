@@ -1,4 +1,14 @@
-﻿<view-title>Search Mobiles, Laptops, Telvision, Air Conditioner, Cameras, Watches from your nearby local stores.</view-title>
+﻿<!--////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<view-title>Search Mobiles, Laptops, Telvision, Air Conditioner, Cameras, Watches from your nearby local stores.</view-title>
 <og-description>
     Search Mobiles, Laptops, Telvision, Air Conditioner, Cameras, Watches from your nearby local stores through
     your online shopping mall of trusted local retailers.
@@ -7,7 +17,7 @@
 
 <div class="view containerbgcolor">
     <div>
-            <span ng-bind="app.error"></span>
+        <span ng-bind="app.error"></span>
         <div class="productfilterbar col-xs-12">
             <div class="">
                 <h4>
@@ -20,7 +30,7 @@
                            data-slider-selection="after" data-slider-tooltip="hide">
 
                 </h4>
-                 
+
 
                 <div class="col-xs-12 productfilter">
                     <div class="col-xs-1 padding-0 fontSize10">
@@ -64,9 +74,9 @@
                 </div>
             </div>
         </div>
-            <strong ng-hide="true">Area : {{searchedArea}}  </strong>
-        <br class="clear" />  
-       
+        <strong ng-hide="true">Area : {{searchedArea}}  </strong>
+        <br class="clear" />
+
         <div class="">
             <div class="col-xs-12">
                 <div class="alert-info" ng-if="products.data.length<=0">There are no products matching your search criteria for the selected area. Please modify your filter condition or check in other areas.</div>
@@ -118,6 +128,6 @@
             </div>
 
         </div>
-</div>
+    </div>
 
 </div>

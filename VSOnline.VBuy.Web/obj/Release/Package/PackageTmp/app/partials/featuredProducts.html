@@ -1,4 +1,14 @@
-﻿<og-image>{{imageUrlBase}}/VBuy_Image.png</og-image>
+﻿<!--////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+    -->
+
+<og-image>{{imageUrlBase}}/VBuy_Image.png</og-image>
 
 <div class="container containerbgcolor">
     <div data-ng-controller="HomeSliderController">
@@ -24,7 +34,7 @@
                 </li>
 
 
-                 <li>
+                <li>
                     <a href="{{homeBannerSettings[2].Value}}">
                         <img src="{{imageUrlBase}}{{homeFolder}}HomeBanner3.jpg" alt=" HomeBanner3 ">
                     </a>
@@ -118,13 +128,13 @@
             </div>
         </div>
 
-        </div>
+    </div>
     <br style="clear:both" />
     <div class="col-lg-12">
         <header class="homeHeaders">
             <strong> TOP CATEGORIES </strong>
         </header>
-         
+
         <div class="col-md-4" data-ng-repeat="category in topCategoryList.data |limitTo:6">
             <a href="category/{{category.Name | formaturl}}/{{category.CategoryId}}">
                 <div>
@@ -174,27 +184,27 @@
 
             <div class="col-md-3" data-ng-repeat="product in topSellingProductList1.data | orderBy:'Name'">
                 <a href="product/{{product.Name | formaturl}}/{{product.ProductId}}" title="{{product.Name}}" class="productlink cardBody btn-link">
-    <div>
-        {{ product.Name | limitTo:45}}
-    </div>
-    <div>
-        <img id="img_{{product.ProductId}}" class="imgproductmedium" src="{{imageUrlBaseSmall}}{{product.PictureName}}" alt="{{product.PictureName}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
-    </div>
-    <!--<div class="cardFooter">
-        <div>from <b>  <span class="greenText">{{product.Price | currency:"&#8377;"}}</span></b></div>
-        <div> <b>{{product.StoresCount}} </b> stores</div>
-    </div>-->
-</a>
+                    <div>
+                        {{ product.Name | limitTo:45}}
+                    </div>
+                    <div>
+                        <img id="img_{{product.ProductId}}" class="imgproductmedium" src="{{imageUrlBaseSmall}}{{product.PictureName}}" alt="{{product.PictureName}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
+                    </div>
+                    <!--<div class="cardFooter">
+                        <div>from <b>  <span class="greenText">{{product.Price | currency:"&#8377;"}}</span></b></div>
+                        <div> <b>{{product.StoresCount}} </b> stores</div>
+                    </div>-->
+                </a>
                 <!--<div data-ng-if=!product.FlagWishlist class="shortlistProduct" ng-click="addProductWishlist(product);">
-                <i class="icon-wishlist-empty-heart"><span>Add to Wishlist</span></i>
+                    <i class="icon-wishlist-empty-heart"><span>Add to Wishlist</span></i>
 
-            </div>
-            <div class="shortlistProduct" data-ng-if=product.FlagWishlist>
-                <i class="icon-wishlist-filled-heart"><span>Added to Wishlist</span></i>
-            </div>-->
+                </div>
+                <div class="shortlistProduct" data-ng-if=product.FlagWishlist>
+                    <i class="icon-wishlist-filled-heart"><span>Added to Wishlist</span></i>
+                </div>-->
             </div>
         </div>
-            <br clear="all" />
+        <br clear="all" />
         <br />
         <div ng-show="recentlyViewedlist.length>0">
             <header class="homeHeaders">
@@ -236,7 +246,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 
 </div>

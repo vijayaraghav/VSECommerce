@@ -1,57 +1,67 @@
-﻿<og-image>{{imageUrlBase}}/VBuy_Image.png</og-image>
+﻿<!--////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<og-image>{{imageUrlBase}}/VBuy_Image.png</og-image>
 
 <div>
     <div class="homeBanner">
-        <span class="hidden">{{$root.hideSearchbar = true}}</span>    
- 
-            <div class="col-md-12 noPadding">
-                <form data-value="search" data-ng-submit="searchCatalogue()">
-                    <div class="col-xs-6 padding-0">
-                        <div class="search-bar">
-                            <!--<span class="glyphicon glyphicon-search saffronText font18"></span>-->
-                            <span>
-                                <input id="productSearchInput" class="productSearch" type="text" data-ng-model="selectedProduct"
-                                       bs-options="product as product.Name for product in getSearchProductList($viewValue)"
-                                       filter="autosuggest"
-                                       data-limit=15
-                                       placeholder="Search by Speciality, Physician Name"
-                                       title="Search by typing the product name"
-                                       data-html=true
-                                       autocomplete="off"
-                                       required
-                                       data-bs-typeahead>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-xs-2 padding-0">
-                        <div class="areaSearch-bar">
-                            <span ng-click="showAreaListClicked()" ng-hide="showAreaList">
-                                <i class="fa fa-map-marker saffronText font20"></i>
-                                <input id="areaSearchInput" ng-hide="showAreaList" class="areaSearchDisabled"
-                                       data-ng-model="selectedArea.AreaName" />
-                                <a href="#" ng-click="showAreaListClicked()" class="right area_select"><span class="fa fa-chevron-down font18"></span></a>
-                            </span>
-                            <span ng-show="showAreaList">
-                                <i class="fa fa-map-marker saffronText font20"></i>
-                                <input id="areaSearchInputSelect" class="areaSearch" ng-show="showAreaList" type="text" data-ng-model="selectedAreaInput"
-                                       bs-options="location.AreaName for location in getLocationList($viewValue) | unique: 'AreaName'"
-                                       data-limit=15
-                                       ng-value="{{selectedAreaInput.AreaName}}"
-                                       placeholder="Type to select area.." autocomplete="off" data-bs-typeahead />
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-xs-2 padding-0">
-                        <div class="col-xs-4 padding-0">
-                            <button type="submit" class="globalSearch-submit" value="Search"><span class="glyphicon glyphicon-search font18"></span></button>
-                        </div>
-                        
-                    </div>
-                </form>
+        <span class="hidden">{{$root.hideSearchbar = true}}</span>
 
-            </div>
+        <div class="col-md-12 noPadding">
+            <form data-value="search" data-ng-submit="searchCatalogue()">
+                <div class="col-xs-6 padding-0">
+                    <div class="search-bar">
+                        <!--<span class="glyphicon glyphicon-search saffronText font18"></span>-->
+                        <span>
+                            <input id="productSearchInput" class="productSearch" type="text" data-ng-model="selectedProduct"
+                                   bs-options="product as product.Name for product in getSearchProductList($viewValue)"
+                                   filter="autosuggest"
+                                   data-limit=15
+                                   placeholder="Search by Speciality, Physician Name"
+                                   title="Search by typing the product name"
+                                   data-html=true
+                                   autocomplete="off"
+                                   required
+                                   data-bs-typeahead>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-2 padding-0">
+                    <div class="areaSearch-bar">
+                        <span ng-click="showAreaListClicked()" ng-hide="showAreaList">
+                            <i class="fa fa-map-marker saffronText font20"></i>
+                            <input id="areaSearchInput" ng-hide="showAreaList" class="areaSearchDisabled"
+                                   data-ng-model="selectedArea.AreaName" />
+                            <a href="#" ng-click="showAreaListClicked()" class="right area_select"><span class="fa fa-chevron-down font18"></span></a>
+                        </span>
+                        <span ng-show="showAreaList">
+                            <i class="fa fa-map-marker saffronText font20"></i>
+                            <input id="areaSearchInputSelect" class="areaSearch" ng-show="showAreaList" type="text" data-ng-model="selectedAreaInput"
+                                   bs-options="location.AreaName for location in getLocationList($viewValue) | unique: 'AreaName'"
+                                   data-limit=15
+                                   ng-value="{{selectedAreaInput.AreaName}}"
+                                   placeholder="Type to select area.." autocomplete="off" data-bs-typeahead />
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-2 padding-0">
+                    <div class="col-xs-4 padding-0">
+                        <button type="submit" class="globalSearch-submit" value="Search"><span class="glyphicon glyphicon-search font18"></span></button>
+                    </div>
 
- 
+                </div>
+            </form>
+
+        </div>
+
+
     </div>
     <div>
         <div class="menubar navbar-collapse nomobdisplay" id="menubar">
@@ -85,7 +95,7 @@
                                     </span>
                                     <!-- grouping should be done later.-->
                                 </div>
- 
+
                             </div>
 
                         </div>
@@ -175,7 +185,7 @@
                 </div>
             </div>
         </nav>
-    </div>   
+    </div>
     <br class="clear" />
     <br />
     <div ng-show="recentlyViewedlist.length>0" class="containerbgcolor">

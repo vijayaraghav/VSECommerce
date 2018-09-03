@@ -1,7 +1,15 @@
-﻿app.service('userActionService', function () {
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app.service('userActionService', function () {
 
-    var endPoint = '/VBuy/api/UserAction';
-    var endPointUserRegister = '/VBuy/api/Login';
+     var endPoint = 'http://192.168.1.12:8075/api/UserAction';
+    var endPointUserRegister = 'http://192.168.1.12:8075/api/Login';
 
     this.getUserWishlist = function ($scope, $http, userName)
     {

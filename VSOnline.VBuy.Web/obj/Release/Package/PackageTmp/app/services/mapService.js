@@ -1,6 +1,14 @@
-﻿app.service('mapService', function () {
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app.service('mapService', function () {
 
-    var endPoint = '/VBuy/api/LocationMap';
+     var endPoint = 'http://192.168.1.12:8075/api/LocationMap';
 
     this.getStoreLocationsForCategory = function ($scope, $http, catId, lat, lng, mapRadius, priceRangeFrom, priceRangeTo) {
         var config = {     

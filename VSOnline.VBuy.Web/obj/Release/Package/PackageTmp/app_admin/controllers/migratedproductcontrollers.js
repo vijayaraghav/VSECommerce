@@ -1,7 +1,15 @@
-﻿app_admin.controller('AdminProductListController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app_admin.controller('AdminProductListController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
-    
-    var endPoint = '/VBuy/api/AdminMigratedProduct';
+
+    var endPoint = 'http://192.168.1.12:8075/api/AdminMigratedProduct';
 
     function ConfirmDialog(message) {
 
@@ -718,7 +726,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 app_admin.controller('AdminBrandController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VBuy/api/AdminMigratedManufacturer';
+    var endPoint = 'http://192.168.1.12:8075/api/AdminMigratedManufacturer';
 
     $(document).ready(function () {
 
@@ -1002,7 +1010,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 app_admin.controller('AdminPublishProductController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VBuy/api/AdminMigratedProduct';
+    var endPoint = 'http://192.168.1.12:8075/api/AdminMigratedProduct';
 
     function InitializeProductPublish() {
         loadProduct();
@@ -1165,8 +1173,8 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
 app_admin.controller('AdminProductSeoController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
-    var endPoint = '/VBuy/api/AdminMigratedProduct';
-
+    var endPoint = 'http://192.168.1.12:8075/api/AdminMigratedProduct';
+    
     function InitializeSeoProduct() {
         $('#ddlCategoryId').select2();
         loadSeoCategory();

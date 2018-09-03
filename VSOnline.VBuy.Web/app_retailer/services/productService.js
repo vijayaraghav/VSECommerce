@@ -6,11 +6,11 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app_retailer.service('productService', function () {
+app_retailer.service('productService', function () {
 
     var endPoint = '/VSECommerce/api/Products';
     var updateProductEndPoint = '/VSECommerce/api/UpdateProducts';
-    var endPointRetailer = '/VSECommerce/api/Retailer';
+    var endPointRetailer = 'http://localhost:49475/api/Retailer';
 
     this.getProductSpecification = function ($scope, $http, productId) {
         var config = {

@@ -1,4 +1,4 @@
-﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////////////////
 // <copyright>
 // Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
 //</copyright>
@@ -6,36 +6,37 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app_admin.controller('AdminUserMasterController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
+app_admin.controller('AdminUserMasterController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VSECommerce/api/AdminMigrated';
-
-$(function () {
-    var date = new Date();
-    var currentMonth = date.getMonth();
-    var currentDate = date.getDate();
-    var currentYear = date.getFullYear();
-    $("#txtFrUserrDetails").datepicker(
-
-          { dateFormat: ' yy-mm-dd', 
-              showAnim: 'slide', 
-              changeMonth: true, 
-              changeYear: true, 
-              yearRange: '1990:2020',
-              maxDate: new Date(currentYear, currentMonth, currentDate)
-	               
-          }
-         );
-	   
-});
+    var endPoint = 'http://localhost:49475/api/AdminMigrated';
 
     $(function () {
         var date = new Date();
         var currentMonth = date.getMonth();
         var currentDate = date.getDate();
         var currentYear = date.getFullYear();
-               
+        $("#txtFrUserrDetails").datepicker(
+
+              {
+                  dateFormat: ' yy-mm-dd',
+                  showAnim: 'slide',
+                  changeMonth: true,
+                  changeYear: true,
+                  yearRange: '1990:2020',
+                  maxDate: new Date(currentYear, currentMonth, currentDate)
+
+              }
+             );
+
+    });
+
+    $(function () {
+        var date = new Date();
+        var currentMonth = date.getMonth();
+        var currentDate = date.getDate();
+        var currentYear = date.getFullYear();
+
         $("#txtToUserDetails").datepicker(
               {
                   dateFormat: 'yy-mm-dd',
@@ -44,20 +45,18 @@ $(function () {
                   changeYear: true,
                   yearRange: '1990:2020',
                   maxDate: new Date(currentYear, currentMonth, currentDate)
-	                                               
+
               }
              );
     });
-         
-   
 
-    $scope.searchUserDetails = function()
-    {
+
+
+    $scope.searchUserDetails = function () {
         var FromRegisDate = $('#txtFrUserrDetails').val().trim();
         var ToRegisDate = $('#txtToUserDetails').val().trim();
-  
-        if (($('#txtUserName').val().length >= 3) || $('#ddlRegisterDetails').val().trim() !=0 || ($('#txtEmail').val().length >= 3) || ($('#txtFrUserrDetails').val().trim() != "") || ($('#txtToUserDetails').val().trim() != ""))
-        {
+
+        if (($('#txtUserName').val().length >= 3) || $('#ddlRegisterDetails').val().trim() != 0 || ($('#txtEmail').val().length >= 3) || ($('#txtFrUserrDetails').val().trim() != "") || ($('#txtToUserDetails').val().trim() != "")) {
             $("span").html("");
             if (FromRegisDate == "" && ToRegisDate != "") {
                 alert('Choose From Date');
@@ -65,8 +64,7 @@ $(function () {
             if (ToRegisDate == "" && FromRegisDate != "") {
                 alert('Choose To Date');
             }
-            else
-            {
+            else {
                 var user = {};
                 user.userName = $('#txtUserName').val().trim();
                 user.email = $('#txtEmail').val().trim();
@@ -80,13 +78,13 @@ $(function () {
                 if (user.RegisDetails == 3) {
                     user.RegisDetails = "true";
                 }
-                
+
                 user.RegisUserFromDate = $('#txtFrUserrDetails').val().trim();
                 user.RegisUserToDate = $('#txtToUserDetails').val().trim();
-              
+
 
                 var config = {
-                    params:user,
+                    params: user,
                     headers: { "CommandType": "searchUser" }
                 };
 
@@ -99,12 +97,11 @@ $(function () {
         }
         else {
             $('#Required').text("Please Enter 3 characters to search");
-      
+
         }
-    
+
     }
-    function createUserGrid(user)
-    {
+    function createUserGrid(user) {
         var data = {
             "rows": eval(user)
         };
@@ -114,7 +111,7 @@ $(function () {
             datastr: data,
             datatype: "jsonstring",
             jsonReader: { repeatitems: false },
-            colNames: ['UserId', 'Username', 'FirstName', 'LastName', 'Email', 'PhoneNumber1', 'PhoneNumber2', 'IsMerchant', 'Active','Deleted', 'Action'],
+            colNames: ['UserId', 'Username', 'FirstName', 'LastName', 'Email', 'PhoneNumber1', 'PhoneNumber2', 'IsMerchant', 'Active', 'Deleted', 'Action'],
             colModel: [
                         { name: 'UserId', index: 'UserId', width: 20, align: "center" },
                         { name: 'Username', index: 'Username', width: 50, align: "center", sortable: false },
@@ -123,7 +120,7 @@ $(function () {
                             { name: 'Email', index: 'Email', width: 50, align: "center", sortable: false },
                         { name: 'PhoneNumber1', index: 'PhoneNumber1', width: 30, align: "center", sortable: false },
                         { name: 'PhoneNumber2', index: 'PhoneNumber2', width: 30, align: "center", sortable: false },
-                            { name: 'IsMerchant', index: 'IsMerchant', width: 20, align: "center", sortable: false ,hidden:true},
+                            { name: 'IsMerchant', index: 'IsMerchant', width: 20, align: "center", sortable: false, hidden: true },
                        { name: 'Active', index: 'Active', width: 20, align: "center", sortable: false, hidden: true },
                             { name: 'Deleted', index: 'Deleted', width: 20, align: "center", sortable: false, hidden: true },
                         { name: 'UserId', index: 'UserId', width: 30, align: "center", sortable: false, formatter: editLink }
@@ -144,25 +141,23 @@ $(function () {
                     var PhoneNumber2 = jQuery('#userlistGrid').jqGrid('getCell', rowid, 'PhoneNumber2');
                     //var Active = jQuery('#userlistGrid').jqGrid('getCell', rowid, 'Active');
                     //var IsMerchant = jQuery('#userlistGrid').jqGrid('getCell', rowid, 'IsMerchant');
-                    editUserDetails(UserId,Username,FirstName,LastName,Email,PhoneNumber1,PhoneNumber2);
+                    editUserDetails(UserId, Username, FirstName, LastName, Email, PhoneNumber1, PhoneNumber2);
                 }
-                else if(event.target.className == 'delete')
-                {
+                else if (event.target.className == 'delete') {
                     var deleteUser = confirm("Do you want to Delete ?");
                     if (deleteUser == true) {
                         var dataFromTheRow = jQuery('#userlistGrid').jqGrid('getRowData', rowid);
                         var UserId = jQuery('#userlistGrid').jqGrid('getCell', rowid, 'UserId');
                         var Deleted = jQuery('#userlistGrid').jqGrid('getCell', rowid, 'Deleted');
-                        if (Deleted == "false")
-                        {
+                        if (Deleted == "false") {
                             Deleted = 1;
-                            userIsDeleted(Deleted,UserId);
+                            userIsDeleted(Deleted, UserId);
                         }
                         else {
                             Deleted = 0;
-                            userIsDeleted(Deleted,UserId);
+                            userIsDeleted(Deleted, UserId);
                         }
-                   
+
                     }
                 }
 
@@ -194,9 +189,8 @@ $(function () {
                 );
 
     }
-    function userIsDeleted(Deleted, UserId)
-    {
-  
+    function userIsDeleted(Deleted, UserId) {
+
         var deleted = {};
         deleted.isDeleted = Deleted;
         deleted.userid = UserId;
@@ -212,8 +206,7 @@ $(function () {
                $scope.searchUserDetails();
            });
     }
-    function editUserDetails(UserId, Username, FirstName, LastName, Email, PhoneNumber1, PhoneNumber2, Active, IsMerchant)
-    {
+    function editUserDetails(UserId, Username, FirstName, LastName, Email, PhoneNumber1, PhoneNumber2, Active, IsMerchant) {
         $('#editUSer').modal('show');
         $('#txtUserid').val(UserId);
         $('#txtEditUserName').val(Username);
@@ -222,19 +215,18 @@ $(function () {
         $('#txteditEmail').val(Email);
         $('#txtEditPhone1').val(PhoneNumber1);
         $('#txtEditPhone2').val(PhoneNumber2);
-    
+
     }
-    function ModifyUserDetails()
-    {
+    function ModifyUserDetails() {
         var modifyUser = {};
-        modifyUser.UserId=$('#txtUserid').val();
-        modifyUser.userName= $('#txtEditUserName').val();
-        modifyUser.FirstName=$('#txtEditFirstName').val();
-        modifyUser.LastName=$('#txtEditLastName').val();
-        modifyUser.Email= $('#txteditEmail').val();
-        modifyUser.PhoneNumber1=$('#txtEditPhone1').val();
+        modifyUser.UserId = $('#txtUserid').val();
+        modifyUser.userName = $('#txtEditUserName').val();
+        modifyUser.FirstName = $('#txtEditFirstName').val();
+        modifyUser.LastName = $('#txtEditLastName').val();
+        modifyUser.Email = $('#txteditEmail').val();
+        modifyUser.PhoneNumber1 = $('#txtEditPhone1').val();
         modifyUser.PhoneNumber2 = $('#txtEditPhone2').val();
-       
+
         var config = {
             params: modifyUser,
             headers: { "CommandType": "ModifyUserName" }
@@ -248,12 +240,11 @@ $(function () {
 
     }
     function editLink(cellValue, options, rowdata, action) {
-        return  '<img src="images/delete.png" class="delete" width="25px" height="25px" style="margin-top:5px" title="Delete" border=0  />';
+        return '<img src="images/delete.png" class="delete" width="25px" height="25px" style="margin-top:5px" title="Delete" border=0  />';
 
     }
 
-    function userClear()
-    {
+    function userClear() {
         $('#txtUserName').val('');
         $('#txtEmail').val('');
         $('#ddlRegisterDetails').val(0);
@@ -261,29 +252,25 @@ $(function () {
         $('#txtToUserDetails').val('');
 
     }
-    function checkUserName()
-    {
+    function checkUserName() {
         var username = $('#txtUserName').val().length;
-   
-   
-   
-        if((username<3))
-        {
+
+
+
+        if ((username < 3)) {
             $('#Required').text("Please Enter 3 characters to search");
             $('#txtUserName').val('');
-        
+
         }
     }
-    function checkFirstName()
-    {
+    function checkFirstName() {
         var frstName = $('#txtFirstName').val().length;
         if ((frstName < 3)) {
             $('#Required').text("Please Enter 3 characters to search");
             $('#txtFirstName').val('');
         }
     }
-    function checkLastName()
-    {
+    function checkLastName() {
         var lstname = $('#txtLastName').val().length;
         if ((lstname < 3)) {
             $('#Required').text("Please Enter 3 characters to search");
@@ -291,19 +278,16 @@ $(function () {
 
         }
     }
-    function checkEmail()
-    {
+    function checkEmail() {
         var email = $('#txtEmail').val().length;
         if ((email < 3)) {
             $('#Required').text("* Please Enter 3 characters to search");
             $('#txtEmail').val('');
         }
-    
+
     }
-    $(function ()
-    {
-        $('input:text').keypress(function ()
-        {
+    $(function () {
+        $('input:text').keypress(function () {
             $('#Required').text('');
         });
     });
@@ -316,12 +300,12 @@ $(function () {
 
     InitializeUserDetails();
 
-	        
+
 }]);
 
 app_admin.controller('AdminSellerController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
-    var endPoint = '/VSECommerce/api/AdminMigratedProduct';
+    var endPoint = 'http://localhost:49475/api/AdminMigratedProduct';
 
     $(document).ready(function () {
         $('#editStore').modal('hide');
@@ -420,7 +404,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         $('#txtEditstoreid').val(Storeid);
         $('#txtEditstorename').val(storename);
     }
-    $scope.ModifyStoreName = function() {
+    $scope.ModifyStoreName = function () {
         var editStoreName = {};
         editStoreName.EditStoreid = $('#txtEditstoreid').val().trim();
         editStoreName.EditStoreName = $('#txtEditstorename').val().trim();
@@ -430,7 +414,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         }
         else {
             var config = {
-                params:editStoreName,
+                params: editStoreName,
                 headers: { "CommandType": "ModifyStoreName" }
             };
 
@@ -486,7 +470,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     }
 
 
-    $scope.searchStore = function() {
+    $scope.searchStore = function () {
         if (($('#txtStoreId').val().length >= 3) || ($('#txtStoreName').val().length >= 3) || ($('#txtBranchId').val().length >= 3) || ($('#txtBranchName').val().length >= 3)) {
             $('#sellerGrid').show();
             var Store = {};
@@ -517,7 +501,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         }
 
     }
-    $scope.ModifyStore = function() {
+    $scope.ModifyStore = function () {
         var editBranch = {};
         editBranch.branchid = $('#txtBranchid').val().trim();
         editBranch.branchname = $('#txtBrnchName').val().trim();
@@ -576,7 +560,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                });
         }
     }
-    $scope.StoreClear = function() {
+    $scope.StoreClear = function () {
 
         $('#txtStoreId').val('');
         $('#txtBranchId').val('');
@@ -586,25 +570,25 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
 
     }
-    $scope.checkStoreId = function() {
+    $scope.checkStoreId = function () {
         if ($('#txtStoreId').val().length < 3) {
             $('#required').text(" * Please Enter 3 characters to search");
             $('#txtStoreId').val('');
         }
     }
-    $scope.checkBranchId = function() {
+    $scope.checkBranchId = function () {
         if ($('#txtBranchId').val().length < 3) {
             $('#required').text(" * Please Enter 3 characters to search");
             $('#txtBranchId').val('');
         }
     }
-    $scope.checkStoreName = function() {
+    $scope.checkStoreName = function () {
         if ($('#txtStoreName').val().length < 3) {
             $('#required').text(" * Please Enter 3 characters to search");
             $('#txtStoreName').val('');
         }
     }
-    $scope.checkBranchName = function() {
+    $scope.checkBranchName = function () {
 
         if ($('#txtBranchName').val().length < 3) {
             $('#required').text(" * Please Enter 3 characters to search");
@@ -616,7 +600,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             $('#required').text('');
         });
     });
-    $scope.CheckStoreId= function(objEvt) {
+    $scope.CheckStoreId = function (objEvt) {
         var charCode = (objEvt.which) ? objEvt.which : event.keyCode
         if (charCode > 31 && (charCode < 48 || charCode > 57)) {
             document.getElementById("txtStoreId").style.backgroundColor = "#FFB2B2";
@@ -627,7 +611,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             return true;
         }
     }
-    $scope.CheckBranchId = function(objEvt) {
+    $scope.CheckBranchId = function (objEvt) {
         var charCode = (objEvt.which) ? objEvt.which : event.keyCode
         if (charCode > 31 && (charCode < 48 || charCode > 57)) {
             document.getElementById("txtBranchId").style.backgroundColor = "#FFB2B2";
@@ -644,16 +628,16 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
 app_admin.controller('AdminSellerCategoryController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
-    var endPoint = '/VSECommerce/api/AdminMigrated';
+    var endPoint = 'http://localhost:49475/api/AdminMigrated';
     $scope.ParentCat = {}
     $scope.ParentCatSelected = {};
 
-    $scope.ClearCategory = function() {
+    $scope.ClearCategory = function () {
         $('#txtBranchId').val('');
         $('#txtBranchName').val('')
     }
 
-    $scope.getCategory = function() {
+    $scope.getCategory = function () {
         var input = {};
         input.BranchId = $('#txtBranchId').val().trim();
         input.BranchName = $('#txtBranchName').val().trim();
@@ -694,7 +678,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
            });
     }
 
-    $scope.LoadAssCategory = function() {
+    $scope.LoadAssCategory = function () {
         $("#ReParentCat").empty();
         $('#myselect').empty();
         $('#ReAppendSelect').empty();
@@ -714,14 +698,14 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
            });
     }
 
-    $scope.AppendSelect = function() {
+    $scope.AppendSelect = function () {
 
 
         var input = {};
         input.selected = $('#myselect option:selected').val();
 
         var config = {
-            params:input,
+            params: input,
             headers: { "CommandType": "LoadSelectedCategory" }
         };
 
@@ -738,7 +722,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     }
 
 
-    $scope.deleteAssCategory = function() {
+    $scope.deleteAssCategory = function () {
 
 
         var input = {};
@@ -760,7 +744,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
            });
     }
 
-    $scope.subcat = function() {
+    $scope.subcat = function () {
         $("#myselect").empty();
         $('#selected').empty();
 
@@ -774,7 +758,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         };
 
         $http.get(endPoint + '/LoadSubCategory', config)
-           .then(function (response) {              
+           .then(function (response) {
                var data = JSON.parse(response.data);
                for (var i = 0; i < data.length; i++) {
 
@@ -784,7 +768,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
            });
     }
 
-    $scope.subAssigncat = function() {
+    $scope.subAssigncat = function () {
         $("#Asmy-select").empty();
         $("#AsmyselectCate").empty();
         var input = {};
@@ -806,7 +790,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
            });
     }
 
-    $scope.ReAppendSelect = function(){
+    $scope.ReAppendSelect = function () {
 
 
         var input = {};
@@ -830,7 +814,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
            });
     }
 
-    $scope.restorCate = function() {
+    $scope.restorCate = function () {
 
 
         var input = {};
@@ -854,7 +838,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
            });
 
     }
-    $scope.ModifySellerCategories = function() {
+    $scope.ModifySellerCategories = function () {
 
 
         var input = {};
@@ -1032,7 +1016,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
     }
 
-    $scope.ModifySellerAssignCategories = function() {
+    $scope.ModifySellerAssignCategories = function () {
 
         $("#AsmyselectCate option[value=" + '--Select--' + "]").remove();
         var input = {};
@@ -1082,7 +1066,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 app_admin.controller('AdminNewStoreController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VSECommerce/api/AdminMigrated';
+    var endPoint = 'http://localhost:49475/api/AdminMigrated';
     function validateQty(event) {
         var key = window.event ? event.keyCode : event.which;
         if (event.keyCode == 8 || event.keyCode == 46
@@ -1099,7 +1083,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         $('#StatusRegis').modal('hide');
     });
     $(document).ready(function () {
-         
+
         $("#txtRePhnNum").keypress(function (e) {
 
             if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
@@ -1118,7 +1102,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     });
 
 
-    $scope.CheckReNameLength = function() {
+    $scope.CheckReNameLength = function () {
 
         if ($('#txtName').val().trim().length < 3) {
             $('#required').text(" * Name must be at least 4 characters long");
@@ -1132,7 +1116,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     }
 
 
-    $scope.CheckBussName = function() {
+    $scope.CheckBussName = function () {
 
         if ($('#txtBussName').val().trim().length == 0) {
             $('#required').text(" *Enter Business Name");
@@ -1146,7 +1130,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     }
 
 
-    $scope.ChkAddress = function() {
+    $scope.ChkAddress = function () {
         if ($('#txtRegAdd1').val().trim().length == 0) {
             $('#required').text(" *Enter Address Name");
             // $('#txtRePhnNum').val('');
@@ -1159,7 +1143,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     }
 
 
-    $scope.ChkCity = function() {
+    $scope.ChkCity = function () {
 
         if ($('#txtCity').val().trim().length == 0) {
             $('#required').text(" *Enter City");
@@ -1172,7 +1156,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     }
 
 
-    $scope.ChkPincode = function() {
+    $scope.ChkPincode = function () {
         if ($('#txtPincode').val().trim().length == 0) {
             $('#required').text(" *Enter Pincode");
             // $('#txtRePhnNum').val('');
@@ -1188,7 +1172,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         }
 
     }
-    $scope.ValidatePhNum = function() {
+    $scope.ValidatePhNum = function () {
 
 
         if ($('#txtRePhnNum').val().trim().length < 10) {
@@ -1202,7 +1186,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
     }
 
-    $scope.RetailerClear = function() {
+    $scope.RetailerClear = function () {
         $('#txtName').val('');
         $('#txtRePhnNum').val('');
         $('#txtReEmail').val('');
@@ -1219,7 +1203,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
 
 
-    $scope.RetailerRegister = function() {
+    $scope.RetailerRegister = function () {
 
         var Requ = $('#required').text().trim();
 
@@ -1285,9 +1269,10 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
 
             var config = {
-                params:input,
-                headers: { "CommandType": "RegisRetailer"
-            }
+                params: input,
+                headers: {
+                    "CommandType": "RegisRetailer"
+                }
             };
 
             $http.get(endPoint + '/RegisRetailer', config)
@@ -1319,8 +1304,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
     }
 
-    $scope.GetLocationLatLong = function()
-    {
+    $scope.GetLocationLatLong = function () {
         var input = {};
         input.Add1 = $('#txtRegAdd1').val().trim();
         input.Add2 = $('#txtRegAdd2').val().trim();
@@ -1342,7 +1326,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                 var geoCodeResult = results;
                 if (displayLatLong(geoCodeResult)) {
                     $('#txtLati').val($scope.Latitude);
-                    $('#txtlong').val( $scope.Longitude);
+                    $('#txtlong').val($scope.Longitude);
                 }
             }
             else {

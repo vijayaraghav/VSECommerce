@@ -24,3 +24,17 @@ D:\Github_VSEngine\VSECommerce\BuildArtifacts\VBuy.Domain\Debug\AutoMapper.Net4.
 D:\Github_VSEngine\VSECommerce\BuildArtifacts\VBuy.Domain\Debug\VSOnline.VSECommerce.Domain.dll.config
 D:\Github_VSEngine\VSECommerce\BuildArtifacts\VBuy.Domain\Debug\VSOnline.VSECommerce.Domain.dll
 D:\Github_VSEngine\VSECommerce\BuildArtifacts\VBuy.Domain\Debug\VSOnline.VSECommerce.Domain.pdb
+C:\Users\user\Desktop\VSECommerce\BuildArtifacts\VBuy.Domain\Debug\AutoMapper.Net4.dll
+C:\Users\user\Desktop\VSECommerce\BuildArtifacts\VBuy.Domain\Debug\VSOnline.VSECommerce.Domain.dll.config
+C:\Users\user\Desktop\VSECommerce\BuildArtifacts\VBuy.Domain\Debug\VSOnline.VSECommerce.Domain.dll
+C:\Users\user\Desktop\VSECommerce\BuildArtifacts\VBuy.Domain\Debug\VSOnline.VSECommerce.Domain.pdb
+C:\Users\user\Desktop\VSECommerce\VSOnline.VSECommerce.Domain\obj\Debug\VSOnline.VSECommerce.Domain.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\VSECommerce\VSOnline.VSECommerce.Domain\obj\Debug\VSOnline.VSECommerce.Domain.dll
+C:\Users\user\Desktop\VSECommerce\VSOnline.VSECommerce.Domain\obj\Debug\VSOnline.VSECommerce.Domain.pdb
+C:\Users\user\Desktop\VSECommerce - Copy\BuildArtifacts\VBuy.Domain\Debug\AutoMapper.Net4.dll
+C:\Users\user\Desktop\VSECommerce - Copy\BuildArtifacts\VBuy.Domain\Debug\VSOnline.VSECommerce.Domain.dll.config
+C:\Users\user\Desktop\VSECommerce - Copy\BuildArtifacts\VBuy.Domain\Debug\VSOnline.VSECommerce.Domain.dll
+C:\Users\user\Desktop\VSECommerce - Copy\BuildArtifacts\VBuy.Domain\Debug\VSOnline.VSECommerce.Domain.pdb
+C:\Users\user\Desktop\VSECommerce - Copy\VSOnline.VSECommerce.Domain\obj\Debug\VSOnline.VSECommerce.Domain.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\VSECommerce - Copy\VSOnline.VSECommerce.Domain\obj\Debug\VSOnline.VSECommerce.Domain.dll
+C:\Users\user\Desktop\VSECommerce - Copy\VSOnline.VSECommerce.Domain\obj\Debug\VSOnline.VSECommerce.Domain.pdb

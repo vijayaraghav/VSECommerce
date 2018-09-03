@@ -1,4 +1,4 @@
-﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////////////////
 // <copyright>
 // Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
 //</copyright>
@@ -6,49 +6,46 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app_retailer.service('ordersService', function () {
+app_retailer.service('ordersService', function () {
 
-    var endPoint = '/VSECommerce/api/RetailerOrder';
-    this.getPendingOrders = function ($scope, $http, branch, pageSize, pageNo)
-    {
-       
+    var endPoint = 'http://localhost:49475/api/RetailerOrder';
+    this.getPendingOrders = function ($scope, $http, branch, pageSize, pageNo) {
+
         var config = {
             headers: { "CommandType": "GetPendingOrderHistory" },
-            params: { branchId: branch,PageSize:pageSize,PageNo:pageNo}
+            params: { branchId: branch, PageSize: pageSize, PageNo: pageNo }
         };
         return $http.get(endPoint + '/GetPendingOrderHistory', config);
     }
     this.GetTotalOrders = function ($scope, $http, branch) {
-     
+
         var config = {
             headers: { "CommandType": "GetTotalOrders" },
             params: { branchId: branch }
         };
         return $http.get(endPoint + '/GetTotalOrders', config);
     }
-    this.getorders = function ($scope, $http, branch, order)
-    {
-       
+    this.getorders = function ($scope, $http, branch, order) {
+
         var config = {
             headers: { "CommandType": "GetOrders" },
-            params: {branchId:branch,orderId:order}
+            params: { branchId: branch, orderId: order }
         };
         return $http.get(endPoint + '/GetOrders', config);
     }
-    this.getOrderSearch = function ($scope, $http, branch, orderStatus, orderid, paymentStatus)
-    {
-       
+    this.getOrderSearch = function ($scope, $http, branch, orderStatus, orderid, paymentStatus) {
+
         var config = {
-            headers: { "CommandType":"GetOrdersSearch" },
+            headers: { "CommandType": "GetOrdersSearch" },
             params: { branchId: branch, order: orderid, Status: orderStatus }
         };
-        return $http.get(endPoint +'/GetOrdersSearch', config);
+        return $http.get(endPoint + '/GetOrdersSearch', config);
     }
     this.getOrdersSummary = function ($scope, $http, branch) {
-       
+
         var config = {
             headers: { "CommandType": "GetOrdersSummary" },
-            params: { branchId: branch}
+            params: { branchId: branch }
         };
         return $http.get(endPoint + '/GetOrdersSummary', config);
     }
@@ -97,7 +94,7 @@
         };
         return $http.get(endPoint + '/GetLast6MonthsSalesChart', config);
     }
-    
+
     this.getBranchProductSummary = function ($scope, $http, branch) {
 
         var config = {
@@ -116,28 +113,28 @@
         return $http.get(endPoint + '/GetBranchEnquirySummary', config);
     }
 
-    
+
 
     this.getOrderStatus = function ($scope, $http) {
 
         var config = {
-            headers: { "CommandType":"GetOrderStatus" }
-          
+            headers: { "CommandType": "GetOrderStatus" }
+
         };
-        return $http.get(endPoint +'/GetOrderStatus', config);
+        return $http.get(endPoint + '/GetOrderStatus', config);
     }
 
     this.printOrderDetails = function ($http, orderId) {
 
         var config = {
             headers: { "CommandType": "PrintOrderDetails" },
-            params: { orderId: orderId}
+            params: { orderId: orderId }
 
         };
         return $http.get(endPoint + '/PrintOrderDetails', config);
     }
 
-    this.GetPaymentOption= function ($scope, $http) {
+    this.GetPaymentOption = function ($scope, $http) {
 
         var config = {
             headers: { "CommandType": "GetPaymentOption" }
@@ -146,15 +143,14 @@
         return $http.get(endPoint + '/GetPaymentOption', config);
     }
 
-    this.UpdateOrderStatus= function($scope, $http, subOrderId, OrderId, statusId)
-    {
+    this.UpdateOrderStatus = function ($scope, $http, subOrderId, OrderId, statusId) {
         var config = {
             headers: { "CommandType": "UpdateOrderStatus" }
 
         };
         var orderStatusUpdate = { subOrderId: subOrderId, orderId: OrderId, statusId: statusId };
         return $http.post(endPoint + '/UpdateOrderStatus/', orderStatusUpdate, config);
-        
+
     }
 
     this.UpdatePaymentStatus = function ($scope, $http, subOrderId, OrderId, statusId) {
@@ -165,5 +161,5 @@
         var orderStatus = { subOrderId: subOrderId, orderId: OrderId, statusId: statusId };
         return $http.post(endPoint + '/UpdateOrderStatus/', orderStatus, config);
     }
-  
+
 });

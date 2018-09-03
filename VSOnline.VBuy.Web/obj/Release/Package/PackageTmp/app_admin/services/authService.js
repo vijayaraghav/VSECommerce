@@ -1,6 +1,15 @@
-﻿app_admin.factory('authService', ['$rootScope', '$http', '$q', 'localStorageService', function ($rootScope, $http, $q, localStorageService) {
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app_admin.factory('authService', ['$rootScope', '$http', '$q', 'localStorageService', function ($rootScope, $http, $q, localStorageService) {
 
-    var endPoint = '/VBuy/api/Login';
+    //var endPoint = '/VSECommerce/api/Login';
+	 var endPoint = 'http://192.168.1.12:8075/'
 
     var authServiceFactory = {};
 
@@ -32,7 +41,7 @@
 
         var deferred = $q.defer();
 
-        $http.post('/VBuy/token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
+        $http.post('http://192.168.1.12:8075/token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
                 localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName, refreshToken: "", useRefreshTokens: false });
             _authentication.isAuth = true;
             _authentication.userName = loginData.userName;

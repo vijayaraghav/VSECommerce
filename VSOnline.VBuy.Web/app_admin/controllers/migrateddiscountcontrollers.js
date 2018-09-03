@@ -1,4 +1,4 @@
-﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////////////////
 // <copyright>
 // Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
 //</copyright>
@@ -6,10 +6,10 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app_admin.controller('AdminSiteDiscountController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
+app_admin.controller('AdminSiteDiscountController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VSECommerce/api/AdminMigrated';
+    var endPoint = 'http://localhost:49475/api/AdminMigrated';
 
     $(function () {
         $("#txtStartDate").datepicker({
@@ -36,9 +36,9 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                 $("#txtStartDate").datepicker("option", "maxDate", dt);
             }
         });
-    });  
+    });
 
-    $scope.NewDiscountDetails = function() {
+    $scope.NewDiscountDetails = function () {
         $('#DiscountDetails').modal('show');
         $('#txtDisId').val('');
         $('#txtDiName').val('');
@@ -55,7 +55,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
     }
 
-    $scope.ModifyDiscountDetails = function() {
+    $scope.ModifyDiscountDetails = function () {
 
         var id = $('#txtDisId').val().trim();
         if (id == "") {
@@ -120,7 +120,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                 input.MaxDiscountAmount = maxdis;
 
                 var config = {
-                    params:input,
+                    params: input,
                     headers: { "CommandType": "SaveDiscountDetails" }
                 };
 
@@ -208,7 +208,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                 input.MaxDiscountAmount = maxdis;
 
                 var config = {
-                    params:input,
+                    params: input,
                     headers: { "CommandType": "UpdateDiscountDetails" }
                 };
 
@@ -373,13 +373,13 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     }
 
 
-    $scope.DiscountClear= function() {
+    $scope.DiscountClear = function () {
         $('#txtName').val('');
         $('#txtCouponCode').val('');
         $('#txtStatus').val('');
     }
 
-    $scope.searchDiscount = function() {
+    $scope.searchDiscount = function () {
 
         var Name = $('#txtName').val();
         var copcode = $('#txtCouponCode').val();
@@ -389,14 +389,14 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                 input.Name = $('#txtName').val();
 
                 var config = {
-                    params:input,
+                    params: input,
                     headers: { "CommandType": "LoadNameBasedDiscountDetails" }
                 };
 
                 $http.get(endPoint + '/LoadNameBasedDiscountDetails', config)
                    .then(function (response) {
                        CreateDiscountDetailsGrid(response.data);
-                   });              
+                   });
             }
         }
         if (Name == "") {
@@ -412,7 +412,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                    .then(function (response) {
                        CreateDiscountDetailsGrid(response.data);
                    });
- 
+
             }
         }
         if (Name != "") {

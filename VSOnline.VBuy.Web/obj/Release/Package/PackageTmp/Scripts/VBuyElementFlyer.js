@@ -1,4 +1,13 @@
-﻿function flyToElement(flyer, flyingTo, callBack /*callback is optional*/) {
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+
+function flyToElement(flyer, flyingTo, callBack /*callback is optional*/) {
     var $func = $(this);
 
     var divider = 3;

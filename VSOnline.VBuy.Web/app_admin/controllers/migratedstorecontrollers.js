@@ -1,4 +1,4 @@
-﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////////////////
 // <copyright>
 // Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
 //</copyright>
@@ -6,10 +6,10 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app_admin.controller('AdminOrdersController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
+app_admin.controller('AdminOrdersController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VSECommerce/api/AdminMigratedSeller';
+    var endPoint = 'http://localhost:49475/api/AdminMigratedSeller';
 
     $(function () {
         var date = new Date();
@@ -77,8 +77,8 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
     });
 
-       
-    $scope.ModifyOrderDetailsStatus = function() {
+
+    $scope.ModifyOrderDetailsStatus = function () {
         var FrDate = $('#txtFrOderDate').val();
         var TDate = $('#txtToOderDate').val();
 
@@ -98,7 +98,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                $scope.SearchOderDetails();
            });
     }
-    
+
     function loadOrderStatus() {
 
         $('#OrderStatus').empty();
@@ -157,11 +157,11 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                data[i].name + "</option>");
                    }
                }
-                
-           }); 
+
+           });
     }
-    
-    $scope.SearchOderClear = function() {
+
+    $scope.SearchOderClear = function () {
         $('#txtFrOderDate').val('');
         $('#txtToOderDate').val('');
         $('#txtOrderNum').val('')
@@ -350,7 +350,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         input.Id = Id;
 
         var config = {
-            params:input,
+            params: input,
             headers: { "CommandType": "LoadOrderDetailsList" }
         };
 
@@ -376,8 +376,8 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                loadOrderStatus();
                loadPaymentOption();
                CreateOrderDetailsProductList(data);
-            
-        });
+
+           });
     }
 
 
@@ -409,7 +409,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                         { name: 'BranchName', index: 'BranchName', width: 90, align: "center", sortable: true },
                         { name: 'Quantity', index: 'Quantity', width: 25, align: "center", sortable: true },
                         { name: 'PriceInclTax', index: 'PriceInclTax', width: 25, align: "center", sortable: true },
-                       { name: 'ProductId', index: 'ProductId', width: 40, align: "center", sortable: false, formatter: editLink2, search:false }
+                       { name: 'ProductId', index: 'ProductId', width: 40, align: "center", sortable: false, formatter: editLink2, search: false }
             ],
             width: "850",
             onCellSelect: function (rowid, index, contents, event) {
@@ -465,7 +465,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         $http.get(endPoint + '/loadOrderStatus', config)
            .then(function (response) {
                $('#ProductOrderStatus').empty();
-              
+
                var data = JSON.parse(response.data);
 
                for (var i = 0; i < data.length; i++) {
@@ -479,10 +479,10 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                    $('#ProductOrderStatus').val(OrderItemStatus);
                }
            });
-       
+
 
     }
-    
+
     var UpdateCancelledStatus = "Cancelled", CheckCancelStatus, ChecknoCancelStatus, CheckCancelStatusId;
     function UpdateData() {
 
@@ -490,7 +490,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         var input = {};
         input.Id = OrderId;
         var config = {
-            params:input,
+            params: input,
             headers: { "CommandType": "LoadOrderDetailsList" }
         };
 
@@ -539,7 +539,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         input.OrderProductStatus = CheckCancelStatusId;
 
         var config = {
-            params:input,
+            params: input,
             headers: { "CommandType": "ModifyOrderDetailsStatusBasedOrderItem" }
         };
 
@@ -549,7 +549,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
            });
     }
 
-    $scope.ModifyProductOrderDetailsStatus = function() {
+    $scope.ModifyProductOrderDetailsStatus = function () {
 
         var FrDate = $('#txtFrOderDate').val();
         var TDate = $('#txtToOderDate').val();
@@ -708,7 +708,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
 
     }
-    
+
     var DeliveryOption;
     function loadGridDeliveryOption() {
 
@@ -719,7 +719,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         $http.get(endPoint + '/loadDeliveryOption', config)
            .then(function (response) {
                DeliveryOption = JSON.parse(response.data);
-              
+
 
            });
     }
@@ -752,10 +752,10 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
 
            });
-       
+
     }
 
-    $scope.OrderDetailsExcelData = function() {
+    $scope.OrderDetailsExcelData = function () {
 
         var input = {};
         input.Id = $('#OderChoosenId').val();
@@ -770,11 +770,11 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                var data = JSON.parse(response.data);
                JSONToCSVConvertor(data, "Order Details", true);
 
-           });       
+           });
     }
 
 
-    $scope.ShowColmnTochoose = function() {
+    $scope.ShowColmnTochoose = function () {
 
         $('#ExcelOrderData').modal('show');
 
@@ -796,7 +796,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
            });
     }
 
-    $scope.GenerateDataForSeleColumn = function() {
+    $scope.GenerateDataForSeleColumn = function () {
 
 
         var input = {};
@@ -812,20 +812,20 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
         input.selected = SelectedId;
         input.Id = $('#OderChoosenId').val();
-        
+
         var config = {
-            params:input,
+            params: input,
             headers: { "CommandType": "LoadOrderDetailsColumnList" }
         };
 
         $http.get(endPoint + '/LoadOrderDetailsColumnList', config)
            .then(function (response) {
                var data = JSON.parse(response.data);
-             
+
                $('#ExcelOrderData').modal('hide');
-               
+
                JSONToCSVConvertor(data, "Order Details", true);
-              
+
 
            });
 
@@ -875,33 +875,34 @@ function AppendDataOrders() {
 app_admin.controller('AdminEnquiryController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VSECommerce/api/AdminMigratedSeller';
-
-$(function () {
-    var date = new Date();
-    var currentMonth = date.getMonth();
-    var currentDate = date.getDate();
-    var currentYear = date.getFullYear();
-    $("#txtFrSalesDetails").datepicker(
-
-          { dateFormat: ' yy-mm-dd', 
-              showAnim: 'slide', 
-              changeMonth: true, 
-              changeYear: true, 
-              yearRange: '1990:2020',
-              maxDate: new Date(currentYear, currentMonth, currentDate)
-	               
-          }
-         );
-	   
-});
+    var endPoint = 'http://localhost:49475/api/AdminMigratedSeller';
 
     $(function () {
         var date = new Date();
         var currentMonth = date.getMonth();
         var currentDate = date.getDate();
         var currentYear = date.getFullYear();
-               
+        $("#txtFrSalesDetails").datepicker(
+
+              {
+                  dateFormat: ' yy-mm-dd',
+                  showAnim: 'slide',
+                  changeMonth: true,
+                  changeYear: true,
+                  yearRange: '1990:2020',
+                  maxDate: new Date(currentYear, currentMonth, currentDate)
+
+              }
+             );
+
+    });
+
+    $(function () {
+        var date = new Date();
+        var currentMonth = date.getMonth();
+        var currentDate = date.getDate();
+        var currentYear = date.getFullYear();
+
         $("#txtToSalesDetails").datepicker(
               {
                   dateFormat: 'yy-mm-dd',
@@ -910,7 +911,7 @@ $(function () {
                   changeYear: true,
                   yearRange: '1990:2020',
                   maxDate: new Date(currentYear, currentMonth, currentDate)
-	                                               
+
               }
              );
     });
@@ -918,7 +919,7 @@ $(function () {
 
 
     var list;
-    $scope.SearchFromToDateSalesDetails = function() {
+    $scope.SearchFromToDateSalesDetails = function () {
 
         CreateSalesGrid(null);
         list = $('#ddlday option:selected').text() + "  Sales Inbox";
@@ -962,7 +963,7 @@ $(function () {
             }
 
             var config = {
-                params:input,
+                params: input,
                 headers: { "CommandType": "LoadSalesFromToDate" }
             };
             $http.get(endPoint + '/LoadSalesFromToDate', config)
@@ -998,7 +999,7 @@ $(function () {
                         { name: 'StoreId', index: 'StoreId', width: 10, align: "center", sortable: true },
                         { name: 'Subject', index: 'Subject', width: 40, align: "center", sortable: true },
                          { name: 'Reply', index: 'Reply', width: 30, align: "center", sortable: true },
-                        { name: 'Id', index: 'Id', width: 12, align: "center", sortable: true, formatter: editLink, search:false }
+                        { name: 'Id', index: 'Id', width: 12, align: "center", sortable: true, formatter: editLink, search: false }
 
             ],
             width: "1100",
@@ -1047,14 +1048,14 @@ $(function () {
         $('#txtId').val(id);
         $('#txtReply').val(reply);
     }
-    
-    $scope.ModifyReply = function() {
+
+    $scope.ModifyReply = function () {
         var reply = {};
         reply.id = $('#txtId').val();
         reply.replies = $('#txtReply').val();
 
         var config = {
-            params:reply,
+            params: reply,
             headers: { "CommandType": "modifySales" }
         };
         $http.get(endPoint + '/modifySales', config)
@@ -1063,7 +1064,7 @@ $(function () {
                   $('#editReply').modal('hide');
               });
 
- 
+
     }
     function editLink(cellValue, options, rowdata, action) {
 
@@ -1076,7 +1077,7 @@ $(function () {
         $('#editReply').modal('hide');
     });
 
-    $scope.SearchSales = function() {
+    $scope.SearchSales = function () {
 
 
         var sales = {};
@@ -1103,9 +1104,9 @@ $(function () {
             sales.reply = "false";
 
         }
-        
+
         var config = {
-            params:sales,
+            params: sales,
             headers: { "CommandType": "LoadSales" }
         };
 
@@ -1114,7 +1115,7 @@ $(function () {
                CreateSalesGrid(response.data);
            });
     }
-    $scope.SalesDetailsClear = function() {
+    $scope.SalesDetailsClear = function () {
 
         $('#txtFrSalesDetails').val('');
         $('#txtToSalesDetails').val('');
@@ -1136,7 +1137,7 @@ function ClearSalesDropValue() {
 app_admin.controller('AdminPricingController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VSECommerce/api/AdminMigratedProduct';
+    var endPoint = 'http://localhost:49475/api/AdminMigratedProduct';
     $(function () {
         $("#txtSplStartDate").datepicker({
             dateFormat: 'yy-mm-dd',
@@ -1173,13 +1174,13 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
     });
 
-    $scope.ClearPriceDetails = function() {
+    $scope.ClearPriceDetails = function () {
 
         $('#txtBranchName').val('');
         $('#txtBranchId').val('');
     }
 
-    $scope.SearchProductPriceDetails = function() {
+    $scope.SearchProductPriceDetails = function () {
         var Branch = $('#txtBranchName').val().trim();
         var BranhId = $('#txtBranchId').val().trim();
         if (Branch == "" && BranhId == "") {
@@ -1194,7 +1195,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             input.BranchId = $('#txtBranchId').val().trim();
 
             var config = {
-                params:input,
+                params: input,
                 headers: { "CommandType": "LoadBranchProductDetails" }
             };
 
@@ -1204,8 +1205,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                    if (data.length > 0) {
                        CreateOrderDetailsGrid(data);
                    }
-                   else
-                   {
+                   else {
                        $scope.savedSuccessfully = false;
                        $scope.message = "No products in Selected Store. Check the Branch Name or id. Get it from Seller List"
                    }
@@ -1305,7 +1305,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     }
 
 
-    $scope.ModifyProductPrice = function() {
+    $scope.ModifyProductPrice = function () {
 
         var price = $('#txtPrice').val().trim();
 
@@ -1344,8 +1344,8 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         }
     }
 
-    
-    $scope.GenerateDataForSeleColumn = function() {
+
+    $scope.GenerateDataForSeleColumn = function () {
 
         var SelectedId = "";
         var input = {};
@@ -1382,7 +1382,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                }
            });
     }
-    $scope.PricingExcelData = function() {
+    $scope.PricingExcelData = function () {
         var Branch = $('#txtBranchName').val().trim();
         var BranhId = $('#txtBranchId').val().trim();
         if (Branch == "" && BranhId == "") {
@@ -1411,12 +1411,12 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                        alert('No Data For Price Details To Export In Excel ');
                    }
 
-               
+
                });
         }
 
     }
-    $scope.ProductPriceExcelData = function() {
+    $scope.ProductPriceExcelData = function () {
         var Branch = $('#txtBranchName').val().trim();
         var BranhId = $('#txtBranchId').val().trim();
         if (Branch == "" && BranhId == "") {
@@ -1445,7 +1445,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                });
         }
     }
-    
+
     function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {
 
         var arrData = typeof JSONData != 'object' ? JSON.parse(JSONData) : JSONData;

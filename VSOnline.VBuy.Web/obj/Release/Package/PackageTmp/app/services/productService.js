@@ -1,6 +1,15 @@
-﻿app.service('productService', function () {
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app.service('productService', function () {
 
-    var endPoint = '/VBuy/api/Products';
+     var endPoint = 'http://192.168.1.12:8075/api/Products';
+
 
      this.getRatings = function($scope, $http, productId){
         var config = {

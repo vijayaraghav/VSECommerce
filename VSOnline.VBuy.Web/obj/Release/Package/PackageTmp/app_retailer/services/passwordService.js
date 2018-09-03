@@ -1,5 +1,13 @@
-﻿app_retailer.service('passwordService', function () {
-    var endPoint = '/VBuy/api/Login';
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app_retailer.service('passwordService', function () {
+     var endPoint = 'http://192.168.1.12:8075/api/Login';
  
 
             this.forgotPassword = function ($scope, $http, userEmail){

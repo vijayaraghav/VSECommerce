@@ -24,9 +24,9 @@ namespace VSOnline.VSECommerce.Web.Controllers
     [Authorize(Roles = "Administrators")]
     public class AdminMigratedController : ApiController
     {
-         IUnitOfWork _unitOfWork = null;
+        IUnitOfWork _unitOfWork = null;
 
-         public AdminMigratedController(IUnitOfWork unitOfWork)
+        public AdminMigratedController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
@@ -302,8 +302,8 @@ namespace VSOnline.VSECommerce.Web.Controllers
             return strjson;
 
         }
-    
-  
+
+
         ///Assign Category to Seller
         ///
         [HttpGet]
@@ -714,59 +714,59 @@ namespace VSOnline.VSECommerce.Web.Controllers
         [ActionName("SaveDiscountDetails")]
         public string SaveDiscountDetails(string Name, int DiscountType, int UsePercentage, decimal DiscountPercentage, decimal DiscountAmount, string StartDate, string EndDate, string CouponCode, string RequiresCouponCode, decimal MinOrderValue, decimal MaxDiscountAmount)
         {
-                string conStr = DbConName;
-                String strjson = "", Query = "";
+            string conStr = DbConName;
+            String strjson = "", Query = "";
 
 
-                try
+            try
+            {
+
+                using (SqlConnection con = new SqlConnection(conStr))
                 {
-
-                    using (SqlConnection con = new SqlConnection(conStr))
+                    try
                     {
-                        try
+                        con.Open();
+                        if (!string.IsNullOrEmpty(StartDate) && !string.IsNullOrEmpty(EndDate))
                         {
-                            con.Open();
-                            if (!string.IsNullOrEmpty(StartDate) && !string.IsNullOrEmpty(EndDate))
-                            {
-                                Query = "insert into Discount (Name,DiscountTypeId,UsePercentage,DiscountPercentage,DiscountAmount,StartDateUtc,EndDateUtc,RequiresCouponCode,CouponCode,MinOrderValue,[MaxDiscountAmount]) values('" + Name + "'," + DiscountType + "," + UsePercentage + "," + DiscountPercentage + "," + DiscountAmount + ",'" + StartDate + "','" + EndDate + "'," + RequiresCouponCode + ",'" + CouponCode + "'," + MinOrderValue + "," + MaxDiscountAmount + ") select * from Discount order by Id asc ";
+                            Query = "insert into Discount (Name,DiscountTypeId,UsePercentage,DiscountPercentage,DiscountAmount,StartDateUtc,EndDateUtc,RequiresCouponCode,CouponCode,MinOrderValue,[MaxDiscountAmount]) values('" + Name + "'," + DiscountType + "," + UsePercentage + "," + DiscountPercentage + "," + DiscountAmount + ",'" + StartDate + "','" + EndDate + "'," + RequiresCouponCode + ",'" + CouponCode + "'," + MinOrderValue + "," + MaxDiscountAmount + ") select * from Discount order by Id asc ";
 
-                            }
-                            else if (!string.IsNullOrEmpty(StartDate) && string.IsNullOrEmpty(EndDate))
-                            {
-                                Query = "insert into Discount (Name,DiscountTypeId,UsePercentage,DiscountPercentage,DiscountAmount,StartDateUtc,EndDateUtc,RequiresCouponCode,CouponCode,MinOrderValue,[MaxDiscountAmount]) values('" + Name + "'," + DiscountType + "," + UsePercentage + "," + DiscountPercentage + "," + DiscountAmount + ",'" + StartDate + "',null," + RequiresCouponCode + ",'" + CouponCode + "'," + MinOrderValue + "," + MaxDiscountAmount + ") select * from Discount order by Id asc ";
+                        }
+                        else if (!string.IsNullOrEmpty(StartDate) && string.IsNullOrEmpty(EndDate))
+                        {
+                            Query = "insert into Discount (Name,DiscountTypeId,UsePercentage,DiscountPercentage,DiscountAmount,StartDateUtc,EndDateUtc,RequiresCouponCode,CouponCode,MinOrderValue,[MaxDiscountAmount]) values('" + Name + "'," + DiscountType + "," + UsePercentage + "," + DiscountPercentage + "," + DiscountAmount + ",'" + StartDate + "',null," + RequiresCouponCode + ",'" + CouponCode + "'," + MinOrderValue + "," + MaxDiscountAmount + ") select * from Discount order by Id asc ";
 
-                            }
-                            else if (string.IsNullOrEmpty(StartDate) && !string.IsNullOrEmpty(EndDate))
-                            {
-                                Query = "insert into Discount (Name,DiscountTypeId,UsePercentage,DiscountPercentage,DiscountAmount,StartDateUtc,EndDateUtc,RequiresCouponCode,CouponCode,MinOrderValue,[MaxDiscountAmount]) values('" + Name + "'," + DiscountType + "," + UsePercentage + "," + DiscountPercentage + "," + DiscountAmount + ",null,'" + EndDate + "'," + RequiresCouponCode + ",'" + CouponCode + "'," + MinOrderValue + "," + MaxDiscountAmount + ") select * from Discount order by Id asc ";
+                        }
+                        else if (string.IsNullOrEmpty(StartDate) && !string.IsNullOrEmpty(EndDate))
+                        {
+                            Query = "insert into Discount (Name,DiscountTypeId,UsePercentage,DiscountPercentage,DiscountAmount,StartDateUtc,EndDateUtc,RequiresCouponCode,CouponCode,MinOrderValue,[MaxDiscountAmount]) values('" + Name + "'," + DiscountType + "," + UsePercentage + "," + DiscountPercentage + "," + DiscountAmount + ",null,'" + EndDate + "'," + RequiresCouponCode + ",'" + CouponCode + "'," + MinOrderValue + "," + MaxDiscountAmount + ") select * from Discount order by Id asc ";
 
-                            }
-
-                            else if (string.IsNullOrEmpty(StartDate) && string.IsNullOrEmpty(EndDate))
-                            {
-                                Query = "insert into Discount (Name,DiscountTypeId,UsePercentage,DiscountPercentage,DiscountAmount,StartDateUtc,EndDateUtc,RequiresCouponCode,CouponCode,MinOrderValue,[MaxDiscountAmount]) values('" + Name + "'," + DiscountType + "," + UsePercentage + "," + DiscountPercentage + "," + DiscountAmount + ",null,null," + RequiresCouponCode + ",'" + CouponCode + "'," + MinOrderValue + "," + MaxDiscountAmount + ") select * from Discount order by Id asc ";
-
-                            }
-                            SqlCommand cmd1 = new SqlCommand(Query, con);
-                            SqlDataAdapter sda = new SqlDataAdapter(cmd1);
-                            DataSet ds1 = new DataSet();
-                            sda.Fill(ds1);
-                            strjson = Jsondata.GetJson(ds1);
                         }
 
-                        finally
+                        else if (string.IsNullOrEmpty(StartDate) && string.IsNullOrEmpty(EndDate))
                         {
-                            con.Close();
+                            Query = "insert into Discount (Name,DiscountTypeId,UsePercentage,DiscountPercentage,DiscountAmount,StartDateUtc,EndDateUtc,RequiresCouponCode,CouponCode,MinOrderValue,[MaxDiscountAmount]) values('" + Name + "'," + DiscountType + "," + UsePercentage + "," + DiscountPercentage + "," + DiscountAmount + ",null,null," + RequiresCouponCode + ",'" + CouponCode + "'," + MinOrderValue + "," + MaxDiscountAmount + ") select * from Discount order by Id asc ";
+
                         }
+                        SqlCommand cmd1 = new SqlCommand(Query, con);
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd1);
+                        DataSet ds1 = new DataSet();
+                        sda.Fill(ds1);
+                        strjson = Jsondata.GetJson(ds1);
                     }
 
+                    finally
+                    {
+                        con.Close();
+                    }
                 }
-                catch (Exception Ex)
-                {
 
-                }
+            }
+            catch (Exception Ex)
+            {
 
-                return strjson;
+            }
+
+            return strjson;
         }
         [HttpGet]
         [ActionName("UpdateDiscountDetails")]
@@ -1059,7 +1059,7 @@ namespace VSOnline.VSECommerce.Web.Controllers
             UserService userService = new UserService();
             RetailerUserDTO retailerUserDTO = new RetailerUserDTO();
             Seller newSeller = new Seller();
-           
+
             UserModel userModel = new UserModel();
 
 
@@ -1083,79 +1083,86 @@ namespace VSOnline.VSECommerce.Web.Controllers
 
             if (ValidateUserResult)
             {
-
                 var user = userService.GetUser(retailerUserDTO.Email);
                 AddSeller(retailerUserDTO, user.UserId);
-
             }
-            try
+
+            if (Convert.ToBoolean(ConfigurationManager.AppSettings["AddUserEnableMail"]) == true)
             {
-                using (SqlConnection con = new SqlConnection(conStr))
+                try
+                {
+                    using (SqlConnection con = new SqlConnection(conStr))
 
-                    try
-                    {
-                        if (ValidateUserResult)
+                        try
                         {
-
-                            string filename = System.Web.HttpContext.Current.Server.MapPath(@"~/" + @"EmailTemplates/GeneratePasswordRetailer.html");
-                            string mailbody = System.IO.File.ReadAllText(filename);
-                            mailbody = mailbody.Replace("$$UserName$$", retailerUserDTO.FirstName);
-                            mailbody = mailbody.Replace("$$UserId$$", retailerUserDTO.Email);
-                            mailbody = mailbody.Replace("$$Password$$", password);
-                            string to = retailerUserDTO.Email;
-                            string from = "info@vbuy.in";
-                            using (MailMessage message = new MailMessage(from, to))
+                            if (ValidateUserResult)
                             {
-                                message.Subject = "Password alert from Vbuy.in";
-                                message.Body = mailbody;
-                                message.BodyEncoding = Encoding.UTF8;
-                                message.IsBodyHtml = true;
-                                SmtpClient smtp = new SmtpClient();
-                                smtp.Host = "smtp.mandrillapp.com";
-                                smtp.EnableSsl = true;
-                                System.Net.NetworkCredential networkCredential = new System.Net.NetworkCredential("siva@vbuy.in", "XUHn_8GZFEv4uMYOvcMuXQ");
 
-                                smtp.Credentials = networkCredential;
-                                smtp.Port = 587;
-                                try
+                                string filename = System.Web.HttpContext.Current.Server.MapPath(@"~/" + @"EmailTemplates/GeneratePasswordRetailer.html");
+                                string mailbody = System.IO.File.ReadAllText(filename);
+                                mailbody = mailbody.Replace("$$UserName$$", retailerUserDTO.FirstName);
+                                mailbody = mailbody.Replace("$$UserId$$", retailerUserDTO.Email);
+                                mailbody = mailbody.Replace("$$Password$$", password);
+                                string to = retailerUserDTO.Email;
+                                string from = "info@vbuy.in";
+                                using (MailMessage message = new MailMessage(from, to))
                                 {
-                                    smtp.Send(message);
+                                    message.Subject = "Password alert from Vbuy.in";
+                                    message.Body = mailbody;
+                                    message.BodyEncoding = Encoding.UTF8;
+                                    message.IsBodyHtml = true;
+                                    SmtpClient smtp = new SmtpClient();
+                                    smtp.Host = "smtp.mandrillapp.com";
+                                    smtp.EnableSsl = true;
+                                    System.Net.NetworkCredential networkCredential = new System.Net.NetworkCredential("siva@vbuy.in", "XUHn_8GZFEv4uMYOvcMuXQ");
 
-                                    if (ValidateUserResult)
+                                    smtp.Credentials = networkCredential;
+                                    smtp.Port = 587;
+                                    try
                                     {
-                                        strjson = "1";
+                                        smtp.Send(message);
+
+                                        if (ValidateUserResult)
+                                        {
+                                            strjson = "1";
+                                        }
                                     }
-                                }
-                                catch (Exception ex)
-                                {
-                                    strjson = "0";
-                                    //  throw new Exception(ex.Message);
+                                    catch (Exception ex)
+                                    {
+                                        strjson = "0";
+                                        //  throw new Exception(ex.Message);
+                                    }
 
                                 }
+                            }
+                            else
+                            {
+                                strjson = "0";
 
                             }
                         }
-                        else
+                        finally
                         {
-                            strjson = "0";
-
+                            con.Close();
                         }
-                    }
+                }
+                catch (Exception Ex)
+                {
+                    throw new Exception(Ex.Message);
+                }
 
-
-
-                    finally
-                    {
-                        con.Close();
-                    }
             }
-
-
-
-
-            catch (Exception Ex)
+            else
             {
-                throw new Exception(Ex.Message);
+                if(ValidateUserResult)
+                {
+                    strjson = "1";
+                }
+                else
+                {
+                    strjson = "0";
+                }
+                
             }
 
 
@@ -1166,6 +1173,6 @@ namespace VSOnline.VSECommerce.Web.Controllers
 
 
 
-      
+
     }
 }

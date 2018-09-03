@@ -8,7 +8,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
  app_admin.service('adminProductService', function () {
 
-    var endPointCategory = '/VSECommerce/api/AdminCategory';
+     var endPointCategory = 'http://localhost:49475/api/AdminCategory';
 
     this.getParentCategory = function ($http) {
 

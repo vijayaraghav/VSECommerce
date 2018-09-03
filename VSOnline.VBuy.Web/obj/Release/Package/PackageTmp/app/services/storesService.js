@@ -1,6 +1,14 @@
-﻿app.service('storesService', function () {
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app.service('storesService', function () {
 
-    var endPoint = '/VBuy/api/Stores';
+    var endPoint = '/VSECommerce/api/Stores';
 
     this.getStoreInfo = function ($http, storeId)
     {

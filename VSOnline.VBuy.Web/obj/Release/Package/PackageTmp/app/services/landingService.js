@@ -1,6 +1,16 @@
-﻿app.service('landingService', function () {
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app.service('landingService', function () {
 
-    var endPoint = '/VBuy/api/Landing';
+	// var endPoint = '/VSECommerce/api/Landing';
+     var endPoint = 'http://192.168.1.12:8075/api/Landing';
+	 
     var curLocationDiv = document.getElementById("curLocation");
 
     this.getAppData = function ($http)

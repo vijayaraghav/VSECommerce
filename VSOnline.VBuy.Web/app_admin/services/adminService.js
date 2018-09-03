@@ -1,4 +1,4 @@
-﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////////////////
 // <copyright>
 // Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
 //</copyright>
@@ -6,10 +6,13 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app_admin.service('adminService', function () {
+app_admin.service('adminService', function () {
 
-    var endPointLanding = '/VSECommerce/api/Landing';
-    var endPoint = '/VSECommerce/api/Admin';
+    var endPointLanding = 'http://localhost:49475/api/Landing';
+    var endPoint = 'http://localhost:49475/api/Admin';
+
+    //var endPointLanding = 'http://localhost:49475/api/Landing';
+    //var endPoint = 'http://localhost:49475/api/Admin';
 
     this.getAppData = function ($http) {
         var config = {
@@ -44,7 +47,7 @@
 
     this.showCategoryInHomePage = function ($http, categoryId, flagShow) {
         var config = {
-            params:{categoryId:categoryId , flagShow:flagShow},
+            params: { categoryId: categoryId, flagShow: flagShow },
             headers: { "CommandType": "ShowCategoryInHomePage" }
         };
         return $http.get(endPoint + '/ShowCategoryInHomePage', config)
@@ -53,8 +56,7 @@
             });
     }
 
-    this.removeCache= function($http)
-    {
+    this.removeCache = function ($http) {
         var config = {
             headers: { "CommandType": "RemoveCache" }
         };
@@ -64,8 +66,7 @@
            });
     }
 
-    this.loadProductIndex = function ($http)
-    {
+    this.loadProductIndex = function ($http) {
         var config = {
             headers: { "CommandType": "LoadProductIndex" }
         };
@@ -75,8 +76,7 @@
            });
     }
 
-    this.getSiteSettings = function($http)
-    {
+    this.getSiteSettings = function ($http) {
         var config = {
             headers: { "CommandType": "GetSiteSettings" }
         };
@@ -88,7 +88,7 @@
 
     this.updateSettings = function ($http, SiteKey, Value) {
         var config = {
-            params:{siteKey:SiteKey, value:Value},
+            params: { siteKey: SiteKey, value: Value },
             headers: { "CommandType": "UpdateSiteSettings" }
         };
         return $http.get(endPoint + '/UpdateSiteSettings', config)

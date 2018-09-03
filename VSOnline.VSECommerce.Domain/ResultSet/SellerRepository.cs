@@ -53,33 +53,35 @@ namespace VSOnline.VSECommerce.Domain
 
         private static RetailerInfoResultSet GetStoreDetails(Seller seller)
         {
-            var retailerInfo = new RetailerInfoResultSet
-            {
-                StoreId = seller.StoreId,
-                StoreName = seller.StoreName,
-                Description = seller.Description
-            };
+            
+                var retailerInfo = new RetailerInfoResultSet
+                {
+                    StoreId = seller.StoreId,
+                    StoreName = seller.StoreName,
+                    Description = seller.Description
+                };
 
-            retailerInfo.Branches = new List<BranchResults>();
+                retailerInfo.Branches = new List<BranchResults>();
 
-            List<SellerBranch> sellerBranches = seller.Branches.ToList<SellerBranch>();
-            foreach (SellerBranch branch in sellerBranches)
-            {
-                BranchResults newBranch = new BranchResults();
-                newBranch.BranchId = branch.BranchId;
-                newBranch.BranchName = branch.BranchName;
-                newBranch.Address1 = branch.Address1;
-                newBranch.Address2 = branch.Address2;
-                newBranch.City = branch.City;
-                newBranch.State = branch.State;
-                newBranch.PostalCode = branch.PostalCode;
-                newBranch.PhoneNumber = branch.PhoneNumber;
-                newBranch.Email = branch.Email;
-                newBranch.EnableBuy = branch.EnableBuy;
-                newBranch.Latitude = branch.Latitude;
-                newBranch.Longitude = branch.Longitude;
-                retailerInfo.Branches.Add(newBranch);
-            }
+                List<SellerBranch> sellerBranches = seller.Branches.ToList<SellerBranch>();
+                foreach (SellerBranch branch in sellerBranches)
+                {
+                    BranchResults newBranch = new BranchResults();
+                    newBranch.BranchId = branch.BranchId;
+                    newBranch.BranchName = branch.BranchName;
+                    newBranch.Address1 = branch.Address1;
+                    newBranch.Address2 = branch.Address2;
+                    newBranch.City = branch.City;
+                    newBranch.State = branch.State;
+                    newBranch.PostalCode = branch.PostalCode;
+                    newBranch.PhoneNumber = branch.PhoneNumber;
+                    newBranch.Email = branch.Email;
+                    newBranch.EnableBuy = branch.EnableBuy;
+                    newBranch.Latitude = branch.Latitude;
+                    newBranch.Longitude = branch.Longitude;
+                    retailerInfo.Branches.Add(newBranch);
+                }
+
             return retailerInfo;
         }
     }
