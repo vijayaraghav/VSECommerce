@@ -12,3 +12,9 @@ D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Persistence\obj\Rele
 D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Persistence\obj\Release\VSOnline.VSECommerce.Persistence.csproj.CopyComplete
 D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Persistence\obj\Release\VSOnline.VSECommerce.Persistence.dll
 D:\VSECommerceEngine\vbuy\VOnline.VBuy\VSOnline.VSECommerce.Persistence\obj\Release\VSOnline.VSECommerce.Persistence.pdb
+C:\Users\user\Desktop\VSECommerce - Copy\BuildArtifacts\VBuy.Persistence\Release\VSOnline.VSECommerce.Persistence.dll.config
+C:\Users\user\Desktop\VSECommerce - Copy\BuildArtifacts\VBuy.Persistence\Release\VSOnline.VSECommerce.Persistence.dll
+C:\Users\user\Desktop\VSECommerce - Copy\BuildArtifacts\VBuy.Persistence\Release\VSOnline.VSECommerce.Persistence.pdb
+C:\Users\user\Desktop\VSECommerce - Copy\VSOnline.VSECommerce.Persistence\obj\Release\VSOnline.VSECommerce.Persistence.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\VSECommerce - Copy\VSOnline.VSECommerce.Persistence\obj\Release\VSOnline.VSECommerce.Persistence.dll
+C:\Users\user\Desktop\VSECommerce - Copy\VSOnline.VSECommerce.Persistence\obj\Release\VSOnline.VSECommerce.Persistence.pdb

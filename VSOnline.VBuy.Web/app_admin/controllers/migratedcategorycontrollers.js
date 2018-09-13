@@ -1,4 +1,4 @@
-﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////////////////
 // <copyright>
 // Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
 //</copyright>
@@ -6,175 +6,174 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app_admin.controller('PublishCategoryController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
-    function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
+app_admin.controller('PublishCategoryController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
+   function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-        var endPoint = '/VSECommerce/api/AdminMigratedCategory';
-    $scope.publishIds = [];
+       var endPoint = 'http://localhost:49475/api/AdminMigratedCategory';
+       $scope.publishIds = [];
 
-    function InitializePublishCategory()
-    {
-        loadCategory();
-        loadPublishedCategory();
-    }
-    InitializePublishCategory();
+       function InitializePublishCategory() {
+           loadCategory();
+           loadPublishedCategory();
+       }
+       InitializePublishCategory();
 
-    function loadCategory() {
+       function loadCategory() {
 
-        var config = {
-            headers: { "CommandType": "unPublishedCategory" }
-        };
+           var config = {
+               headers: { "CommandType": "unPublishedCategory" }
+           };
 
-        $http.get(endPoint + '/unPublishedCategory', config)
-         .then(function (response) {
-             createGrid(response.data);
-         });
-    }
+           $http.get(endPoint + '/unPublishedCategory', config)
+            .then(function (response) {
+                createGrid(response.data);
+            });
+       }
 
-    function loadPublishedCategory() {
+       function loadPublishedCategory() {
 
-        var config = {
-            headers: { "CommandType": "loadPublishedCategory" }
-        };
+           var config = {
+               headers: { "CommandType": "loadPublishedCategory" }
+           };
 
-        $http.get(endPoint + '/loadPublishedCategory',config)
-         .then(function (response) {
-             createPublishedCategoryGrid(response.data);
-         });
-    }
-    function createPublishedCategoryGrid(category) {
-        var data = {
-            "rows": eval(category)
-        };
-        jQuery("#PublishCategorygrid").jqGrid("GridUnload");
-        var grid = jQuery("#PublishCategorygrid");
-        grid.jqGrid({
-            datastr: data,
-            datatype: "jsonstring",
-            jsonReader: { repeatitems: false },
-            colNames: ['CategoryId', 'Name', 'Published'],
-            colModel: [
-                        { name: 'CategoryId', index: 'CategoryId', width: 30, align: "center" },
-                        { name: 'Name', index: 'Name', width: 100, align: "center", sortable: true },
-                         { name: 'Published', index: 'Published', width: 30, align: "center", sortable: true },
+           $http.get(endPoint + '/loadPublishedCategory', config)
+            .then(function (response) {
+                createPublishedCategoryGrid(response.data);
+            });
+       }
+       function createPublishedCategoryGrid(category) {
+           var data = {
+               "rows": eval(category)
+           };
+           jQuery("#PublishCategorygrid").jqGrid("GridUnload");
+           var grid = jQuery("#PublishCategorygrid");
+           grid.jqGrid({
+               datastr: data,
+               datatype: "jsonstring",
+               jsonReader: { repeatitems: false },
+               colNames: ['CategoryId', 'Name', 'Published'],
+               colModel: [
+                           { name: 'CategoryId', index: 'CategoryId', width: 30, align: "center" },
+                           { name: 'Name', index: 'Name', width: 100, align: "center", sortable: true },
+                            { name: 'Published', index: 'Published', width: 30, align: "center", sortable: true },
 
-            ],
-            width: "1100",
-
-
-            height: 300,
-            rowNum: 50,
-            rowList: [50, 100, 150],
-            caption: "Recently Published Categories List (Last 2 days)",
-            pager: '#PublishCategoryPager',
-            multiselect: false,
-            ignoreCase: true
-        });
-
-        $('#PublishCategorygrid').jqGrid('navGrid', '#PublishCategoryPager',
-                       {
-                           edit: false,
-                           add: false,
-                           del: false,
-                           search: true,
-                           searchtext: "Search"
+               ],
+               width: "1100",
 
 
-                       }
-                );
+               height: 300,
+               rowNum: 50,
+               rowList: [50, 100, 150],
+               caption: "Recently Published Categories List (Last 2 days)",
+               pager: '#PublishCategoryPager',
+               multiselect: false,
+               ignoreCase: true
+           });
 
-    }
-
-    function createGrid(category) {
-        var data = {
-            "rows": eval(category)
-        };
-        jQuery("#unPublishCatgrid").jqGrid("GridUnload");
-        var grid = jQuery("#unPublishCatgrid");
-        grid.jqGrid({
-            datastr: data,
-            datatype: "jsonstring",
-            jsonReader: { repeatitems: false },
-            colNames: ['CategoryId', 'Name', 'Published', 'IsDeleted'],
-            colModel: [
-                        { name: 'CategoryId', index: 'CategoryId', width: 30, align: "center" },
-                        { name: 'Name', index: 'Name', width: 100, align: "center", sortable: true },
-                         { name: 'Published', index: 'Published', width: 30, align: "center", sortable: true },
-                               { name: 'IsDeleted', index: 'IsDeleted', width: 30, align: "center", sortable: true }
-
-            ],
-            width: "1100",
+           $('#PublishCategorygrid').jqGrid('navGrid', '#PublishCategoryPager',
+                          {
+                              edit: false,
+                              add: false,
+                              del: false,
+                              search: true,
+                              searchtext: "Search"
 
 
-            height: 300,
-            rowNum: 50,
-            rowList: [50, 100, 150],
-            caption: "UnPublished Categories",
-            pager: '#unPublishCatPager',
-            multiselect: true,
-            ignoreCase: true
-        });
+                          }
+                   );
 
-        $('#unPublishCatgrid').jqGrid('navGrid', '#unPublishCatPager',
-                       {
-                           edit: false,
-                           add: false,
-                           del: false,
-                           search: true,
-                           searchtext: "Search"
+       }
 
+       function createGrid(category) {
+           var data = {
+               "rows": eval(category)
+           };
+           jQuery("#unPublishCatgrid").jqGrid("GridUnload");
+           var grid = jQuery("#unPublishCatgrid");
+           grid.jqGrid({
+               datastr: data,
+               datatype: "jsonstring",
+               jsonReader: { repeatitems: false },
+               colNames: ['CategoryId', 'Name', 'Published', 'IsDeleted'],
+               colModel: [
+                           { name: 'CategoryId', index: 'CategoryId', width: 30, align: "center" },
+                           { name: 'Name', index: 'Name', width: 100, align: "center", sortable: true },
+                            { name: 'Published', index: 'Published', width: 30, align: "center", sortable: true },
+                                  { name: 'IsDeleted', index: 'IsDeleted', width: 30, align: "center", sortable: true }
 
-                       }
-                );
-
-    }
-    $scope.publishCategory = function() {
-
-        var myrow = ids = "";
-        var id = jQuery("#unPublishCatgrid").jqGrid('getGridParam', 'selarrrow');
-        if (id.length) {
-            for (var i = 0; i < id.length; i++) {
-                myrow = jQuery("#unPublishCatgrid").jqGrid('getCell', id[i], 'CategoryId');
-                $scope.publishIds.push(myrow);
-            }
-        }
-        if ($scope.publishIds.length>0) {
-
-            var config = {
-                headers: { "CommandType": "UpdatePublishedCategories" }
-            };
-
-            $http.post(endPoint + '/UpdatePublishedCategories', $scope.publishIds, config)
-             .then(function (response) {
-                 if (response.data.length > 0) {
-                     alert("Selected " + response.data + " Category(s) Published Successfully");
-                     $scope.publishIds = [];
-                     loadCategory();
-                     loadPublishedCategory();
-                 }
-             });
+               ],
+               width: "1100",
 
 
-        }
-        else {
-            alert("Please select any item to Publish");
-        }
+               height: 300,
+               rowNum: 50,
+               rowList: [50, 100, 150],
+               caption: "UnPublished Categories",
+               pager: '#unPublishCatPager',
+               multiselect: true,
+               ignoreCase: true
+           });
+
+           $('#unPublishCatgrid').jqGrid('navGrid', '#unPublishCatPager',
+                          {
+                              edit: false,
+                              add: false,
+                              del: false,
+                              search: true,
+                              searchtext: "Search"
 
 
-    }
-}]);
+                          }
+                   );
 
-app_admin.controller('AdminCategoryListController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams','authService',
+       }
+       $scope.publishCategory = function () {
+
+           var myrow = ids = "";
+           var id = jQuery("#unPublishCatgrid").jqGrid('getGridParam', 'selarrrow');
+           if (id.length) {
+               for (var i = 0; i < id.length; i++) {
+                   myrow = jQuery("#unPublishCatgrid").jqGrid('getCell', id[i], 'CategoryId');
+                   $scope.publishIds.push(myrow);
+               }
+           }
+           if ($scope.publishIds.length > 0) {
+
+               var config = {
+                   headers: { "CommandType": "UpdatePublishedCategories" }
+               };
+
+               $http.post(endPoint + '/UpdatePublishedCategories', $scope.publishIds, config)
+                .then(function (response) {
+                    if (response.data.length > 0) {
+                        alert("Selected " + response.data + " Category(s) Published Successfully");
+                        $scope.publishIds = [];
+                        loadCategory();
+                        loadPublishedCategory();
+                    }
+                });
+
+
+           }
+           else {
+               alert("Please select any item to Publish");
+           }
+
+
+       }
+   }]);
+
+app_admin.controller('AdminCategoryListController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VSECommerce/api/AdminMigratedCategory';
+    var endPoint = 'http://localhost:49475/api/AdminMigratedCategory';
     function InitializeCategoryList() {
         $('#categoryGrid').hide();
         $('#editCategoryName').modal('hide');
     }
 
     InitializeCategoryList();
-    $scope.searchCategory = function() {
+    $scope.searchCategory = function () {
         if (($('#txtCategoryId').val().length >= 3) || ($('#txtCategoryName').val().length >= 3)) {
             var category = {};
             category.categoryId = $('#txtCategoryId').val();
@@ -187,7 +186,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             }
 
             var config = {
-                params:category,
+                params: category,
                 headers: { "CommandType": "searchCategory" }
             };
 
@@ -244,7 +243,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                     editCategory(categoryID, Name, CategoryGroupTag, GroupDisplayOrder, DisplayOrder, Published);
                 }
             },
-            
+
             height: 300,
             rowNum: 50,
             rowList: [50, 100, 150],
@@ -285,7 +284,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         }
 
     }
-    $scope.ModifyCategory = function() {
+    $scope.ModifyCategory = function () {
 
         var category = {};
         category.id = $('#txtEditCategoryid').val().trim();
@@ -297,7 +296,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             category.CategoryGroupTag = $('#txtGrptag').val().trim();
             category.GroupDisplayOrder = $('#txtGrpDisplay').val().trim();
             category.DisplayOrder = $('#txtDisplayOrder').val().trim();
-          
+
             if (category.GroupDisplayOrder == "") {
                 category.GroupDisplayOrder = 0;
             }
@@ -317,7 +316,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             }
             else {
                 category.flagTopCategory = 0;
-            }           
+            }
 
             var config = {
                 params: category,
@@ -339,25 +338,25 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         return '<img src="images/edit.png" class="edit" width="25px" height="25px" style="margin-top:5px" title="Edit" border=0  /> &nbsp;&nbsp;';
 
     }
-    $scope.checkCategoyId = function() {
+    $scope.checkCategoyId = function () {
         if ($('#txtCategoryId').val().length < 3) {
             $('#required').text(" * Please Enter 3 characters to search");
             $('#txtCategoryId').val('');
         }
     }
-    $scope.checkCategoryName = function() {
+    $scope.checkCategoryName = function () {
         if ($('#txtCategoryName').val().length < 3) {
             $('#required').text(" * Please Enter 3 characters to search");
             $('#txtCategoryName').val('');
         }
 
     }
-    $scope.categoryrClear = function() {
+    $scope.categoryrClear = function () {
         $('#txtCategoryName').val('');
         $('#txtCategoryId').val('');
     }
 
-    $scope.CheckCategoryId = function(objEvt) {
+    $scope.CheckCategoryId = function (objEvt) {
         var charCode = (objEvt.which) ? objEvt.which : event.keyCode
         if (charCode > 31 && (charCode < 48 || charCode > 57)) {
             document.getElementById("txtCategoryId").style.backgroundColor = "#FFB2B2";
@@ -368,7 +367,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             return true;
         }
     }
-    $scope.CheckCatDisplay = function(objEvt) {
+    $scope.CheckCatDisplay = function (objEvt) {
         var charCode = (objEvt.which) ? objEvt.which : event.keyCode
         if (charCode > 31 && (charCode < 48 || charCode > 57)) {
             document.getElementById("txtDisplayOrder").style.backgroundColor = "#FFB2B2";
@@ -379,7 +378,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             return true;
         }
     }
-    $scope.CheckGrpDisplay = function(objEvt) {
+    $scope.CheckGrpDisplay = function (objEvt) {
         var charCode = (objEvt.which) ? objEvt.which : event.keyCode
         if (charCode > 31 && (charCode < 48 || charCode > 57)) {
             document.getElementById("txtGrpDisplay").style.backgroundColor = "#FFB2B2";
@@ -393,13 +392,12 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
 }]);
 
-app_admin.controller('AdminCategoryExportController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams','authService',
+app_admin.controller('AdminCategoryExportController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VSECommerce/api/AdminMigratedCategory';
+    var endPoint = 'http://localhost:49475/api/AdminMigratedCategory';
 
-    function InitializeProductExport()
-    {
+    function InitializeProductExport() {
         LoadCategory();
         $('#CateGridData').hide();
         $('#ExcelData').hide();
@@ -451,7 +449,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         input.CateId = $('#ddlcateId').val().trim();
 
         var config = {
-            params:input,
+            params: input,
             headers: { "CommandType": "LoadCategory" }
         };
 
@@ -469,7 +467,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     }
 
 
-    $scope.SearchCategorySubcat = function(){
+    $scope.SearchCategorySubcat = function () {
         var input = {};
         input.CateId = $('#ddlcateId').val().trim();
         input.SubId = $('#ddlSubId').val().trim();
@@ -481,7 +479,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
         }
         var config = {
-            params:input,
+            params: input,
             headers: { "CommandType": "LoadCategory" }
         };
         $http.get(endPoint + '/LoaCategoryDetails', config)
@@ -569,7 +567,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     }
 
 
-    $scope.showSubCategory = function(catId, parId) {
+    $scope.showSubCategory = function (catId, parId) {
 
         $('#SuCateProductList').modal('show');
         var input = {};
@@ -586,14 +584,14 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         $('#parid').val(parId);
 
         var config = {
-            params:input,
+            params: input,
             headers: { "CommandType": "LoadGridSubproductCategoryDetails" }
         };
         $http.get(endPoint + '/LoadGridSubproductCategoryDetails', config)
        .then(function (response) {
            createSubproductCategoryGrid(response.data);
        });
-        
+
 
     }
 
@@ -639,7 +637,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     }
 
 
-    $scope.ShowColmnTochoose = function() {
+    $scope.ShowColmnTochoose = function () {
 
         $('#ExcelOrderData').modal('show');
 
@@ -659,10 +657,10 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                $("#ColumnValue").append("<option value=" + data[i].ColumnName + ">" +
        data[i].ColumnName + "</option>");
            }
-       });       
+       });
     }
 
-    $scope.SubCateShowColmnTochoose = function() {
+    $scope.SubCateShowColmnTochoose = function () {
 
         $('#ProductExcelOrderData').modal('show');
 
@@ -685,7 +683,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
     }
 
-    $scope.ProductDetailsExcelData = function() {
+    $scope.ProductDetailsExcelData = function () {
         var input = {};
         input.Catid = $('#catid').val();
         input.Parid = $('#parid').val();
@@ -697,7 +695,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
         }
         var config = {
-            params:input,
+            params: input,
             headers: { "CommandType": "LoadSubproductCategoryDetails" }
         };
         $http.get(endPoint + '/LoadSubproductCategoryDetails', config)
@@ -714,7 +712,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
        });
     }
 
-    $scope.GenerateProductForSeleColumn = function() {
+    $scope.GenerateProductForSeleColumn = function () {
         var input = {};
         input.Catid = $('#catid').val();
         input.Parid = $('#parid').val();
@@ -759,7 +757,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
            }
        });
     }
-    $scope.GenerateDataForSeleColumn = function() {
+    $scope.GenerateDataForSeleColumn = function () {
 
 
         var input = {};
@@ -794,7 +792,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
            var data = JSON.parse(response.data);
            var chk = Object.keys(data).length;
            if (chk != 0) {
-             
+
                JSONToCSVConvertor(data, "SubCategory Product Details List", true);
 
 
@@ -809,7 +807,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
     }
 
-    $scope.CateDetailsExcelData = function() {
+    $scope.CateDetailsExcelData = function () {
 
         var input = {};
         input.CateId = $('#ddlcateId option:selected').val();
@@ -821,7 +819,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             input.publishstatus = 0;
 
         }
-        
+
         var config = {
             params: input,
             headers: { "CommandType": "LoadAllCategoryDetails" }
@@ -840,7 +838,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
            }
        });
     }
-    
+
     function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {
 
         var arrData = typeof JSONData != 'object' ? JSON.parse(JSONData) : JSONData;
@@ -906,7 +904,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         link.click();
         document.body.removeChild(link);
     }
-    
+
 }]);
 
 var SelectColumnData = function () {

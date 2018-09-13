@@ -1,7 +1,18 @@
-﻿app.service('cartService', function () {
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app.service('cartService', function () {
 
-    var endPoint = '/VBuy/api/Cart';
-    var endPointCheckout = '/VBuy/api/CheckOut';
+    //var endPoint = '/VSECommerce/api/Cart';
+    //var endPointCheckout = '/VSECommerce/api/CheckOut';
+
+	 var endPoint = 'http://192.168.1.12:8075/api/Cart';
+	 var endPointCheckout = 'http://192.168.1.12:8075/api/CheckOut';
 
     this.getOrderConfirmationDetails = function ($http, orderid, userName) {
 

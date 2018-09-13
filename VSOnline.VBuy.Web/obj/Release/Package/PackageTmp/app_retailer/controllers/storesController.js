@@ -1,4 +1,12 @@
-﻿app_retailer.controller('StoresController', ['$rootScope', '$scope', '$http', '$routeParams', '$route',
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app_retailer.controller('StoresController', ['$rootScope', '$scope', '$http', '$routeParams', '$route',
     '$filter', 'ngTableParams', 'FileUploader', 'storesService', 'authInterceptorService',
 function ($rootScope, $scope, $http, $routeParams, $route, $filter, ngTableParams, FileUploader, storesService, authInterceptorService) {
     {

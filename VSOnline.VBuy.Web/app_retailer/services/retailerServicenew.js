@@ -1,4 +1,4 @@
-﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////////////////
 // <copyright>
 // Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
 //</copyright>
@@ -6,13 +6,12 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app_retailer.service('retailerServiceNew', function () {
+app_retailer.service('retailerServiceNew', function () {
 
-    var endPointLanding = '/VSECommerce/api/Landing';
-    var endPoint = '/VSECommerce/api/Login';
+    var endPointLanding = 'http://localhost:49475/api/Landing';
+    var endPoint = 'http://localhost:49475/api/Login';
 
-    this.RegisterRetailer = function ($scope, $http, retailerDTO)
-    {
+    this.RegisterRetailer = function ($scope, $http, retailerDTO) {
 
         var config = {
             headers: { "CommandType": "RegisterRetailer" }
@@ -23,8 +22,7 @@
             });
     }
 
-    this.getAppData = function($http)
-    {
+    this.getAppData = function ($http) {
         var config = {
             headers: { "CommandType": "GetApplicationData" }
         };

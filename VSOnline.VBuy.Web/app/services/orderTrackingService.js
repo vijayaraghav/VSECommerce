@@ -1,4 +1,4 @@
-﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////////////////
 // <copyright>
 // Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
 //</copyright>
@@ -6,14 +6,13 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app.service('orderTrackingService', function ()
-{
-    var endPoint = '/VSECommerce/api/OrderTracking';
+app.service('orderTrackingService', function () {
+    var endPoint = 'http://localhost:49475/api/OrderTracking';
     this.getTrackingOrders = function ($scope, $http) {
-      
+
         var config = {
             headers: { "CommandType": "GetTrackingOrders" },
-           
+
         };
         return $http.get(endPoint + '/GetTrackingOrders', config);
     }
@@ -27,7 +26,7 @@
     }
 
     this.GetProductList = function ($scope, $http, orderId) {
-      
+
         var config = {
             headers: { "CommandType": "GetProductList" },
             params: { OrderId: orderId }
@@ -35,18 +34,18 @@
         return $http.get(endPoint + '/GetProductList', config);
     }
     this.CancelOrders = function ($scope, $http, orderId) {
-     
+
         var config = {
-            headers: { "CommandType":"CancelOrders" },
-            params: { OrderId:orderId }
+            headers: { "CommandType": "CancelOrders" },
+            params: { OrderId: orderId }
         };
-        return $http.get(endPoint +'/CancelOrders', config);
+        return $http.get(endPoint + '/CancelOrders', config);
     }
     this.SearchOrders = function ($scope, $http, orderId) {
 
         var config = {
             headers: { "CommandType": "SearchOrders" },
-            params: { OrderId:orderId}
+            params: { OrderId: orderId }
         };
         return $http.get(endPoint + '/SearchOrders', config);
     }
@@ -54,9 +53,9 @@
 
         var config = {
             headers: { "CommandType": "GetPagingOrders" },
-            params: {PageId:page}
+            params: { PageId: page }
         };
         return $http.get(endPoint + '/GetPagingOrders', config);
     }
-    
+
 });

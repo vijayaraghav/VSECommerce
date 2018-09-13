@@ -1,4 +1,4 @@
-﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////////////////
 // <copyright>
 // Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
 //</copyright>
@@ -6,17 +6,16 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app.service('userActionService', function () {
+app.service('userActionService', function () {
 
-    var endPoint = '/VSECommerce/api/UserAction';
-    var endPointUserRegister = '/VSECommerce/api/Login';
+    var endPoint = 'http://localhost:49475/api/UserAction';
+    var endPointUserRegister = 'http://localhost:49475/api/Login';
 
-    this.getUserWishlist = function ($scope, $http, userName)
-    {
+    this.getUserWishlist = function ($scope, $http, userName) {
         var config = {
-            params: { userName: userName}
+            params: { userName: userName }
         };
-          return $http.get(endPoint + '/GetUserWishlist/' , config);
+        return $http.get(endPoint + '/GetUserWishlist/', config);
     }
 
     this.getUserWishlistCount = function ($scope, $http, userName) {
@@ -25,7 +24,7 @@
         };
         return $http.get(endPoint + '/GetUserWishlistCount/', config);
     }
-   
+
     this.addUserWishlist = function ($scope, $http, userName, productId) {
         var config = {
             params: { userName: userName, productId: productId }

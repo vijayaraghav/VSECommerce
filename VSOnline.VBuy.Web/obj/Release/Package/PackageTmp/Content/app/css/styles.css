@@ -1,5 +1,16 @@
-﻿body {
-    padding-left:0px;
+﻿/* 
+ ///////////////////////////////////////////////////////////////////////////////////////////
+// <copyright >
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright >
+// <description > VSECommerce: A VBuy.in platform<description >
+// <author > Sivakumar Anirudhan</author >
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+body {
+    padding-left: 0px;
     font-size: 13px;
     font-family: Open Sans, Trebuchet MS, sans-serif, arial,tahoma,verdana,sans-serif;
     text-align: left;

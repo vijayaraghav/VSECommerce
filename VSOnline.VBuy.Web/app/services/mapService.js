@@ -6,9 +6,9 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app.service('mapService', function () {
+app.service('mapService', function () {
 
-    var endPoint = '/VSECommerce/api/LocationMap';
+    var endPoint = 'http://localhost:49475/api/LocationMap';
 
     this.getStoreLocationsForCategory = function ($scope, $http, catId, lat, lng, mapRadius, priceRangeFrom, priceRangeTo) {
         var config = {     

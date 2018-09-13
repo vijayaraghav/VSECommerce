@@ -1,8 +1,18 @@
-﻿<view-title>Online Shopping of {{product.data.Name}} at best prices from your nearby store in Chennai, Tamilnadu, India </view-title>
+﻿<!--////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<view-title>Online Shopping of {{product.data.Name}} at best prices from your nearby store in Chennai, Tamilnadu, India </view-title>
 <og-description>VBuy {{ product.data.Name}}- </og-description>
 <og-image>{{imageUrlBaseStandard}}{{imgSrc}}</og-image>
 
- 
+
 <div class="container view containerbgcolor">
     <div>
         {{$scope.app.error}}
@@ -39,34 +49,34 @@
                     </ul>
                 </div>
                 <br class="clear" />
-                    <div class="col-xs-2 col-md-1 col-lg-1">
-                        <div data="productImage">
-                            <img class="imgthumbnail" ng-mouseover="ChangeProductDisplayImage(product.data.PictureName1);" src="{{product.data.PictureName}}" alt="{{product.data.Name}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
-                        </div>
-                        <!--<div data="productImage" data-ng-show="product.data.PictureName1">
-                            <img class="imgthumbnail" ng-mouseover="ChangeProductDisplayImage(product.data.PictureName1);" src="{{imageUrlBaseSmall}}{{product.data.PictureName1}}" alt="{{product.data.Name}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
-                        </div>
-                        <div data="productImage" data-ng-show="product.data.PictureName2">
-                            <img class="imgthumbnail" ng-mouseover="ChangeProductDisplayImage(product.data.PictureName2);" src="{{imageUrlBaseSmall}}{{product.data.PictureName2}}" alt="{{product.data.Name}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
-                        </div>
-                        <div data="productImage" data-ng-show="product.data.PictureName3">
-                            <img class="imgthumbnail" ng-mouseover="ChangeProductDisplayImage(product.data.PictureName3);" src="{{imageUrlBaseSmall}}{{product.data.PictureName3}}" alt="{{product.data.Name}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
-                        </div>
-                        <div data="productImage" data-ng-show="product.data.PictureName4">
-                            <img class="imgthumbnail" ng-mouseover="ChangeProductDisplayImage(product.data.PictureName4);" src="{{imageUrlBaseSmall}}{{product.data.PictureName4}}" alt="{{product.data.Name}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
-                        </div>
-                        <div data="productImage" data-ng-show="product.data.PictureName5">
-                            <img class="imgthumbnail" ng-mouseover="ChangeProductDisplayImage(product.data.PictureName5);" src="{{imageUrlBaseSmall}}{{product.data.PictureName5}}" alt="{{product.data.Name}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
-                        </div>
-                        <div data="productImage" data-ng-show="product.data.PictureName6">
-                            <img class="imgthumbnail" ng-mouseover="ChangeProductDisplayImage(product.data.PictureName6);" src="{{imageUrlBaseSmall}}{{product.data.PictureName6}}" alt="{{product.data.Name}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
-                        </div>-->
+                <div class="col-xs-2 col-md-1 col-lg-1">
+                    <div data="productImage">
+                        <img class="imgthumbnail" ng-mouseover="ChangeProductDisplayImage(product.data.PictureName1);" src="{{product.data.PictureName}}" alt="{{product.data.Name}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
                     </div>
+                    <!--<div data="productImage" data-ng-show="product.data.PictureName1">
+                        <img class="imgthumbnail" ng-mouseover="ChangeProductDisplayImage(product.data.PictureName1);" src="{{imageUrlBaseSmall}}{{product.data.PictureName1}}" alt="{{product.data.Name}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
+                    </div>
+                    <div data="productImage" data-ng-show="product.data.PictureName2">
+                        <img class="imgthumbnail" ng-mouseover="ChangeProductDisplayImage(product.data.PictureName2);" src="{{imageUrlBaseSmall}}{{product.data.PictureName2}}" alt="{{product.data.Name}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
+                    </div>
+                    <div data="productImage" data-ng-show="product.data.PictureName3">
+                        <img class="imgthumbnail" ng-mouseover="ChangeProductDisplayImage(product.data.PictureName3);" src="{{imageUrlBaseSmall}}{{product.data.PictureName3}}" alt="{{product.data.Name}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
+                    </div>
+                    <div data="productImage" data-ng-show="product.data.PictureName4">
+                        <img class="imgthumbnail" ng-mouseover="ChangeProductDisplayImage(product.data.PictureName4);" src="{{imageUrlBaseSmall}}{{product.data.PictureName4}}" alt="{{product.data.Name}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
+                    </div>
+                    <div data="productImage" data-ng-show="product.data.PictureName5">
+                        <img class="imgthumbnail" ng-mouseover="ChangeProductDisplayImage(product.data.PictureName5);" src="{{imageUrlBaseSmall}}{{product.data.PictureName5}}" alt="{{product.data.Name}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
+                    </div>
+                    <div data="productImage" data-ng-show="product.data.PictureName6">
+                        <img class="imgthumbnail" ng-mouseover="ChangeProductDisplayImage(product.data.PictureName6);" src="{{imageUrlBaseSmall}}{{product.data.PictureName6}}" alt="{{product.data.Name}}" onerror="this.src = 'Content/images/noimage.jpg'; this.onerror = '';" />
+                    </div>-->
+                </div>
                 <div class="col-xs-10 col-md-10 col-lg-10">
                     <div id="img_{{product.data.ProductId}}">
                         <!--<img id="productImage" class="col-xs-10" alt="{{product.data.PictureName}}" src="{{product.data.PictureName1}}" err-src='Content/images/noimage.jpg'  />-->
-                        
-                        <br class="clear"/>
+
+                        <br class="clear" />
                         <div ng-hide="flagPlayer2">
                             <div data-ng-jw-player-new source="{{product.data.PictureName1}}" image="{{product.data.PictureName}}" videotitle="{{product.data.Name}}">
                                 <div id="videocontainer" ng-hide="flagPlayer2">
@@ -77,57 +87,57 @@
                     </div>
 
                 </div>
-                    <div class="col-xs-12 col-md-6">   
-                        <div class="col-xs-12 noPadding">
-                           
-                                <h3> <strong>{{ product.data.Name}}</strong> </h3>                              
-                            <div class="col-md-5 col-sm-12 noPadding">
-                                by {{product.data.BrandName}}
-                                <span ng-vbuy-rating data-rating-value="productRating" data-max="5" on-rating-selected="onProductRatingChanged(rating)"></span>
-                                <span class="label label-info" ng-if="productRating>0">{{productRating}} / 5</span>
-                                <br class="clear" />
-                                <span style="color:grey" ng-show="product.data.StorePricingModel[0].Price > product.data.StorePricingModel[0].SpecialPrice">
-                                    Price: <del>{{product.data.StorePricingModel[0].Price | currency:"&#8377;"}} </del>
-                                    [ <span>{{((1-(product.data.StorePricingModel[0].SpecialPrice/product.data.StorePricingModel[0].Price ))*100) | number:0 }}</span> % Off ]
+                <div class="col-xs-12 col-md-6">
+                    <div class="col-xs-12 noPadding">
+
+                        <h3> <strong>{{ product.data.Name}}</strong> </h3>
+                        <div class="col-md-5 col-sm-12 noPadding">
+                            by {{product.data.BrandName}}
+                            <span ng-vbuy-rating data-rating-value="productRating" data-max="5" on-rating-selected="onProductRatingChanged(rating)"></span>
+                            <span class="label label-info" ng-if="productRating>0">{{productRating}} / 5</span>
+                            <br class="clear" />
+                            <span style="color:grey" ng-show="product.data.StorePricingModel[0].Price > product.data.StorePricingModel[0].SpecialPrice">
+                                Price: <del>{{product.data.StorePricingModel[0].Price | currency:"&#8377;"}} </del>
+                                [ <span>{{((1-(product.data.StorePricingModel[0].SpecialPrice/product.data.StorePricingModel[0].Price ))*100) | number:0 }}</span> % Off ]
+                            </span>
+                            <span ng-show=""></span>
+                            <br class="clear" />
+                            <span ng-if="product.data.StorePricingModel.length>0">Sale Price</span>
+                            <span class="product-price">
+                                <strong>
+                                    <span class="greenText" ng-bind="product.data.StorePricingModel[0].SpecialPrice | currency:'&#8377;'"></span>
+                                </strong>
+                            </span>
+                            <br class="clear" />
+                            <div class="col-md-12">
+                                <span ng-if="product.data.StorePricingModel.length>0">
+                                    <a href="stores/{{product.data.StorePricingModel[0].BranchName | formaturl}}/{{product.data.StorePricingModel[0].StoreId}}?productId={{product.data.ProductId}}&branchId={{product.data.StorePricingModel[0].BranchId}}"
+                                       title="{{product.data.StorePricingModel[0].BranchName}}" class="productlink">({{product.data.StorePricingModel[0].BranchName | limitTo:25}})</a>
                                 </span>
-                                <span ng-show=""></span>
-                                <br class="clear" />
-                                <span ng-if="product.data.StorePricingModel.length>0">Sale Price</span> 
-                                <span class="product-price">
-                                    <strong>
-                                        <span class="greenText" ng-bind="product.data.StorePricingModel[0].SpecialPrice | currency:'&#8377;'"></span>
-                                    </strong>                            
-                                </span>                               
-                                <br class="clear" />
-                                <div class="col-md-12">
-                                    <span ng-if="product.data.StorePricingModel.length>0">
-                                       <a href="stores/{{product.data.StorePricingModel[0].BranchName | formaturl}}/{{product.data.StorePricingModel[0].StoreId}}?productId={{product.data.ProductId}}&branchId={{product.data.StorePricingModel[0].BranchId}}"
-                                                   title="{{product.data.StorePricingModel[0].BranchName}}" class="productlink"> ({{product.data.StorePricingModel[0].BranchName | limitTo:25}})</a>
-                                    </span>
-                                </div>
-                                
                             </div>
-                            
 
                         </div>
-                        <br class="clear"/>
-                     
-                            <br class="clear" />
-                            <u><strong><span style="color:#0094ff;font-size:10px">Basic information about this Video</span></strong></u>
-                            <div class="keyFeatureList" data-ng-repeat="keyFeatuers in productKeyFeatures.data">
-                                <ul>
-                                    <li> {{keyFeatuers.Parameter}} : {{keyFeatuers.KeyFeature}}</li>
-                                </ul>
-                            </div>
 
-                            <br class="clear" />
+
                     </div>
+                    <br class="clear" />
+
+                    <br class="clear" />
+                    <u><strong><span style="color:#0094ff;font-size:10px">Basic information about this Video</span></strong></u>
+                    <div class="keyFeatureList" data-ng-repeat="keyFeatuers in productKeyFeatures.data">
+                        <ul>
+                            <li> {{keyFeatuers.Parameter}} : {{keyFeatuers.KeyFeature}}</li>
+                        </ul>
+                    </div>
+
+                    <br class="clear" />
+                </div>
 
                 <br class="clear" />
             </div>
-            <br class="clear"/>
+            <br class="clear" />
             <br />
-            <hr class="style"/>
+            <hr class="style" />
             <div ng-show="product.data.RelatedProductList.length>0">
                 <header class="homeHeaders">
                     <strong> YOU MAY BE INTERESTED IN </strong>
@@ -173,7 +183,7 @@
                 <h4> <span> Description</span></h4>
                 {{ product.data.FullDescription}}
             </div>
-           
+
 
             <div class="col-xs-10">
                 <div class="panel-group">
@@ -192,7 +202,7 @@
                                 <div ng-if="product.data.BrandName.length>0">
                                     <strong>Production House : </strong><span ng-bind="product.data.BrandName"></span>
                                 </div>
-                              
+
                             </div>
                         </div>
                     </div>
@@ -279,9 +289,9 @@
             </div>
         </div>
     </div>
- </div>
-    <div id="wrapperImage">
+</div>
+<div id="wrapperImage">
 
-    </div>
+</div>
 
 

@@ -68,7 +68,7 @@ function ($rootScope, $scope, $http, $routeParams, $filter, ngTableParams, FileU
 
 
         var uploader = $scope.uploader = new FileUploader({
-            url: 'api/FileUpload/UploadFile?productId=' + $scope.productId,
+            url: 'http://localhost:49475/api/FileUpload/UploadFile?productId=' + $scope.productId,
             withCredentials: true
         });
 

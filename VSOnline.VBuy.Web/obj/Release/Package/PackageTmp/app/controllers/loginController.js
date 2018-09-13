@@ -1,4 +1,12 @@
-﻿app.controller('LoginController', ['$rootScope', '$scope', '$http', '$cookieStore', '$location',
+﻿////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+app.controller('LoginController', ['$rootScope', '$scope', '$http', '$cookieStore', '$location',
     'authService', 'userActionService', 'passwordService', 'localStorageService', 'Facebook', 'cartService',
 function ($rootScope, $scope, $http, $cookieStore, $location, authService, userActionService, passwordService,localStorageService, Facebook, cartService) {
 

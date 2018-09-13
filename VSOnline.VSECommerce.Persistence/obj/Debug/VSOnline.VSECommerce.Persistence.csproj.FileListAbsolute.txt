@@ -20,3 +20,15 @@ D:\Github_VSEngine\VSECommerce\VSOnline.VSECommerce.Persistence\obj\Debug\VSOnli
 D:\Github_VSEngine\VSECommerce\BuildArtifacts\VBuy.Persistence\Debug\VSOnline.VSECommerce.Persistence.dll.config
 D:\Github_VSEngine\VSECommerce\BuildArtifacts\VBuy.Persistence\Debug\VSOnline.VSECommerce.Persistence.dll
 D:\Github_VSEngine\VSECommerce\BuildArtifacts\VBuy.Persistence\Debug\VSOnline.VSECommerce.Persistence.pdb
+C:\Users\user\Desktop\VSECommerce\BuildArtifacts\VBuy.Persistence\Debug\VSOnline.VSECommerce.Persistence.dll.config
+C:\Users\user\Desktop\VSECommerce\BuildArtifacts\VBuy.Persistence\Debug\VSOnline.VSECommerce.Persistence.dll
+C:\Users\user\Desktop\VSECommerce\BuildArtifacts\VBuy.Persistence\Debug\VSOnline.VSECommerce.Persistence.pdb
+C:\Users\user\Desktop\VSECommerce\VSOnline.VSECommerce.Persistence\obj\Debug\VSOnline.VSECommerce.Persistence.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\VSECommerce\VSOnline.VSECommerce.Persistence\obj\Debug\VSOnline.VSECommerce.Persistence.dll
+C:\Users\user\Desktop\VSECommerce\VSOnline.VSECommerce.Persistence\obj\Debug\VSOnline.VSECommerce.Persistence.pdb
+C:\Users\user\Desktop\VSECommerce - Copy\BuildArtifacts\VBuy.Persistence\Debug\VSOnline.VSECommerce.Persistence.dll.config
+C:\Users\user\Desktop\VSECommerce - Copy\BuildArtifacts\VBuy.Persistence\Debug\VSOnline.VSECommerce.Persistence.dll
+C:\Users\user\Desktop\VSECommerce - Copy\BuildArtifacts\VBuy.Persistence\Debug\VSOnline.VSECommerce.Persistence.pdb
+C:\Users\user\Desktop\VSECommerce - Copy\VSOnline.VSECommerce.Persistence\obj\Debug\VSOnline.VSECommerce.Persistence.dll
+C:\Users\user\Desktop\VSECommerce - Copy\VSOnline.VSECommerce.Persistence\obj\Debug\VSOnline.VSECommerce.Persistence.pdb
+C:\Users\user\Desktop\VSECommerce - Copy\VSOnline.VSECommerce.Persistence\obj\Debug\VSOnline.VSECommerce.Persistence.csprojResolveAssemblyReference.cache

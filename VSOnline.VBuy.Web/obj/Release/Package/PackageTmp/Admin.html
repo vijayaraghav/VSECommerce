@@ -1,4 +1,13 @@
-﻿<!DOCTYPE html>
+﻿<!--////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+-->
+<!DOCTYPE html>
 
 <html data-ng-app="VBuyAdminApp">
 <head>
@@ -12,11 +21,11 @@
           type="image/icon"
           href="Content/images/VBuyIco_32.png">
 
-    <script src="AdminAppResource/scripts/jquery-2.1.4.min.js"></script> 
+    <script src="AdminAppResource/scripts/jquery-2.1.4.min.js"></script>
     <link href="AdminAppResource/css/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
     <link href="AdminAppResource/css/select2.css" rel="stylesheet" />
 
-    <script data-cfasync="false" src="https://maps.googleapis.com/maps/api/js"></script>    
+    <script data-cfasync="false" src="https://maps.googleapis.com/maps/api/js"></script>
 
     <script src="AdminAppResource/scripts/JSon.js"></script>
     <link href="AdminAppResource/css/password.css" rel="stylesheet" />
@@ -24,9 +33,9 @@
 
 
     <link href="Content/app/css/login.css" rel="stylesheet" />
-    
+
     <link href="Content/app/css/bootstrap.css" rel="stylesheet" />
-     <script src="Scripts/bootstrap.min.js"></script> 
+    <script src="Scripts/bootstrap.min.js"></script>
     <link href="Content/app/css/styles.css" rel="stylesheet" />
     <link href="AdminAppResource/css/Product.css" rel="stylesheet" />
     <link rel="stylesheet" href="AdminAppResource/css/style.css" />
@@ -55,7 +64,7 @@
     <script src="app_admin/controllers/migrateduserlistcontrollers.js"></script>
     <script src="app_admin/controllers/migrateddiscountcontrollers.js"></script>
     <script src="app_admin/controllers/migratedstorecontrollers.js"></script>
-    
+
 
     <script src="app_admin/services/adminService.js"></script>
     <script src="app_admin/services/authService.js"></script>
@@ -83,15 +92,15 @@
                 <ul class="nav navbar-nav">
 
                     <li class="dropdown" style="border-right-style: solid; border-right-width: 1px;">
-                        <a data-toggle="dropdown" class="dropdown-toggle" > Dashboard<b class="caret"></b></a>
+                        <a data-toggle="dropdown" class="dropdown-toggle"> Dashboard<b class="caret"></b></a>
                         <ul role="menu" class="dropdown-menu">
                             <li><a href="Admin.html#/dashboard">User Summary</a></li>
                         </ul>
                     </li>
 
                     <li class="dropdown" style="border-right-style: solid; border-right-width: 1px;">
-                        <a data-toggle="dropdown" class="dropdown-toggle" >Product <b class="caret"></b></a>
-                        <ul role="menu" class="dropdown-menu">                          
+                        <a data-toggle="dropdown" class="dropdown-toggle">Product <b class="caret"></b></a>
+                        <ul role="menu" class="dropdown-menu">
                             <li><a href="Admin.html#/products">Search Product</a></li>
                             <li><a href="Admin.html#/manufacturer">Manufacturer</a></li>
                             <li><a href="Admin.html#/publishProduct">Publish Product</a></li>
@@ -99,19 +108,17 @@
                         </ul>
                     </li>
                     <li class="dropdown" style="border-right-style: solid; border-right-width: 1px;">
-                        <a data-toggle="dropdown" class="dropdown-toggle" >Categories <b class="caret"></b></a>
+                        <a data-toggle="dropdown" class="dropdown-toggle">Categories <b class="caret"></b></a>
                         <ul role="menu" class="dropdown-menu">
                             <li><a href="Admin.html#/category">Categories List</a></li>
                             <li><a href="Admin.html#/topCategory">Top Categories</a></li>
                             <li><a href="Admin.html#/exportProduct">Export</a></li>
-                            <li>
-                                <a href="Admin.html#/newCategory">New Category</a>
-                            </li>
+                            <li><a href="Admin.html#/newCategory">New Category</a></li>
                             <li><a href="Admin.html#/publishCategory">Publish Category</a></li>
                         </ul>
                     </li>
                     <li class="dropdown" style="border-right-style: solid; border-right-width: 1px;">
-                        <a data-toggle="dropdown" class="dropdown-toggle" >Sales <b class="caret"></b></a>
+                        <a data-toggle="dropdown" class="dropdown-toggle">Sales <b class="caret"></b></a>
                         <ul role="menu" class="dropdown-menu">
 
                             <li><a href="Admin.html#/orders">Order Details</a></li>
@@ -120,7 +127,7 @@
                         </ul>
                     </li>
                     <li class="dropdown" style="border-right-style: solid; border-right-width: 1px;">
-                        <a data-toggle="dropdown" class="dropdown-toggle" >Users <b class="caret"></b></a>
+                        <a data-toggle="dropdown" class="dropdown-toggle">Users <b class="caret"></b></a>
                         <ul role="menu" class="dropdown-menu">
                             <li><a href="Admin.html#/userMaster">User List</a></li>
                             <li><a href="Admin.html#/seller">Seller List</a></li>
@@ -138,21 +145,21 @@
                         </ul>
                     </li>
                     <li class="dropdown" style="border-right-style: solid; border-right-width: 1px;">
-                        <a data-toggle="dropdown" class="dropdown-toggle" >Site Admin<b class="caret"></b></a>
+                        <a data-toggle="dropdown" class="dropdown-toggle">Site Admin<b class="caret"></b></a>
                         <ul role="menu" class="dropdown-menu">
                             <li><a href="Admin.html#/uploadSiteImages">Upload Site Images</a></li>
                             <li><a href="Admin.html#/siteSettings">Site Settings</a></li>
                         </ul>
                     </li>
                     <li class="dropdown" style="border-right-style: solid; border-right-width: 1px;">
-                        <a data-toggle="dropdown" class="dropdown-toggle" >Logout<b class="caret"></b></a>
+                        <a data-toggle="dropdown" class="dropdown-toggle">Logout<b class="caret"></b></a>
                         <ul role="menu" class="dropdown-menu">
-                           
+
                             <li><a href="Admin.html#/login">Log Out</a></li>
 
                         </ul>
                     </li>
-                </ul>                
+                </ul>
                 <span class="saffronText" data-ng-if=$root.flagLoggedIn ng-bind="$root.curUserDisplayName"></span>
             </div>
         </nav>
@@ -165,7 +172,7 @@
         <div>
             <label>
                 No one other than the designated employee or authorized agent of VS Online Services Private limited should use this site. This is not a public site and Violation to use the site
-                by unauthenticated users.  <a href="" target="_blank"> Copyright © 2014-2016 VS Online Services Pvt ltd (VBuy.in). All Rights Reserved.</a>
+                by unauthenticated users.  <a href="" target="_blank"> Copyright © 2014-2018 VS Online Services Pvt ltd (VBuy.in). All Rights Reserved.</a>
             </label>
         </div>
     </footer>

@@ -1,7 +1,15 @@
-﻿app_admin.controller('AdminOrdersController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app_admin.controller('AdminOrdersController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VBuy/api/AdminMigratedSeller';
+    var endPoint = 'http://192.168.1.12:8075/api/AdminMigratedSeller';
 
     $(function () {
         var date = new Date();
@@ -867,7 +875,7 @@ function AppendDataOrders() {
 app_admin.controller('AdminEnquiryController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VBuy/api/AdminMigratedSeller';
+    var endPoint = 'http://192.168.1.12:8075/api/AdminMigratedSeller';
 
 $(function () {
     var date = new Date();
@@ -1128,7 +1136,7 @@ function ClearSalesDropValue() {
 app_admin.controller('AdminPricingController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VBuy/api/AdminMigratedProduct';
+    var endPoint = 'http://192.168.1.12:8075/api/AdminMigratedProduct';
     $(function () {
         $("#txtSplStartDate").datepicker({
             dateFormat: 'yy-mm-dd',

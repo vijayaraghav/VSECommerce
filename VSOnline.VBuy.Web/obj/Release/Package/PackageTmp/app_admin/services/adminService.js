@@ -1,7 +1,18 @@
-﻿app_admin.service('adminService', function () {
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app_admin.service('adminService', function () {
+     
+     var endPointLanding = 'http://192.168.1.12:8075/api/Landing';
+     var endPoint = 'http://192.168.1.12:8075/api/Admin';
 
-    var endPointLanding = '/VBuy/api/Landing';
-    var endPoint = '/VBuy/api/Admin';
+     //var endPointLanding = 'http://localhost:49475/api/Landing';
+     //var endPoint = 'http://localhost:49475/api/Admin';
 
     this.getAppData = function ($http) {
         var config = {

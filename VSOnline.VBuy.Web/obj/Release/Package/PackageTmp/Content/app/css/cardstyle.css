@@ -1,13 +1,23 @@
-﻿
+﻿/* 
+///////////////////////////////////////////////////////////////////////////////////////////
+// <copyright >
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright >
+// <description > VSECommerce: A VBuy.in platform<description >
+// <author > Sivakumar Anirudhan</author >
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+
+*/
 .card {
-    background-color:#ffffff;
+    background-color: #ffffff;
     border: 1px solid #138808;
-    height:290px;
+    height: 290px;
     min-width: 175px;
     margin-bottom: 20px;
-     /*margin-right:5px;
+    /*margin-right:5px;
     padding-left:0px;*/
-    padding-right:0px;
+    padding-right: 0px;
 }
 
 .card-nowidth{

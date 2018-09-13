@@ -1,8 +1,16 @@
-﻿app_retailer.service('productService', function () {
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app_retailer.service('productService', function () {
 
-    var endPoint = '/VBuy/api/Products';
-    var updateProductEndPoint = '/VBuy/api/UpdateProducts';
-    var endPointRetailer = '/VBuy/api/Retailer';
+    var endPoint = '/VSECommerce/api/Products';
+    var updateProductEndPoint = '/VSECommerce/api/UpdateProducts';
+    var endPointRetailer = 'http://192.168.1.12:8075/api/Retailer';
 
     this.getProductSpecification = function ($scope, $http, productId) {
         var config = {

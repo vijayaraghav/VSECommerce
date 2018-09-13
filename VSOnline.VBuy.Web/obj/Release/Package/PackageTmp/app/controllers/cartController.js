@@ -1,4 +1,14 @@
-﻿app.controller('CartController', ['$scope', '$location', '$http', '$rootScope', '$routeParams', 'localStorageService', '$timeout', 'cartService', 
+﻿////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ 
+
+app.controller('CartController', ['$scope', '$location', '$http', '$rootScope', '$routeParams', 'localStorageService', '$timeout', 'cartService', 
     function ($scope, $location, $http, $rootScope, $routeParams, localStorageService, $timeout, cartService) {
 
 

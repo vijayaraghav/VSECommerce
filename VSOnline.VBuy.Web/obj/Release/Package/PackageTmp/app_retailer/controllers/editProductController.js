@@ -1,4 +1,12 @@
-﻿app_retailer.controller('EditProductController', ['$rootScope', '$scope', '$http', '$routeParams',
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app_retailer.controller('EditProductController', ['$rootScope', '$scope', '$http', '$routeParams',
     '$filter', 'ngTableParams', 'FileUploader', 'productService', 'storesService', 'authInterceptorService',
 function ($rootScope, $scope, $http, $routeParams, $filter, ngTableParams, FileUploader, productService, storesService, authInterceptorService) {
     {
@@ -60,7 +68,7 @@ function ($rootScope, $scope, $http, $routeParams, $filter, ngTableParams, FileU
 
 
         var uploader = $scope.uploader = new FileUploader({
-            url: 'api/FileUpload/UploadFile?productId=' + $scope.productId,
+            url: 'http://192.168.1.12:8075/api/FileUpload/UploadFile?productId=' + $scope.productId,
             withCredentials: true
         });
 

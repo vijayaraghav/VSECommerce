@@ -1,4 +1,14 @@
-﻿<div class="containerbgcolor">
+﻿<!--////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<div class="containerbgcolor">
     <ul class="ultab" ng-init="tab = 'loginTab'">
 
         <li class="tab" id="loginTab" ng-class="{active:tab==='loginTab'}" ng-disabled="$root.flagLoggedIn" data-ng-click="tab = 'loginTab'">
@@ -162,8 +172,8 @@
                             <span ng-if="!buyerAddress.State">
                                 {{buyerAddress.State= "Tamil Nadu"}}
                             </span>
-                            <select name="state" class="form-control" required ng-model="buyerAddress.State" id="address-state">      
-                                <option value=""></option>                         
+                            <select name="state" class="form-control" required ng-model="buyerAddress.State" id="address-state">
+                                <option value=""></option>
                                 <option value="Tamil Nadu" ng-selected>Tamil Nadu</option>
                                 <!--<option value="Andaman and Nicobar Islands">
                                     Andaman
@@ -277,7 +287,8 @@
 
                     <ul>
                         <li>
-                            <span class="text-info"><b>SpecialZone Products (Crackers):</b>We will e-mail/SMS you link for payment.                           
+                            <span class="text-info">
+                                <b>SpecialZone Products (Crackers):</b>We will e-mail/SMS you link for payment.
                             </span>
                         </li>
                         <li>
@@ -295,7 +306,7 @@
 
                     <br class="clear" />
                     <br />
-                    <br class="clear"/>
+                    <br class="clear" />
                     <div>
                         <img class="img-responsive" src="{{imageUrlBase}}{{homeFolder}}/PayUSecured.jpg" alt=" PayU Secured ">
                     </div>
@@ -318,8 +329,7 @@
                 <td width="25%" align="center">
                     <strong>PRICE</strong>
                 </td>
-                <td width="10%">                    
-                </td>
+                <td width="10%"></td>
             </tr>
             <tr data-ng-repeat="product in $root.cartlist">
 
@@ -392,7 +402,7 @@
                 <tr ng-show="$root.flagLoggedIn">
                     <td colspan="2">
                         <div class="noPadding col-sm-7">
-                            <input type="text" ng-model="couponCode" placeholder="Discount Coupon"  class="form-control" />
+                            <input type="text" ng-model="couponCode" placeholder="Discount Coupon" class="form-control" />
                         </div>
                         <div class="noPadding col-sm-5">
                             <button class="form-control btn-info" data-ng-click="applyCoupon()">Apply Coupon</button>
@@ -439,6 +449,6 @@
 
     </section>
 
-    <br class="clear"/>
+    <br class="clear" />
     <span class="minorinfofont"><strong>Availability</strong> Our Service is available only in Chennai, and certain cities of Tamilnadu</span>
 </div>

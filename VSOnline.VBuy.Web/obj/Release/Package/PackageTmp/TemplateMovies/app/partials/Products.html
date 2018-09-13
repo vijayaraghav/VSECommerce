@@ -1,53 +1,63 @@
-﻿<og-image>{{imageUrlBase}}VBuy_Image.png</og-image>
+﻿<!--////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<og-image>{{imageUrlBase}}VBuy_Image.png</og-image>
 
 
-    <div ng-if="products.data.length<=0">
-        <view-title>Online Shopping of {{searchedCategoryName}} at best prices from your nearby store in India </view-title>
-        <og-description>VBuy {{ searchedCategoryName}}- </og-description>
-    </div>
-    <div ng-if="products.data.length>0">
-        <view-title>
-            Online Shopping of
-            <span data-ng-repeat="category in products.data | unique: 'SubCategoryId' | limitTo:3">
-                {{category.SubCategoryName}} {{category.ParentCategoryName}},
-            </span>
-            at best prices from your nearby store in India
-        </view-title>
+<div ng-if="products.data.length<=0">
+    <view-title>Online Shopping of {{searchedCategoryName}} at best prices from your nearby store in India </view-title>
+    <og-description>VBuy {{ searchedCategoryName}}- </og-description>
+</div>
+<div ng-if="products.data.length>0">
+    <view-title>
+        Online Shopping of
+        <span data-ng-repeat="category in products.data | unique: 'SubCategoryId' | limitTo:3">
+            {{category.SubCategoryName}} {{category.ParentCategoryName}},
+        </span>
+        at best prices from your nearby store in India
+    </view-title>
 
-        <og-description>VBuy {{category.SubCategoryName}} {{category.ParentCategoryName}} , - </og-description>
-    </div>
+    <og-description>VBuy {{category.SubCategoryName}} {{category.ParentCategoryName}} , - </og-description>
+</div>
 <div class="container containerbgcolor">
     <div data-ng-hide="$root.cartMessage == ''" class="alert alert-success float-message" id="cart-success-alert">
         <a href="#" class="close" ng-click="$root.cartMessage = ''">&times;</a>
         <strong>Successfully </strong> added to your cart.
     </div>
     <div class="productfilterbar">
-        
-            <div class="col-md-12">
 
-                <h2 class="text-center">
-                    <span class="upperCase greenText" ng-bind="searchedCategoryName"></span><span> : </span>
-                    <span class="minorinfofont font11"> Showing  <strong ng-bind="products.data.length"></strong> of <strong ng-bind="products.totalCount"></strong> products</span>
-                </h2>
-            </div>
+        <div class="col-md-12">
 
-            <div>
-                    <button class="btn btn-navbar navbar-toggle" type="button" data-target="#productfilterdiv" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="fontSize10">Filters</span>
+            <h2 class="text-center">
+                <span class="upperCase greenText" ng-bind="searchedCategoryName"></span><span> : </span>
+                <span class="minorinfofont font11"> Showing  <strong ng-bind="products.data.length"></strong> of <strong ng-bind="products.totalCount"></strong> products</span>
+            </h2>
+        </div>
 
-                    </button>
-            </div>
-         
+        <div>
+            <button class="btn btn-navbar navbar-toggle" type="button" data-target="#productfilterdiv" data-toggle="collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="fontSize10">Filters</span>
+
+            </button>
+        </div>
+
     </div>
     <div data-ng-hide="message == ''" class="alert alert-info float-message">
         <a href="#" class="close" ng-click="message = ''">&times;</a>
         <strong>Info!</strong>  {{message}}
     </div>
 
-    <br class="clear"/>
+    <br class="clear" />
     <div class="view">
         <div>
             {{$scope.app.error}}
@@ -67,7 +77,7 @@
                     </div>
                     <span class="headerlistdropdown">Browse</span>
                     <div data-ng-repeat="menu in mainMenu.data |  filter:{ParentCategoryId: products.data[0].CategoryId}" ng-if="products.data && products.data.length>0">
-                        <div data-ng-repeat="submenu in menu.SubMenu | limitTo:15 |unique: 'CategoryGroupTag'">                       
+                        <div data-ng-repeat="submenu in menu.SubMenu | limitTo:15 |unique: 'CategoryGroupTag'">
                             <a data-toggle="collapse" data-target="#{{submenu.CategoryGroupTag | formaturl}}" aria-expanded="false" aria-controls="{{submenu.CategoryGroupTag | formaturl}}">
                                 <strong class="saffronText" ng-if="(submenu.CategoryGroupTag.length>0)">  {{submenu.CategoryGroupTag}} <span class="caret"></span></strong>
                                 <strong class="saffronText" ng-if="!(submenu.CategoryGroupTag.length>0)"> Group (None)<span class="caret"></span></strong>
@@ -115,7 +125,7 @@
                     </div>
                 </div>
                 <div class="col-xs-10">
-                    <div data-ng-repeat="category in products.data | unique: 'SubCategoryId'">                        
+                    <div data-ng-repeat="category in products.data | unique: 'SubCategoryId'">
                         <div>
                             <div>
                                 <div>
@@ -147,18 +157,18 @@
                                 <br class="clear" />
                             </div>
                         </div>
-                </div>
+                    </div>
                     <div class="text-center">
                         <button class="btn-loadMore" href="#"
                                 ng-show="showLoadMore"
-                                ng-click="loadMore()">                           
+                                ng-click="loadMore()">
                             ........Show <span ng-bind="products.totalCount - products.data.length"></span> More.......
                         </button>
                     </div>
+                </div>
             </div>
-        </div>
 
+        </div>
     </div>
-</div>
 
 </div>

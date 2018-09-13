@@ -1,6 +1,14 @@
-﻿app_retailer.service('ordersService', function () {
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app_retailer.service('ordersService', function () {
 
-    var endPoint = '/VBuy/api/RetailerOrder';
+     var endPoint = 'http://192.168.1.12:8075/api/RetailerOrder';
     this.getPendingOrders = function ($scope, $http, branch, pageSize, pageNo)
     {
        

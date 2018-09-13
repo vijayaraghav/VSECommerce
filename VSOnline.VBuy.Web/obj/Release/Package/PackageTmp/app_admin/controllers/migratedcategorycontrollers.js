@@ -1,7 +1,15 @@
-﻿app_admin.controller('PublishCategoryController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app_admin.controller('PublishCategoryController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
     function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-        var endPoint = '/VBuy/api/AdminMigratedCategory';
+        var endPoint = 'http://192.168.1.12:8075/api/AdminMigratedCategory';
     $scope.publishIds = [];
 
     function InitializePublishCategory()
@@ -159,7 +167,7 @@
 app_admin.controller('AdminCategoryListController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams','authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VBuy/api/AdminMigratedCategory';
+    var endPoint = 'http://192.168.1.12:8075/api/AdminMigratedCategory';
     function InitializeCategoryList() {
         $('#categoryGrid').hide();
         $('#editCategoryName').modal('hide');
@@ -349,7 +357,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         $('#txtCategoryId').val('');
     }
 
-    $scope.CheckCategoryId = function(objEvt) {
+    $scope.CheckCategoryId = function (objEvt) {
         var charCode = (objEvt.which) ? objEvt.which : event.keyCode
         if (charCode > 31 && (charCode < 48 || charCode > 57)) {
             document.getElementById("txtCategoryId").style.backgroundColor = "#FFB2B2";
@@ -388,7 +396,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 app_admin.controller('AdminCategoryExportController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams','authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VBuy/api/AdminMigratedCategory';
+    var endPoint = 'http://192.168.1.12:8075/api/AdminMigratedCategory';
 
     function InitializeProductExport()
     {

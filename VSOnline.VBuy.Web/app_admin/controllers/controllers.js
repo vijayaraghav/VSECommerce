@@ -7,8 +7,8 @@
 
 app_admin.controller('LandingController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', 'adminService', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, adminService, authService) {
-    {       
-        $scope.LogOut =function() {
+    {
+        $scope.LogOut = function () {
             authService.logOut();
             $rootScope.flagLoggedIn = false;
             $cookieStore.remove('userName');
@@ -20,7 +20,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, admi
 
 
 app_admin.controller('LoginController', ['$scope', '$cookieStore', '$location', '$rootScope', '$timeout', 'authService',
-    function ($scope, $cookieStore, $location, $rootScope,$timeout, authService) {
+    function ($scope, $cookieStore, $location, $rootScope, $timeout, authService) {
 
         $scope.loginData = {
             userName: "",
@@ -35,22 +35,22 @@ app_admin.controller('LoginController', ['$scope', '$cookieStore', '$location', 
         $rootScope.curUserDisplayName = "";
 
         $scope.Login = function () {
-            authService.login($scope.loginData).then(function (response) {               
+            authService.login($scope.loginData).then(function (response) {
 
                 if (response) {
                     $('form').fadeOut(500);
                     $('.wrapper').addClass('form-success');
                     $timeout(function () {
-                    $scope.message = "Login Successful";
-                    $location.path('/dashboard');
-                  
-                    $rootScope.flagLoggedIn = true;
-                    $rootScope.userName = $scope.loginData.userName;
-                    $cookieStore.put('userName', $rootScope.userName);
-                    $cookieStore.put('flagLoggedIn', $rootScope.flagLoggedIn);
+                        $scope.message = "Login Successful";
+                        $location.path('/dashboard');
 
-                    $rootScope.curUserDisplayName = $scope.loginData.userName;
-                    $cookieStore.put('curUserDisplayName', $rootScope.curUserDisplayName);
+                        $rootScope.flagLoggedIn = true;
+                        $rootScope.userName = $scope.loginData.userName;
+                        $cookieStore.put('userName', $rootScope.userName);
+                        $cookieStore.put('flagLoggedIn', $rootScope.flagLoggedIn);
+
+                        $rootScope.curUserDisplayName = $scope.loginData.userName;
+                        $cookieStore.put('curUserDisplayName', $rootScope.curUserDisplayName);
                     }, 500);
                 }
             },
@@ -73,11 +73,11 @@ app_admin.controller('LoginController', ['$scope', '$cookieStore', '$location', 
 
 app_admin.controller('DashboardController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', 'adminService', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, adminService, authService) {
-  
-    var endPoint = '/VSECommerce/api/AdminMigratedCategory';
+
+    var endPoint = 'http://localhost:49475/api/AdminMigratedCategory';
     function InitializeUserStatistics() {
         regCustomers();
-        regRetailers(); 
+        regRetailers();
     }
     InitializeUserStatistics();
 
@@ -86,10 +86,10 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, admi
             headers: { "CommandType": "LoadCustomer" }
         };
 
-                $http.get(endPoint + '/LoadCustomer', config)
-          .then(function (response) {
-              createCustomerGrid(response.data);
-          });
+        $http.get(endPoint + '/LoadCustomer', config)
+  .then(function (response) {
+      createCustomerGrid(response.data);
+  });
     }
     function regRetailers() {
         var config = {
@@ -160,7 +160,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, admi
 
 
 app_admin.controller('TopCategoryController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', 'FileUploader'
-    ,'$timeout', '$location', '$filter', 'ngTableParams', 'adminService', 'authService', 'authInterceptorService',
+    , '$timeout', '$location', '$filter', 'ngTableParams', 'adminService', 'authService', 'authInterceptorService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, FileUploader, $timeout, $location, $filter, ngTableParams, adminService, authService, authInterceptorService) {
     {
 
@@ -185,24 +185,23 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, FileUploader, $
         }
         InitializeTopCategory();
 
-        $scope.AddToHomePageCategory = function(categoryId)
-        {
+        $scope.AddToHomePageCategory = function (categoryId) {
             adminService.showCategoryInHomePage($http, categoryId, true)
                   .then(function (response) {
                       if (response.data == "Success") {
                           $scope.savedSuccessfully = true;
                           $scope.message = "Category Added to Home Page"
                           $timeout(function () {
-                            $scope.message = "";
+                              $scope.message = "";
                           }, 2000);
                           InitializeTopCategory();
                       }
                       else {
-                              $scope.savedSuccessfully = false;
-                              $scope.message = "Error adding Category from Home Page"
-                              $timeout(function () {
-                                  $scope.message = "";
-                              }, 2000);
+                          $scope.savedSuccessfully = false;
+                          $scope.message = "Error adding Category from Home Page"
+                          $timeout(function () {
+                              $scope.message = "";
+                          }, 2000);
                       }
                   });
         }
@@ -218,8 +217,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, FileUploader, $
                           }, 2000);
                           InitializeTopCategory();
                       }
-                      else 
-                      {
+                      else {
                           $scope.savedSuccessfully = false;
                           $scope.message = "Error removing Category from Home Page"
                           $timeout(function () {
@@ -234,14 +232,14 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, FileUploader, $
         $scope.topCategoryGridParams = new ngTableParams({
             page: 1,            // show first page
             // count per page
-            count :10,
+            count: 10,
             filter: { Name: '' },
             // initial sort order
             sorting: { Name: "asc" }
         }, {
             counts: [],
             getData: function ($defer, params) {
-             
+
                 $scope.gridtopCategorylist = params.sorting() ? $filter('orderBy')($scope.topCategorylist, params.orderBy()) : $scope.topCategorylist;
                 $scope.gridtopCategorylist = params.filter() ? $filter('filter')($scope.gridtopCategorylist, params.filter()) : $scope.gridtopCategorylist;
                 params.total($scope.gridtopCategorylist.length);
@@ -262,8 +260,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, FileUploader, $
             }
         });
 
-        $scope.AddImage = function(categoryName)
-        {
+        $scope.AddImage = function (categoryName) {
             $scope.currentFileName = categoryName;
             $scope.flagCategoryImage = true;
         }
@@ -298,7 +295,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, FileUploader, $
                 $scope.savedSuccessfully = true;
                 $scope.flagCategoryImage = false;
                 $scope.message = fileItem.file.name + " Uploaded";
-                var imgName =document.getElementById(fileItem.file.name).src;
+                var imgName = document.getElementById(fileItem.file.name).src;
                 document.getElementById(fileItem.file.name).src = imgName + "?" + new Date();
             }
             if (response.toLowerCase() === 'failure') {
@@ -312,8 +309,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, FileUploader, $
             fileItem.isUploading = false;
         };
 
-        $scope.ShowLargeImage=function(categoryName)
-        {
+        $scope.ShowLargeImage = function (categoryName) {
             $scope.currentFileName = categoryName;
             $scope.flagShowlargeImage = true;
         }
@@ -325,7 +321,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, File
     {
 
         $scope.uploaderHomeBanner = new FileUploader({
-            url: 'api/AdminFileUpload/UploadHomeBannerImages',
+            url: 'http://localhost:49475/api/AdminFileUpload/UploadHomeBannerImages',
             withCredentials: true
         });
 
@@ -337,7 +333,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, File
         $scope.uploaderHomeBanner.filters.push({
             name: 'customFilter',
             fn: function (item /*{File|FileLikeObject}*/, options) {
-               
+
                 var returnValImage = false;
 
                 if (item.name.indexOf("HomeBanner") >= 0 || item.name.indexOf("TopOffers") >= 0) {
@@ -350,8 +346,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, File
                     }
                     return returnValImage;
                 }
-                else
-                {
+                else {
                     alert("use HomeBanner1.jpg/HomeBanner2.jpg..... as name of file.\n Supported upto HomeBanner4.jpg");
                 }
                 return false;
@@ -388,13 +383,13 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, File
 
                 var returnValImage = false;
 
-                    var type = '|' + item.type.slice(item.type.lastIndexOf('/') + 1) + '|';
-                    returnValImage = '|jpg|png|jpeg|gif|'.indexOf(type) !== -1;
+                var type = '|' + item.type.slice(item.type.lastIndexOf('/') + 1) + '|';
+                returnValImage = '|jpg|png|jpeg|gif|'.indexOf(type) !== -1;
 
-                    if (returnValImage == false) {
-                        alert("Unsupported image type");
-                    }
-                    return returnValImage;
+                if (returnValImage == false) {
+                    alert("Unsupported image type");
+                }
+                return returnValImage;
             }
         });
 
@@ -417,19 +412,18 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, File
 
 
 app_admin.controller('SiteSettingsController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'adminService', 'authService',
-function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location,  $filter, ngTableParams, adminService, authService) {
+function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, adminService, authService) {
     {
         $scope.savedSuccessfully = false;
         $scope.message = '';
         $scope.siteSettingList = {};
 
-        $scope.removeCache = function()
-        {
+        $scope.removeCache = function () {
             adminService.removeCache($http)
              .then(function (response) {
                  if (response.data == true) {
                      $scope.savedSuccessfully = true;
-                     $scope.message ="Caching is removed Successfully"
+                     $scope.message = "Caching is removed Successfully"
                  }
                  else {
                      $scope.savedSuccessfully = true;
@@ -446,8 +440,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location,  $fi
                      $scope.savedSuccessfully = true;
                      $scope.message = "Index Created Successfully"
                  }
-                 else
-                 {
+                 else {
                      $scope.savedSuccessfully = true;
                      $scope.message = "Error in Indexing"
                  }
@@ -460,14 +453,13 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location,  $fi
             .then(function (response) {
                 if (response.data) {
                     $scope.siteSettingList = response.data;
-                    
+
                 }
             });
         }
         InitializeSiteSettings();
 
-        $scope.updateSettings= function(setting)
-        {
+        $scope.updateSettings = function (setting) {
             adminService.updateSettings($http, setting.SiteKey, setting.NewValue)
            .then(function (response) {
                if (response.data == true) {
@@ -496,8 +488,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location,  $fi
                     $scope.siteSettingListFiltered = $scope.siteSettingListFiltered.slice((params.page() - 1) * params.count(), params.page() * params.count());
                     $defer.resolve($scope.siteSettingListFiltered);
                 }
-                else
-                {
+                else {
                     $defer.resolve($scope.siteSettingList);
                 }
             }

@@ -1,0 +1,2365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\movie</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Admin.html">
+      <publishTime>08/25/2018 13:08:20</publishTime>
+    </File>
+    <File Include="AdminAppResource/css/bootstrap.min.css">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/css/jquery-ui-1.9.2.custom.css">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/css/jquery-ui.css">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/css/password.css">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/css/Product.css">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/css/select2.css">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/css/select2.min.css">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/css/style.css">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/images/06.jpg">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/images/bg.jpg">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/images/delete.png">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/images/edit.png">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/images/grey saree.jpg">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/images/LeftArrow.png">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/images/RightArrows.png">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/images/switch.png">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/images/VBuyLogo.png">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/addUser.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-animate.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-animate.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-animate.min.js.map">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-aria.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-aria.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-aria.min.js.map">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-cookies.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-cookies.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-cookies.min.js.map">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-csp.css">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-loader.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-loader.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-loader.min.js.map">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-message-format.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-message-format.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-message-format.min.js.map">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-messages.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-messages.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-messages.min.js.map">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-mocks.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-resource.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-resource.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-resource.min.js.map">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-route.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-route.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-route.min.js.map">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-sanitize.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-sanitize.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-sanitize.min.js.map">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-scenario.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-touch.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-touch.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular-touch.min.js.map">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular.bundled.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/angular.min.js.map">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/autocomplete.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/bootstrap-select.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/bootstrap.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/bower.json">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/category.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/CatSubCategories.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/Discount.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/errors.json">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/grid.locale-en.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/jquery-1.5.1.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/jquery-2.1.4.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/jquery-ui-1.8.10.custom.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/jquery-ui.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/jquery.easytabs.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/jquery.form-validator.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/jquery.hashchange.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/jquery.jqGrid.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/jquery.multi-select.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/JSon.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/Login.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/Manufacturer.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/multi-select.css">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/multi-select.jquery.json">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/OrderDetails.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/Product.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/ProductPrice.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/RegisterRetailer.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/sales.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/select2.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/select2.min.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/sellerCategory.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/seoCategories.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/seoProduct.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/statistics.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/Store.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/ui.jqgrid.css">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/unPubCategory.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/unPublishedProduct.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/user.js">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/version.json">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="AdminAppResource/scripts/Web.config">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="angular-chart/angular-chart.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="angular-chart/angular-chart.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="angular-chart/angular-chart.min.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="angular-chart/angular-chart.min.css.map">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="angular-chart/angular-chart.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="angular-chart/angular-chart.min.js.map">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="angular-chart/Chart.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="angular-chart/Chart.js-master.zip">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="angular-chart/Chart.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="angular-chart/src/Chart.Bar.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="angular-chart/src/Chart.Core.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="angular-chart/src/Chart.Doughnut.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="angular-chart/src/Chart.Line.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="angular-chart/src/Chart.PolarArea.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="angular-chart/src/Chart.Radar.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/app.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/controllers/cartController.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/controllers/checkoutController.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/controllers/controllers.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/controllers/loginController.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/controllers/orderTrackingController.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/controllers/productController.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/controllers/productlistController.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/controllers/resetPasswordController.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/controllers/searchProductsController.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/controllers/storesController.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/controllers/userWishlistController.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/directives/animatedView.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/directives/ngElevateZoom.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/directives/ngVBuyRating.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/cart.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/ChangePassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/checkout.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/Compare.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/featuredProducts.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/ForgotPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/login.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/MyAccount.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/offers.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/orderConfirmation.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/orderTracking.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/orderTransactionFailed.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/product.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/products.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/recentOrders.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/Register.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/ResetPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/search.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/stores.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/partials/userWishlist.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/services/authInterceptorService.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/services/authService.js">
+      <publishTime>08/30/2018 12:34:26</publishTime>
+    </File>
+    <File Include="app/services/cartService.js">
+      <publishTime>08/30/2018 12:34:26</publishTime>
+    </File>
+    <File Include="app/services/categoryService.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/services/landingService.js">
+      <publishTime>08/30/2018 12:31:43</publishTime>
+    </File>
+    <File Include="app/services/mapService.js">
+      <publishTime>08/30/2018 12:34:26</publishTime>
+    </File>
+    <File Include="app/services/orderTrackingService.js">
+      <publishTime>08/30/2018 12:34:26</publishTime>
+    </File>
+    <File Include="app/services/passwordService.js">
+      <publishTime>08/30/2018 12:34:26</publishTime>
+    </File>
+    <File Include="app/services/productService.js">
+      <publishTime>08/30/2018 12:34:26</publishTime>
+    </File>
+    <File Include="app/services/storesService.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app/services/userActionService.js">
+      <publishTime>08/30/2018 12:34:26</publishTime>
+    </File>
+    <File Include="app_admin/adminapp.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/controllers/controllers.js">
+      <publishTime>08/30/2018 12:19:47</publishTime>
+    </File>
+    <File Include="app_admin/controllers/migratedcategorycontrollers.js">
+      <publishTime>08/30/2018 12:28:12</publishTime>
+    </File>
+    <File Include="app_admin/controllers/migrateddiscountcontrollers.js">
+      <publishTime>08/30/2018 12:21:08</publishTime>
+    </File>
+    <File Include="app_admin/controllers/migratedproductcontrollers.js">
+      <publishTime>08/30/2018 12:26:53</publishTime>
+    </File>
+    <File Include="app_admin/controllers/migratedstorecontrollers.js">
+      <publishTime>08/30/2018 12:28:56</publishTime>
+    </File>
+    <File Include="app_admin/controllers/migrateduserlistcontrollers.js">
+      <publishTime>08/30/2018 12:25:00</publishTime>
+    </File>
+    <File Include="app_admin/controllers/productcontroller.js">
+      <publishTime>08/30/2018 16:34:23</publishTime>
+    </File>
+    <File Include="app_admin/partials/category.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/categorylist.html">
+      <publishTime>08/29/2018 18:32:08</publishTime>
+    </File>
+    <File Include="app_admin/partials/categoryParameter.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/dashboard.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/enquiry.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/exportproduct.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/login.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/manufacturer.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/newstore.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/orders.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/pricing.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/productlist.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/productseo.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/publishcategory.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/publishproduct.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/seller.html">
+      <publishTime>08/30/2018 15:40:35</publishTime>
+    </File>
+    <File Include="app_admin/partials/sellercategory.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/sitediscount.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/siteSettings.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="app_admin/partials/topCategories.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_admin/partials/uploadSiteImages.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_admin/partials/usermaster.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_admin/services/adminProductService.js">
+      <publishTime>08/30/2018 12:34:26</publishTime>
+    </File>
+    <File Include="app_admin/services/adminService.js">
+      <publishTime>08/30/2018 16:32:40</publishTime>
+    </File>
+    <File Include="app_admin/services/authInterceptorService.js">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_admin/services/authService.js">
+      <publishTime>08/30/2018 13:29:45</publishTime>
+    </File>
+    <File Include="app_retailer/controllers/controllers.js">
+      <publishTime>08/27/2018 16:48:30</publishTime>
+    </File>
+    <File Include="app_retailer/controllers/editProductController.js">
+      <publishTime>08/30/2018 12:34:26</publishTime>
+    </File>
+    <File Include="app_retailer/controllers/forgotPasswordController.js">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/controllers/loginController.js">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/controllers/ordersController.js">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/controllers/resetPasswordController.js">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/controllers/storesController.js">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/directives/directives.js">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/ChangePassword.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/dashboard.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/defaultSettings.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/ForgotPassword.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/login.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/manageBranches.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/managePricing.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/manageProducts.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/MyDetails.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/myInbox.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/myOrders.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/mySettings.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/myStore.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/newBranch.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/newProduct.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/OrderSummary.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/pendingOrders.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/printOrder.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/productBulkUpload.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/productImage.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/productSEO.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/ResetPassword.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/retailerHome.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/retailerRegister.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/updateKeyFeatures.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/updateProduct.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/partials/userSettings.html">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/retailerapp.js">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/services/authInterceptorService.js">
+      <publishTime>08/25/2018 12:46:35</publishTime>
+    </File>
+    <File Include="app_retailer/services/authService.js">
+      <publishTime>08/30/2018 13:29:54</publishTime>
+    </File>
+    <File Include="app_retailer/services/ordersService.js">
+      <publishTime>08/30/2018 12:32:18</publishTime>
+    </File>
+    <File Include="app_retailer/services/passwordService.js">
+      <publishTime>08/30/2018 12:34:26</publishTime>
+    </File>
+    <File Include="app_retailer/services/productService.js">
+      <publishTime>08/30/2018 12:37:13</publishTime>
+    </File>
+    <File Include="app_retailer/services/retailerServicenew.js">
+      <publishTime>08/30/2018 12:31:54</publishTime>
+    </File>
+    <File Include="app_retailer/services/storesService.js">
+      <publishTime>08/30/2018 12:37:04</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>08/25/2018 12:47:07</publishTime>
+    </File>
+    <File Include="bin/Autofac.dll">
+      <publishTime>08/25/2018 12:47:14</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.Mvc.dll">
+      <publishTime>08/25/2018 12:47:14</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.WebApi.dll">
+      <publishTime>08/25/2018 12:47:14</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>08/25/2018 12:47:10</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.AspNet.dll">
+      <publishTime>08/25/2018 12:47:14</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.Core.dll">
+      <publishTime>08/25/2018 12:47:14</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.Consumer.dll">
+      <publishTime>08/25/2018 12:47:14</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.dll">
+      <publishTime>08/25/2018 12:47:14</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.dll">
+      <publishTime>08/25/2018 12:47:15</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.RelyingParty.dll">
+      <publishTime>08/25/2018 12:47:15</publishTime>
+    </File>
+    <File Include="bin/Elasticsearch.Net.dll">
+      <publishTime>08/25/2018 12:47:16</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>08/25/2018 12:47:17</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>08/25/2018 12:47:17</publishTime>
+    </File>
+    <File Include="bin/Excel.dll">
+      <publishTime>08/25/2018 12:47:17</publishTime>
+    </File>
+    <File Include="bin/Facebook.dll">
+      <publishTime>08/25/2018 12:47:17</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.Auth.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.Auth.PlatformServices.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.Core.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.Oauth2.v2.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.PlatformServices.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.Plus.v1.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/ICSharpCode.SharpZipLib.dll">
+      <publishTime>08/25/2018 12:47:24</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>08/25/2018 12:47:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Cors.dll">
+      <publishTime>08/25/2018 12:47:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>08/25/2018 12:47:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>08/25/2018 12:47:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>08/25/2018 12:47:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>08/25/2018 12:47:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Threading.Tasks.dll">
+      <publishTime>08/25/2018 12:47:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Threading.Tasks.Extensions.Desktop.dll">
+      <publishTime>08/25/2018 12:47:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Threading.Tasks.Extensions.dll">
+      <publishTime>08/25/2018 12:47:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Helpers.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>08/25/2018 12:47:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.WebPages.OAuth.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/Mono.Math.dll">
+      <publishTime>08/25/2018 12:47:15</publishTime>
+    </File>
+    <File Include="bin/Nest.dll">
+      <publishTime>08/25/2018 12:47:22</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/25/2018 12:47:23</publishTime>
+    </File>
+    <File Include="bin/Org.Mentalis.Security.Cryptography.dll">
+      <publishTime>08/25/2018 12:47:15</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>08/25/2018 12:47:24</publishTime>
+    </File>
+    <File Include="bin/PagedList.dll">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Extensions.dll">
+      <publishTime>08/25/2018 12:47:19</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Primitives.dll">
+      <publishTime>08/25/2018 12:47:19</publishTime>
+    </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Cors.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Owin.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/VSOnline.VBuy.Web.dll">
+      <publishTime>08/30/2018 12:41:31</publishTime>
+    </File>
+    <File Include="bin/VSOnline.VSECommerce.Core.dll">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="bin/VSOnline.VSECommerce.dll">
+      <publishTime>08/30/2018 10:41:15</publishTime>
+    </File>
+    <File Include="bin/VSOnline.VSECommerce.Domain.dll">
+      <publishTime>08/29/2018 15:57:17</publishTime>
+    </File>
+    <File Include="bin/VSOnline.VSECommerce.Persistence.dll">
+      <publishTime>08/29/2018 15:57:16</publishTime>
+    </File>
+    <File Include="bin/VSOnline.VSECommerce.Utilities.dll">
+      <publishTime>08/25/2018 12:46:28</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>08/25/2018 12:47:24</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.Data.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.WebData.dll">
+      <publishTime>08/25/2018 12:47:18</publishTime>
+    </File>
+    <File Include="bin/Zlib.Portable.dll">
+      <publishTime>08/25/2018 12:47:24</publishTime>
+    </File>
+    <File Include="Content/app/css/app.min.css">
+      <publishTime>08/25/2018 12:46:33</publishTime>
+    </File>
+    <File Include="Content/app/css/bootstrap-social.css">
+      <publishTime>08/25/2018 12:46:33</publishTime>
+    </File>
+    <File Include="Content/app/css/bootstrap.css">
+      <publishTime>08/25/2018 12:46:33</publishTime>
+    </File>
+    <File Include="Content/app/css/cardstyle.css">
+      <publishTime>08/25/2018 12:46:33</publishTime>
+    </File>
+    <File Include="Content/app/css/font-awesome.css">
+      <publishTime>08/25/2018 12:46:33</publishTime>
+    </File>
+    <File Include="Content/app/css/gridstyle.css">
+      <publishTime>08/25/2018 12:46:33</publishTime>
+    </File>
+    <File Include="Content/app/css/images/bg.jpg">
+      <publishTime>08/25/2018 12:46:33</publishTime>
+    </File>
+    <File Include="Content/app/css/images/bx_loader.gif">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/css/images/controls.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/css/jasny-bootstrap.min.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/css/jquery.bxslider.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/css/login.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/css/menustyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/css/Orders.css">
+      <publishTime>08/25/2018 12:46:33</publishTime>
+    </File>
+    <File Include="Content/app/css/others.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/css/rating.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/css/styles.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/fonts/fontawesome-webfont.eot">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/fonts/fontawesome-webfont.svg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/fonts/fontawesome-webfont.ttf">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/fonts/fontawesome-webfont.woff">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/fonts/fontawesome-webfont.woff2">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/fonts/FontAwesome.otf">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/app/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/Directions.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/glyphicons-halflings-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/glyphicons-halflings.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/glyphicons-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/glyphicons.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/googlestore.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/icon_wishlist_cancel.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/icon_wishlist_Small.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/icon_wishlist_Small_Filled.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/locateme.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/noimage.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/RetailerApp/retailerLogIn.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/RetailerApp/retailer_login.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/RetailerApp/specialOffer.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/VBuyIco_32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/VBuyLogo.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/vbuy_loading.gif">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/images/VBuy_map32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/loading-bar.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/loading-bar.min.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>08/25/2018 12:46:33</publishTime>
+    </File>
+    <File Include="EmailTemplates/ForgotPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/ForgotPassword.txt">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/GeneratePasswordRetailer.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/OrderCancellation.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/OrderCancellationSMS.txt">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/OrderConfirmation.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/OrderConfirmationSMS.txt">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/ProductReplyMail.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/ProductReplyMail.txt">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/ProductReplySMS.txt">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/ProductRequestMail.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/ProductRequestMail.txt">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/ProductRequestSMS.txt">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/RetailerRegistration - Copy.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/RetailerRegistration.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/RetailerRegistration.txt">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/RetailerWelcome.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/SiteAdminInformation.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/VBuyLogo_150.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/WelcomeMail.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="EmailTemplates/WelcomeMail.txt">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>08/25/2018 12:46:36</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>08/25/2018 12:46:36</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>08/25/2018 12:46:36</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>08/25/2018 12:46:36</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>08/25/2018 12:46:36</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Home.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="images/bx_loader.gif">
+      <publishTime>08/25/2018 12:46:36</publishTime>
+    </File>
+    <File Include="images/controls.png">
+      <publishTime>08/25/2018 12:46:36</publishTime>
+    </File>
+    <File Include="images/delete.png">
+      <publishTime>08/25/2018 12:46:36</publishTime>
+    </File>
+    <File Include="images/edit.png">
+      <publishTime>08/25/2018 12:46:36</publishTime>
+    </File>
+    <File Include="images/LeftArrow.png">
+      <publishTime>08/25/2018 12:46:36</publishTime>
+    </File>
+    <File Include="images/RightArrows.png">
+      <publishTime>08/25/2018 12:46:36</publishTime>
+    </File>
+    <File Include="images/switch.png">
+      <publishTime>08/25/2018 12:46:36</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="Payment.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="PayUResponseHandling.aspx">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Retailer.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angular-animate.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angular-cookies.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angular-cookies.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angular-facebook.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angular-file-upload.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angular-local-storage.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angular-mocks.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angular-route.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angular-sanitize.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angular-strap.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angular-strap.tpl.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angular.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angular.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angularjs-dropdown-multiselect.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/angularjs-viewhead.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-slider.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/google-plus-signin.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/jasny-bootstrap.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery.bxslider.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery.bxslider.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery.elevatezoom.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/loading-bar.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/lodash.min.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/ng-breadcrumbs.vbuy.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/ng-table.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/StyledMarker.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Scripts/VBuyElementFlyer.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="shared/faq.html">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="shared/OfferPolicy.html">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="shared/PolicyPrivacy.html">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="shared/PolicySeller.html">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="shared/PolicyTerms.html">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="shared/ReturnPolicy.html">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="shared/sellerMDA.html">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="slick/ajax-loader.gif">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="slick/config.rb">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="slick/fonts/slick.eot">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="slick/fonts/slick.svg">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="slick/fonts/slick.ttf">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="slick/fonts/slick.woff">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="slick/slick.css">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="slick/slick.css.map">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="slick/slick.js">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="slick/slick.min.js">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="slick/slick.scss">
+      <publishTime>08/25/2018 12:46:46</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/Cart.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/ChangePassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/checkout.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/Compare.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/featuredProducts.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/ForgotPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/login.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/MyAccount.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/offers.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/OrderConfirmation.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/orderTracking.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/orderTransactionFailed.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/product.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/Products.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/recentOrders.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/Register.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/ResetPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/search.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/stores.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/app/partials/userWishlist.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/app/css/cardstyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/app/css/login.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/app/css/menustyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/app/css/Orders.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/app/css/others.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/app/css/rating.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/app/css/styles.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/Directions.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/glyphicons-halflings-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/glyphicons-halflings.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/glyphicons-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/glyphicons.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/googlestore.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/icon_wishlist_cancel.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/icon_wishlist_Small.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/icon_wishlist_Small_Filled.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/locateme.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/noimage.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/RetailerApp/retailerLogIn.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/RetailerApp/retailer_login.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/RetailerApp/specialOffer.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/VBuyIco_32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/VBuyLogo.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/vbuy_loading.gif">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Content/images/VBuy_map32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateBrightBlack/Home.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/Cart.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/ChangePassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/checkout.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/Compare.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/featuredProducts.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/ForgotPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/login.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/MyAccount.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/offers.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/OrderConfirmation.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/orderTracking.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/orderTransactionFailed.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/product.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/Products.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/recentOrders.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/Register.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/ResetPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/search.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/stores.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/app/partials/userWishlist.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/app/css/cardstyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/app/css/login.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/app/css/menustyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/app/css/Orders.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/app/css/others.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/app/css/rating.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/app/css/styles.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/Directions.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/glyphicons-halflings-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/glyphicons-halflings.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/glyphicons-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/glyphicons.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/googlestore.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/icon_wishlist_cancel.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/icon_wishlist_Small.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/icon_wishlist_Small_Filled.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/locateme.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/noimage.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/RetailerApp/retailerLogIn.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/RetailerApp/retailer_login.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/RetailerApp/specialOffer.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/VBuyIco_32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/VBuyLogo.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/vbuy_loading.gif">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Content/images/VBuy_map32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMapPhysician/Home.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/Cart.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/ChangePassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/checkout.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/Compare.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/featuredProducts.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/ForgotPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/login.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/MyAccount.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/offers.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/OrderConfirmation.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/orderTracking.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/orderTransactionFailed.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/product.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/Products.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/recentOrders.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/Register.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/ResetPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/search.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/stores.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/app/partials/userWishlist.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/app/css/cardstyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/app/css/login.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/app/css/menustyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/app/css/Orders.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/app/css/others.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/app/css/rating.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/app/css/styles.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/Directions.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/glyphicons-halflings-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/glyphicons-halflings.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/glyphicons-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/glyphicons.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/googlestore.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/icon_wishlist_cancel.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/icon_wishlist_Small.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/icon_wishlist_Small_Filled.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/locateme.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/noimage.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/RetailerApp/retailerLogIn.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/RetailerApp/retailer_login.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/RetailerApp/specialOffer.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/VBuyIco_32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/VBuyLogo.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/vbuy_loading.gif">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Content/images/VBuy_map32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Home.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMarketPlace/Scripts/angularjs-dropdown-multiselect.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/Cart.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/ChangePassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/checkout.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/Compare.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/featuredProducts.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/ForgotPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/login.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/MyAccount.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/offers.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/OrderConfirmation.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/orderTracking.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/orderTransactionFailed.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/product.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/Products.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/recentOrders.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/Register.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/ResetPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/search.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/stores.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/app/partials/userWishlist.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/app/css/cardstyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/app/css/login.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/app/css/menustyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/app/css/Orders.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/app/css/others.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/app/css/rating.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/app/css/styles.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/Directions.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/glyphicons-halflings-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/glyphicons-halflings.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/glyphicons-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/glyphicons.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/googlestore.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/grey_wash_wall.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/icon_wishlist_cancel.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/icon_wishlist_Small.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/icon_wishlist_Small_Filled.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/locateme.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/noimage.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/RetailerApp/retailerLogIn.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/RetailerApp/retailer_login.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/RetailerApp/specialOffer.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/VBuyIco_32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/VBuyLogo.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/vbuy_loading.gif">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Content/images/VBuy_map32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Home.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateMovies/Scripts/angularjs-dropdown-multiselect.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/Cart.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/ChangePassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/checkout.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/Compare.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/featuredProducts.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/ForgotPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/login.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/MyAccount.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/offers.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/OrderConfirmation.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/orderTracking.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/orderTransactionFailed.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/product.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/Products.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/recentOrders.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/Register.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/ResetPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/search.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/stores.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/app/partials/userWishlist.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/app/css/cardstyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/app/css/login.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/app/css/menustyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/app/css/Orders.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/app/css/others.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/app/css/rating.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/app/css/styles.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/Directions.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/glyphicons-halflings-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/glyphicons-halflings.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/glyphicons-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/glyphicons.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/googlestore.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/grey_wash_wall.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/icon_wishlist_cancel.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/icon_wishlist_Small.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/icon_wishlist_Small_Filled.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/locateme.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/noimage.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/RetailerApp/retailerLogIn.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/RetailerApp/retailer_login.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/RetailerApp/specialOffer.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/VBuyIco_32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/VBuyLogo.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/vbuy_loading.gif">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Content/images/VBuy_map32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Home.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleBlackTheme/Scripts/angularjs-dropdown-multiselect.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/Cart.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/ChangePassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/checkout.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/Compare.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/featuredProducts.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/ForgotPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/login.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/MyAccount.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/offers.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/OrderConfirmation.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/orderTracking.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/orderTransactionFailed.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/product.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/Products.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/recentOrders.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/Register.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/ResetPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/search.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/stores.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/app/partials/userWishlist.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/app/css/cardstyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/app/css/login.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/app/css/menustyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/app/css/Orders.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/app/css/others.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/app/css/rating.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/app/css/styles.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/Directions.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/glyphicons-halflings-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/glyphicons-halflings.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/glyphicons-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/glyphicons.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/googlestore.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/icon_wishlist_cancel.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/icon_wishlist_Small.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/icon_wishlist_Small_Filled.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/locateme.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/noimage.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/RetailerApp/retailerLogIn.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/RetailerApp/retailer_login.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/RetailerApp/specialOffer.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/VBuyIco_32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/VBuyLogo.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/vbuy_loading.gif">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Content/images/VBuy_map32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Home.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSimpleStore/Scripts/angularjs-dropdown-multiselect.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/Cart.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/ChangePassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/checkout.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/Compare.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/featuredProducts.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/ForgotPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/login.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/MyAccount.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/offers.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/OrderConfirmation.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/orderTracking.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/orderTransactionFailed.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/product.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/Products.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/recentOrders.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/Register.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/ResetPassword.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/search.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/stores.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/app/partials/userWishlist.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/app/css/cardstyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/app/css/login.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/app/css/menustyle.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/app/css/Orders.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/app/css/others.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/app/css/rating.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/app/css/styles.css">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/Directions.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/glyphicons-halflings-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/glyphicons-halflings.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/glyphicons-white.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/glyphicons.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/googlestore.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/icon_wishlist_cancel.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/icon_wishlist_Small.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/icon_wishlist_Small_Filled.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/locateme.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/noimage.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/RetailerApp/retailerLogIn.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/RetailerApp/retailer_login.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/RetailerApp/specialOffer.jpg">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/VBuyIco_32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/VBuyLogo.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/vbuy_loading.gif">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Content/images/VBuy_map32.png">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Home.html">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="TemplateSingleSuperMarket/Scripts/angularjs-dropdown-multiselect.js">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Views/Admin/Index.cshtml">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Views/PaymentGatewayReturn/Index.cshtml">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Views/PaymentGatewayReturn/Result.cshtml">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>08/25/2018 12:46:34</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/31/2018 10:41:36</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

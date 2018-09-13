@@ -1,4 +1,4 @@
-﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////////////////
 // <copyright>
 // Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
 //</copyright>
@@ -6,32 +6,31 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app_retailer.service('storesService', function () {
+app_retailer.service('storesService', function () {
 
-    var endPoint = '/VSECommerce/api/Retailer';
+    var endPoint = 'http://localhost:49475/api/Retailer';
 
 
-    this.getFilter = function ($http)
-    {
-   
+    this.getFilter = function ($http) {
+
         var config = {
             headers: { "CommandType": "GetRetailerProductFilter" },
-           
+
         };
         return $http.get(endPoint + '/GetRetailerProductFilter', config);
     }
 
     this.getProducts = function ($scope, $http) {
-     
+
         var config = {
-            headers: { "CommandType":"GetProducts" },
-            params : $scope.filters
+            headers: { "CommandType": "GetProducts" },
+            params: $scope.filters
         };
-        return $http.get(endPoint +'/GetProducts', config);
+        return $http.get(endPoint + '/GetProducts', config);
     }
-    
+
     this.productPagination = function ($scope, $http, PageNo, pageSize) {
-       
+
         //int selectedCategory, int selectedSubCategory, int? selectedBrand, int?pages
         var config = {
             headers: { "CommandType": "GetPagingProducts" },
@@ -54,25 +53,24 @@
         };
         return $http.get(endPoint + '/GetMyProducts', config);
     }
-    this.getMyFilteredProductsPaging = function ($scope, $http, pageno,pageSize) {
-       
+    this.getMyFilteredProductsPaging = function ($scope, $http, pageno, pageSize) {
+
         var config = {
-            headers: { "CommandType":"GetMyFilteredProductsPaging" },
+            headers: { "CommandType": "GetMyFilteredProductsPaging" },
             params: {
                 selectedCategory: $scope.filters.selectedCategory,
                 selectedSubCategory: $scope.filters.selectedSubCategory,
-                selectedBranchId:$scope.filters.selectedBranchId,
+                selectedBranchId: $scope.filters.selectedBranchId,
                 storeId: $scope.RetailerInfo.StoreId,
                 pageNo: pageno,
                 selectedBrand: $scope.filters.selectedBrand,
-                PageSize:pageSize
+                PageSize: pageSize
             }
         };
-        return $http.get(endPoint +'/GetMyFilteredProductsPaging', config);
+        return $http.get(endPoint + '/GetMyFilteredProductsPaging', config);
     }
-   
-    this.getRetailerInfo = function ($http)
-    {
+
+    this.getRetailerInfo = function ($http) {
         var config = {
             headers: { "CommandType": "GetRetailerInfo" },
         };
@@ -104,8 +102,7 @@
         };
         return $http.post(endPoint + '/UpdateProductPrice', productPricing, config);
     }
-    this.removeProduct=function($scope,$http,product)
-    {
+    this.removeProduct = function ($scope, $http, product) {
         product.StoreId = $scope.RetailerInfo.StoreId
         product.BranchIdList = [];
         product.BranchIdList.push($scope.filters.selectedBranchId);
@@ -147,22 +144,20 @@
         return $http.get(endPoint + '/InboxReply', config);
     }
 
-    this.getStoreDetails = function($scope, $http, userName, branchId)
-    {
+    this.getStoreDetails = function ($scope, $http, userName, branchId) {
         var config = {
             params: { username: userName, branchId: branchId },
             headers: { "CommandType": "UpdateFilterParameters" }
-            };
-            return $http.get(endPoint + '/GetStoreDetails', config);
+        };
+        return $http.get(endPoint + '/GetStoreDetails', config);
     }
 
-    this.updateBranchDetails = function($scope, $http, userName, branch)
-    {
-        var branchModel = {branch:branch, userName:userName}
+    this.updateBranchDetails = function ($scope, $http, userName, branch) {
+        var branchModel = { branch: branch, userName: userName }
         var config = {
             headers: { "CommandType": "UpdateBranchDetails" }
         };
-        
+
         return $http.post(endPoint + '/UpdateBranchDetails/', branchModel, config);
     }
 

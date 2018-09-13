@@ -1,6 +1,14 @@
-﻿app_admin.service('adminProductService', function () {
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+ app_admin.service('adminProductService', function () {
 
-    var endPointCategory = '/VBuy/api/AdminCategory';
+     var endPointCategory = 'http://192.168.1.12:8075/api/AdminCategory';
 
     this.getParentCategory = function ($http) {
 

@@ -1,4 +1,10 @@
-﻿
+﻿/*!
+ * VSECommerce
+ *
+ * Copyright 2014-2018 Sivakumar Anirudhan, VS Online Services Pvt Ltd.
+ *
+ */
+
 app_admin.controller('LandingController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', 'adminService', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, adminService, authService) {
     {       
@@ -67,8 +73,8 @@ app_admin.controller('LoginController', ['$scope', '$cookieStore', '$location', 
 
 app_admin.controller('DashboardController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', 'adminService', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, adminService, authService) {
-  
-    var endPoint = '/VBuy/api/AdminMigratedCategory';
+
+    var endPoint = 'http://192.168.1.12:8075/api/AdminMigratedCategory';
     function InitializeUserStatistics() {
         regCustomers();
         regRetailers(); 
@@ -319,7 +325,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, File
     {
 
         $scope.uploaderHomeBanner = new FileUploader({
-            url: 'api/AdminFileUpload/UploadHomeBannerImages',
+            url: 'http://192.168.1.12:8075/api/AdminFileUpload/UploadHomeBannerImages',
             withCredentials: true
         });
 

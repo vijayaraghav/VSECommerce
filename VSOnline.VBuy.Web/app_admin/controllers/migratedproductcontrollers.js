@@ -1,4 +1,4 @@
-﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////////////////
 // <copyright>
 // Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
 //</copyright>
@@ -6,10 +6,10 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app_admin.controller('AdminProductListController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
+app_admin.controller('AdminProductListController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
-    
-    var endPoint = '/VSECommerce/api/AdminMigratedProduct';
+
+    var endPoint = 'http://localhost:49475/api/AdminMigratedProduct';
 
     function ConfirmDialog(message) {
 
@@ -62,7 +62,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     //    //      createGrid(data.d);
     //    //  });
     //}
-    $scope.searchProduct = function() {
+    $scope.searchProduct = function () {
         if (($('#txtSrchProductId').val().length >= 3) || ($('#txtSrchProductName').val().length >= 3)) {
             $('#ProductGrid').show();
             var product = {};
@@ -83,7 +83,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             }
 
             var config = {
-                params:product,
+                params: product,
                 headers: { "CommandType": "SearchProduct" }
             };
 
@@ -126,7 +126,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
     }
 
-    $scope.ProductExcelData = function() {
+    $scope.ProductExcelData = function () {
         var product = {};
         product.searchProId = $('#txtSrchProductId').val();
         product.searchProName = $('#txtSrchProductName').val();
@@ -147,7 +147,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         $('#txtExcelPName').val(product.searchProName);
         $('#txtPuId').val(product.publishstatus);
         var config = {
-            params:product,
+            params: product,
             headers: { "CommandType": "SearchProduct" }
         };
 
@@ -165,9 +165,9 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
   });
 
     }
-    
-    
-    $scope.ProductKeyExcelData = function() {
+
+
+    $scope.ProductKeyExcelData = function () {
         var product = {};
         product.searchProId = $('#txtSrchProductId').val();
         product.searchProName = $('#txtSrchProductName').val();
@@ -184,7 +184,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             productKey.Productkey = productKeyID;
 
             var config = {
-                params:productKey,
+                params: productKey,
                 headers: { "CommandType": "SearchProductKey" }
             };
 
@@ -278,7 +278,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         productKey.Productkey = productKeyID;
 
         var config = {
-            params:productKey,
+            params: productKey,
             headers: { "CommandType": "SearchProductKey" }
         };
 
@@ -364,7 +364,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         $('#txtEditKeyFeature').val(KeyFeature);
 
     }
-    $scope.ModifyProductKey= function() {
+    $scope.ModifyProductKey = function () {
         var productKey = {};
         productKey.keyID = $('#txtEditKeyid').val().trim();
         productKey.display = $('#txtEditDisplay').val().trim();
@@ -392,7 +392,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                 }
 
                 var config = {
-                    params:productKey,
+                    params: productKey,
                     headers: { "CommandType": "ModifyProductKey" }
                 };
 
@@ -401,7 +401,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
               $('#editProductKey').modal('hide');
               searchProduct();
           });
-                
+
             }
     }
     function createGrid(datas) {
@@ -502,7 +502,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         input.Productid = $('#txtProductId').val().trim();
 
         var config = {
-            params:input,
+            params: input,
             headers: { "CommandType": "getBrandId" }
         };
 
@@ -518,7 +518,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                   $('#drpBrandId').val(BrandName);
                   $('#drpBrandId').select2();
 
-              }); 
+              });
     }
 
     var pic, pic1, pic2, html, BrandName;
@@ -549,11 +549,11 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         }
         //   $('#drpBrandId').val(BrandName);
 
-          $('#pictureUpload').val(PictureName);
+        $('#pictureUpload').val(PictureName);
 
-          $('#picture1Upload').val(PictureName1);
+        $('#picture1Upload').val(PictureName1);
 
-          $('#picture2Upload').val(PictureName2);
+        $('#picture2Upload').val(PictureName2);
 
         //  $('#ProductDescription').val(ProductDescriptionHtml);
 
@@ -606,23 +606,23 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             //product.PictureName2 = product.PictureName2.replace(/^.*[\\\/]/, '');
             if (product.MnuPartNumber == "") {
 
-               
+
 
             }
-          
-           //if (product.PictureName != "" && AlternativePictureName == "") {
 
-           //     product.PictureName = "Product" + "\\" + product.PictureName;
-           // }
-           // else if (product.PictureName != "" && AlternativePictureName != "") {
+            //if (product.PictureName != "" && AlternativePictureName == "") {
 
-           //     product.PictureName = "Product" + "\\" + product.PictureName;
-           // }
-           // else if (product.PictureName == "" && AlternativePictureName != "") {
-                product.PictureName = AlternativePictureName;
-           // }
+            //     product.PictureName = "Product" + "\\" + product.PictureName;
+            // }
+            // else if (product.PictureName != "" && AlternativePictureName != "") {
 
-            
+            //     product.PictureName = "Product" + "\\" + product.PictureName;
+            // }
+            // else if (product.PictureName == "" && AlternativePictureName != "") {
+            product.PictureName = AlternativePictureName;
+            // }
+
+
             //if (product.PictureName1 != "" && AlternativePictureName1 == "") {
             //    product.PictureName1 = "Product" + "\\" + product.PictureName1;
             //}
@@ -630,10 +630,10 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             //    product.PictureName1 = "Product" + "\\" + product.PictureName1;
             //}
             //else if (product.PictureName1 == "" && AlternativePictureName1 != "") {
-               product.PictureName1 = AlternativePictureName1;
+            product.PictureName1 = AlternativePictureName1;
             //}
 
-            
+
 
             //if (product.PictureName2 != "" && AlternativePictureName2 == "") {
             //    product.PictureName2 = "Product" + "\\" + product.PictureName2;
@@ -641,7 +641,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             //    product.PictureName2 = "Product" + "\\" + product.PictureName2;
             //}
             //else if (product.PictureName2 == "" && AlternativePictureName2 != "") {
-                product.PictureName2 = AlternativePictureName2;
+            product.PictureName2 = AlternativePictureName2;
             //}
 
 
@@ -651,7 +651,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             product.proFullDesc = product.proFullDesc.replace(/'/g, "''");
 
             var config = {
-                params:product,
+                params: product,
                 headers: { "CommandType": "ModifyProducts" }
             };
 
@@ -677,19 +677,19 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         }
 
     }
-    $scope.ProductClear = function() {
+    $scope.ProductClear = function () {
         $('#txtSrchProductId').val('');
         $('#txtSrchProductName').val('');
         $('#publishproduct').attr('checked', false);
 
     }
-    $scope.checkID = function() {
+    $scope.checkID = function () {
         if ($('#txtSrchProductId').val().length < 3) {
             $('#required').text(" * Please Enter 3 characters to search");
             $('#txtSrchProductId').val('');
         }
     }
-    $scope.checkName = function() {
+    $scope.checkName = function () {
 
         if ($('#txtSrchProductName').val().length < 3) {
             $('#required').text(" * Please Enter 3 characters to search");
@@ -697,7 +697,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         }
     }
 
-    $scope.CheckIsNumeric = function(objEvt) {
+    $scope.CheckIsNumeric = function (objEvt) {
         var charCode = (objEvt.which) ? objEvt.which : event.keyCode
         if (charCode > 31 && (charCode < 48 || charCode > 57)) {
             document.getElementById("txtSrchProductId").style.backgroundColor = "#FFB2B2";
@@ -709,7 +709,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         }
     }
 
-    $scope.CheckInDisplay = function(objEvt) {
+    $scope.CheckInDisplay = function (objEvt) {
         var charCode = (objEvt.which) ? objEvt.which : event.keyCode
         if (charCode > 31 && (charCode < 48 || charCode > 57)) {
             document.getElementById("txtEditDisplay").style.backgroundColor = "#FFB2B2";
@@ -726,7 +726,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 app_admin.controller('AdminBrandController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VSECommerce/api/AdminMigratedManufacturer';
+    var endPoint = 'http://localhost:49475/api/AdminMigratedManufacturer';
 
     $(document).ready(function () {
 
@@ -750,7 +750,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
         return true;
     }
-    
+
     function getManufacturerDetails() {
 
         $("drpManuId").show();
@@ -784,9 +784,8 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
               });
     }
 
-    function InitializeManufacturer()
-    {
-         $("drpManuId").show();
+    function InitializeManufacturer() {
+        $("drpManuId").show();
         $('#ManufacturerDetails').modal('hide');
         getManufacturerDetails();
         getManuId();
@@ -794,15 +793,15 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     }
     InitializeManufacturer();
 
-    
-  
 
-    $scope.SearchManufacturerProductDetails = function() {
+
+
+    $scope.SearchManufacturerProductDetails = function () {
         var input = {};
         input.Manuid = $('#drpManuId').val().trim();
 
         var config = {
-            params:input,
+            params: input,
             headers: { "CommandType": "LoadManuProductIdDetails" }
         };
 
@@ -813,7 +812,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                $("drpManuId").show();
            });
     }
-    $scope.NewManufacturerDetails = function() {
+    $scope.NewManufacturerDetails = function () {
 
         $('#ManufacturerDetails').modal('show');
 
@@ -826,23 +825,23 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
         $('#txtDisplay').val('');
         $("span").html("");
-   
+
     }
 
 
 
-    $scope.SaveManuDetails = function() {
+    $scope.SaveManuDetails = function () {
 
 
         var Id = $('#txtManId').val().trim();
         var Name = $('#txtMaName').val().trim();
-   
-  
+
+
         if (Name == "") {
             $('#ManuRequiredfield').text(" * Enter Name");
         }
 
-        if ((Id == "") && (Name!="")) {
+        if ((Id == "") && (Name != "")) {
             var input = {}
             input.Name = $('#txtMaName').val().trim();
             input.Desc = $('#txtDes').val().trim();
@@ -876,7 +875,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                    $("drpManuId").show();
                });
 
-         
+
         }
 
 
@@ -938,14 +937,14 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             datastr: data,
             datatype: "jsonstring",
             jsonReader: { repeatitems: false },
-            colNames: ['ManufacturerId', 'Name', 'Description', 'MetaKeywords', 'MetaDescription','MetaTitle','DisplayOrder', 'Action'],
+            colNames: ['ManufacturerId', 'Name', 'Description', 'MetaKeywords', 'MetaDescription', 'MetaTitle', 'DisplayOrder', 'Action'],
             colModel: [
-                         { name: 'ManufacturerId', index: 'ManufacturerId', width: 30, align: "center",hidden:true },
+                         { name: 'ManufacturerId', index: 'ManufacturerId', width: 30, align: "center", hidden: true },
                         { name: 'Name', index: 'Name', width: 50, align: "center", sortable: true, search: true },
                         { name: 'Description', index: 'Description', width: 50, align: "center", sortable: true },
                         { name: 'MetaKeywords', index: 'MetaKeywords', width: 30, align: "center", sortable: true },
                         { name: 'MetaDescription', index: 'MetaDescription', width: 50, align: "center", sortable: true },
-                          { name: 'MetaTitle', index: 'MetaTitle', width: 50, align: "center", sortable: true },                          
+                          { name: 'MetaTitle', index: 'MetaTitle', width: 50, align: "center", sortable: true },
                                { name: 'DisplayOrder', index: 'DisplayOrder', width: 30, align: "center", sortable: true, search: false },
                         { name: 'ManufacturerId', index: 'ManufacturerId', width: 30, align: "center", sortable: false, formatter: editLink, search: false }
 
@@ -1010,14 +1009,14 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 app_admin.controller('AdminPublishProductController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
 
-    var endPoint = '/VSECommerce/api/AdminMigratedProduct';
+    var endPoint = 'http://localhost:49475/api/AdminMigratedProduct';
 
     function InitializeProductPublish() {
         loadProduct();
         loadPublishedProduct();
     }
 
-    InitializeProductPublish();  
+    InitializeProductPublish();
 
     function loadProduct() {
         var config = {
@@ -1040,7 +1039,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         $http.get(endPoint + '/PublishedProduct', config)
            .then(function (response) {
                createPublishedGrid(response.data);
-           });       
+           });
     }
 
 
@@ -1132,7 +1131,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
     $scope.publishIds = [];
 
-    $scope.publishProduct = function() {
+    $scope.publishProduct = function () {
 
         var myrow = ids = "";
         var id = jQuery("#unPublishgrid").jqGrid('getGridParam', 'selarrrow');
@@ -1143,7 +1142,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             }
         }
         if ($scope.publishIds.length > 0) {
- 
+
 
             var config = {
                 headers: { "CommandType": "UpdatePublishedProduct" }
@@ -1157,11 +1156,10 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                        loadProduct();
                        loadPublishedProduct();
                    }
-                   else
-                   {
+                   else {
                        alert("Unsucessful. Error contact administrator")
                    }
-               });       
+               });
         }
         else {
             alert("Please select any item to Publish");
@@ -1173,7 +1171,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
 
 app_admin.controller('AdminProductSeoController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location', '$filter', 'ngTableParams', 'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $filter, ngTableParams, authService) {
-    var endPoint = '/VSECommerce/api/AdminMigratedProduct';
+    var endPoint = 'http://localhost:49475/api/AdminMigratedProduct';
 
     function InitializeSeoProduct() {
         $('#ddlCategoryId').select2();
@@ -1182,7 +1180,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
     }
 
     InitializeSeoProduct();
-     
+
     function loadSeoCategory() {
         $('#ddlCategoryId').empty();
         $("#ddlSubCategoryId").append("<option value='--Select--'>" +
@@ -1221,7 +1219,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         }
         else {
 
-            
+
             var config = {
                 params: input,
                 headers: { "CommandType": "loadSubCategory" }
@@ -1255,7 +1253,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
                 input.SubCategoryId = "0";
             }
 
-                
+
             var config = {
                 params: input,
                 headers: { "CommandType": "seoProductList" }
@@ -1282,7 +1280,7 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
             jsonReader: { repeatitems: false },
             colNames: ['ProductId', 'Name', 'MetaTitle', 'MetaDescription', 'MetaKeywords', 'Action'],
             colModel: [
-                        { name: 'ProductId', index: 'ProductId', width: 20, align: "center"},
+                        { name: 'ProductId', index: 'ProductId', width: 20, align: "center" },
                         { name: 'Name', index: 'Name', width: 70, align: "center", sortable: true },
                          { name: 'MetaTitle', index: 'MetaTitle', width: 30, align: "center", sortable: true },
                                { name: 'MetaDescription', index: 'MetaDescription', width: 30, align: "center", sortable: true },
@@ -1340,9 +1338,9 @@ function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, $fil
         $('#txtEditKeywords').val(MetaKeywords);
 
     }
-    
-    
-    $scope.ModifySEOProduct = function() {
+
+
+    $scope.ModifySEOProduct = function () {
         var SEOProduct = {};
         SEOProduct.ProductId = $('#txtEditid').val().trim();
         SEOProduct.MetaTitle = $('#txtEditTitle').val().trim();

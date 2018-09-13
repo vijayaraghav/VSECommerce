@@ -21,38 +21,41 @@ using System.Configuration;
 
 
 namespace VSOnline.VSECommerce.Web.Controllers
-{    
+{
     public class LoginController : ApiController
-    {     
-         IUnitOfWork _unitOfWork = null;
+    {
+        IUnitOfWork _unitOfWork = null;
 
-         public LoginController(IUnitOfWork unitOfWork)
+        public LoginController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
 
         [HttpPost]
         [ActionName("RegisterRetailer")]
-         public IHttpActionResult RegisterRetailer([FromBody] RetailerUserDTO retailerUserDTO)
+        public IHttpActionResult RegisterRetailer([FromBody] RetailerUserDTO retailerUserDTO)
         {
             if (!ModelState.IsValid)
             {
-              return BadRequest(ModelState);
+                return BadRequest(ModelState);
             }
 
             UserService userService = new UserService();
             if (userService.AddUser(retailerUserDTO) == true)
             {
-               var user= userService.GetUser(retailerUserDTO.Email);
-               try
-               {
-                   AddSeller(retailerUserDTO, user.UserId);
-                   VSOnline.VSECommerce.Domain.Helper.MailHelper.SendRegisterRetailerMail(user.Username, retailerUserDTO.Email, retailerUserDTO.BusinessName);
-               }
+                var user = userService.GetUser(retailerUserDTO.Email);
+                try
+                {
+                    AddSeller(retailerUserDTO, user.UserId);
+                    if (Convert.ToBoolean(ConfigurationManager.AppSettings["AddUserEnableMail"]) == true)
+                    {
+                        VSOnline.VSECommerce.Domain.Helper.MailHelper.SendRegisterRetailerMail(user.Username, retailerUserDTO.Email, retailerUserDTO.BusinessName);
+                    }
+                }
                 catch
-               {
+                {
 
-               }
+                }
                 return Ok();
             }
             return BadRequest("User not registered.");
@@ -116,7 +119,7 @@ namespace VSOnline.VSECommerce.Web.Controllers
                 branch.CreatedOnUtc = DateTime.UtcNow;
                 newSeller.Branches.Add(branch);
                 _unitOfWork.SellerRepository.Add(newSeller);
-                _unitOfWork.Commit();               
+                _unitOfWork.Commit();
 
             }
             catch
@@ -128,14 +131,14 @@ namespace VSOnline.VSECommerce.Web.Controllers
         [HttpGet]
         [ActionName("ForgotPassword")]
         public bool ForgotPassword(string username)
-        {            
+        {
             UserService userService = new UserService();
             if (userService.CheckUserExist(username))
             {
-              string passwordResetToken = "";
-              var query =  userService.GenerateResetPasswordLinkQuery(username, out passwordResetToken);
-              var execQuery = _unitOfWork.ExecuteCommand(query, new SqlParameter("@username", username));
-                if(execQuery>0)
+                string passwordResetToken = "";
+                var query = userService.GenerateResetPasswordLinkQuery(username, out passwordResetToken);
+                var execQuery = _unitOfWork.ExecuteCommand(query, new SqlParameter("@username", username));
+                if (execQuery > 0)
                 {
                     var user = userService.GetUser(username);
                     try
@@ -147,9 +150,9 @@ namespace VSOnline.VSECommerce.Web.Controllers
 
                     }
                     return true;
-                }             
-            }           
-                return false;             
+                }
+            }
+            return false;
         }
 
 
@@ -160,7 +163,7 @@ namespace VSOnline.VSECommerce.Web.Controllers
             UserService userService = new UserService();
             if (userService.CheckUserExist(resetPasswordDTO.UserName) && userService.CheckUserDataInPasswordReset(resetPasswordDTO.UserName, resetPasswordDTO.UniqueId))
             {
-                if(userService.UpdatePassword(resetPasswordDTO.UserName, resetPasswordDTO.Password))
+                if (userService.UpdatePassword(resetPasswordDTO.UserName, resetPasswordDTO.Password))
                 {
                     userService.PasswordResetCompeleted(resetPasswordDTO.UserName, resetPasswordDTO.UniqueId);
                     return true;

@@ -1,22 +1,32 @@
-﻿<span class="hidden">{{$root.hideSearchbar = false}}</span>
+﻿<!--////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<span class="hidden">{{$root.hideSearchbar = false}}</span>
 <og-image>{{imageUrlBase}}VBuy_Image.png</og-image>
 
 
-    <div ng-if="products.data.length<=0">
-        <view-title>Online Shopping of {{searchedCategoryName}} at best prices from your nearby  in India </view-title>
-        <og-description>VBuy {{ searchedCategoryName}}- </og-description>
-    </div>
-    <div ng-if="products.data.length>0">
-        <view-title>
-            Online Shopping of
-            <span data-ng-repeat="category in products.data | unique: 'SubCategoryId' | limitTo:3">
-                {{category.SubCategoryName}} {{category.ParentCategoryName}},
-            </span>
-            at best prices from your nearby store in India
-        </view-title>
+<div ng-if="products.data.length<=0">
+    <view-title>Online Shopping of {{searchedCategoryName}} at best prices from your nearby  in India </view-title>
+    <og-description>VBuy {{ searchedCategoryName}}- </og-description>
+</div>
+<div ng-if="products.data.length>0">
+    <view-title>
+        Online Shopping of
+        <span data-ng-repeat="category in products.data | unique: 'SubCategoryId' | limitTo:3">
+            {{category.SubCategoryName}} {{category.ParentCategoryName}},
+        </span>
+        at best prices from your nearby store in India
+    </view-title>
 
-        <og-description>VBuy {{category.SubCategoryName}} {{category.ParentCategoryName}} , - </og-description>
-    </div>
+    <og-description>VBuy {{category.SubCategoryName}} {{category.ParentCategoryName}} , - </og-description>
+</div>
 <div class="container containerbgcolor">
     <div data-ng-hide="$root.cartMessage == ''" class="alert alert-success float-message" id="cart-success-alert">
         <a href="#" class="close" ng-click="$root.cartMessage = ''">&times;</a>
@@ -26,15 +36,15 @@
         <div class="navbar-header">
             <div><a href="" ng-click="clearFilter()"><span class="glyphicon glyphicon-eye-close"></span>Reset Filters</a></div>
             <div>
-                    <button class="btn btn-navbar navbar-toggle" type="button" data-target="#productfilterdiv" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="fontSize10">Filters</span>
+                <button class="btn btn-navbar navbar-toggle" type="button" data-target="#productfilterdiv" data-toggle="collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="fontSize10">Filters</span>
 
-                    </button>
+                </button>
             </div>
-         </div>
+        </div>
         <div id="productfilterdiv" class="container containerbgcolor navbar-collapse collapse">
             <div class="col-xs-12 productfilter">
                 <div class="multiselectfilterdiv padding-0">
@@ -63,7 +73,7 @@
         <strong>Info!</strong>  {{message}}
     </div>
 
-    <br class="clear"/>
+    <br class="clear" />
     <div class="col-md-12">
 
         <h4 class="text-center">

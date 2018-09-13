@@ -1,4 +1,12 @@
-﻿
+﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+// <copyright>
+// Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
+//</copyright>
+// <description>VSECommerce: A VBuy.in platform<description>
+// <author>Sivakumar Anirudhan</author>
+//VSOnline.VSECommerce
+///////////////////////////////////////////////////////////////////////////////////////////
+
 app_retailer.controller('LandingController', ['$rootScope', '$scope', '$http', '$cookieStore', '$routeParams', '$location',  'authService',
 function ($rootScope, $scope, $http, $cookieStore, $routeParams, $location, authService) {
     {       
@@ -32,20 +40,23 @@ function ($scope, $http, $routeParams, $location, $timeout, retailerServiceNew) 
             glocation = glocation + "," + $scope.user.Pincode;
             var mapGeoCoder = new google.maps.Geocoder();
             var geoCodeResult = "";
-            mapGeoCoder.geocode({ 'address': glocation }, function (results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    var geoCodeResult = results;
-                    if (displayLatLong(geoCodeResult)) {
+            //COMMENT:NO NEED LAT AND LNG
+            //mapGeoCoder.geocode({ 'address': glocation }, function (results, status) {
+            //    if (status == google.maps.GeocoderStatus.OK) {
+            //        var geoCodeResult = results;
+            //        if (displayLatLong(geoCodeResult)) {
                         RegisterRetailer();
-                    }
-                }
-                else {
-                    geoCodeResult = "We couldn't find that location. Try again."
-                    $scope.savedSuccessfully = false;
-                    $scope.message = geoCodeResult;
-                }
+            //        }
+            //    }
+            //    else {
+            //        geoCodeResult = "We couldn't find that location. Try again."
+            //        $scope.savedSuccessfully = false;
+            //        $scope.message = geoCodeResult;
+            //    }
                     
-            });
+            //});
+                        $scope.user.Latitude = "13.0445";
+                        $scope.user.Longitude = "80.2114";
         }
 
         function RegisterRetailer() {

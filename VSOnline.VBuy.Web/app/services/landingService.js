@@ -1,4 +1,4 @@
-﻿ ////////////////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////////////////
 // <copyright>
 // Copyright (c) 2014-2018 VS Online Services Pvt ltd, All Rights Reserved
 //</copyright>
@@ -6,15 +6,14 @@
 // <author>Sivakumar Anirudhan</author>
 //VSOnline.VSECommerce
 ///////////////////////////////////////////////////////////////////////////////////////////
- app.service('landingService', function () {
+app.service('landingService', function () {
 
-	// var endPoint = '/VSECommerce/api/Landing';
-	 var endPoint = 'http://localhost:49475/api/Landing';
-	 
+    // var endPoint = '/VSECommerce/api/Landing';
+    var endPoint = 'http://localhost:49475/api/Landing';
+
     var curLocationDiv = document.getElementById("curLocation");
 
-    this.getAppData = function ($http)
-    {
+    this.getAppData = function ($http) {
         var config = {
             headers: { "CommandType": "GetApplicationData" }
         };
@@ -81,23 +80,21 @@
         return $http.get(endPoint + '/GetPersonalizedProductList1');
     }
 
-    this.getTopCategoriesList = function ($scope, $http)
-    {
+    this.getTopCategoriesList = function ($scope, $http) {
         return $http.get(endPoint + '/GetTopCategoriesList');
     }
 
     this.loadLocationList = function ($scope, $http) {
         var config = {
             headers: { "CommandType": "GetSearchAreaFilter" },
-            params:{city:'Chennai'}
+            params: { city: 'Chennai' }
         };
         return $http.get(endPoint + '/GetSearchAreaFilter', config);
     }
 
     this.loadCurrentLocation = function ($scope, $http) {
 
-        if (!curLocationDiv.title)
-        {
+        if (!curLocationDiv.title) {
             curLocationDiv.title = $scope.$parent.defaultLat;
             curLocationDiv.value = $scope.$parent.defaultLng;
         }
@@ -118,13 +115,12 @@
 
             $http.get('http://maps.googleapis.com/maps/api/geocode/json', { params: params })
             .then(function (res) {
-                if (res.data.results.length > 0) {                     
+                if (res.data.results.length > 0) {
                     $scope.currentAddress = res.data.results[0].formatted_address;
                     $scope.$parent.currentAddress = $scope.currentAddress;
                     document.getElementById("areaSearchInput").value = $scope.currentAddress;
                 }
-                else
-                {
+                else {
                     if (!$scope.selectedArea) {
                         document.getElementById("areaSearchInput").value = 'Chennai';
                     }
@@ -132,12 +128,11 @@
             });
         }
 
-        function errorCallbackNavigator(error)
-        {
+        function errorCallbackNavigator(error) {
             if (!$scope.selectedArea) {
                 document.getElementById("areaSearchInput").value = 'Chennai';
             }
         }
-    }  
-    
+    }
+
 });

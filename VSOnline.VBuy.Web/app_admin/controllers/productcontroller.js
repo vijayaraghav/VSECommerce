@@ -31,8 +31,11 @@ function ($rootScope, $scope, $http, $routeParams, $timeout, $location, adminPro
         function loadCategoryData() {
             adminProductService.getCategory($scope, $http)
                .then(function (response) {
-                   $scope.newCategory = response.data;
-                   $scope.selectedCategory = response.data.ParentCategoryId;
+                   if (response.data != null)
+                   {
+                       $scope.newCategory = response.data;
+                       $scope.selectedCategory = response.data.ParentCategoryId;
+                   }
                });
         }
 
